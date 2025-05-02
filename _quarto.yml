@@ -22,8 +22,8 @@ csl: diabetologia.csl
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: cosmo
+      dark: darkly
 
 
 

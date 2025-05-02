@@ -242,7 +242,7 @@ respectively, and $T_{STC} = 25^\circ$ C. The PV module temperature
 $T_{PV}$ is calculated as:
 
 $$T_{PV} = T_a + G_t \cdot \frac{T_{PV, TETC} - T_{a, TETC}}{G_{TETC}}
-$$ {@eq-temp_panel}
+$$ {#eq-temp_panel}
 
 where $T_a$ is the ambient temperature,
 $T_{PV, TETC} = 47^\circ$ C and $T_{a, TETC} = 20^\circ$ C are the
