@@ -3,7 +3,9 @@ project:
 
 book:
   title: "High-resolution wind speed data and its influence on wind energy aspects in Mexico"
-  author: "Diego Arturo Canul Reyes"
+  author: 
+    - name: Diego Arturo Canul Reyes
+      email: dacr@ier.unam.mx
   # date: "3/3/2025"
   chapters:
     - index.md

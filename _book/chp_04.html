@@ -212,14 +212,14 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction-sec-intro" id="toc-introduction-sec-intro" class="nav-link active" data-scroll-target="#introduction-sec-intro"><span class="header-section-number">4.1</span> Introduction {#sec: intro}</a></li>
-  <li><a href="#sec:meth" id="toc-sec:meth" class="nav-link" data-scroll-target="#sec\:meth"><span class="header-section-number">4.2</span> Data and methodology</a>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">4.1</span> Introduction</a></li>
+  <li><a href="#sec-meth" id="toc-sec-meth" class="nav-link" data-scroll-target="#sec-meth"><span class="header-section-number">4.2</span> Data and methodology</a>
   <ul class="collapse">
-  <li><a href="#sec:preprocess" id="toc-sec:preprocess" class="nav-link" data-scroll-target="#sec\:preprocess"><span class="header-section-number">4.2.1</span> Data and pre-processing</a></li>
+  <li><a href="#sec-preprocess" id="toc-sec-preprocess" class="nav-link" data-scroll-target="#sec-preprocess"><span class="header-section-number">4.2.1</span> Data and pre-processing</a></li>
   <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">4.2.2</span> Methodology</a></li>
-  <li><a href="#theory-sec-theory" id="toc-theory-sec-theory" class="nav-link" data-scroll-target="#theory-sec-theory"><span class="header-section-number">4.2.3</span> Theory {#sec: theory}</a></li>
+  <li><a href="#sec-theory" id="toc-sec-theory" class="nav-link" data-scroll-target="#sec-theory"><span class="header-section-number">4.2.3</span> Theory</a></li>
   </ul></li>
-  <li><a href="#results-and-discussion-sec-case_studies" id="toc-results-and-discussion-sec-case_studies" class="nav-link" data-scroll-target="#results-and-discussion-sec-case_studies"><span class="header-section-number">4.3</span> Results and discussion {#sec: case_studies}</a>
+  <li><a href="#sec-case_studies" id="toc-sec-case_studies" class="nav-link" data-scroll-target="#sec-case_studies"><span class="header-section-number">4.3</span> Results and discussion</a>
   <ul class="collapse">
   <li><a href="#power-spectrum-analysis" id="toc-power-spectrum-analysis" class="nav-link" data-scroll-target="#power-spectrum-analysis"><span class="header-section-number">4.3.1</span> Power spectrum analysis</a></li>
   <li><a href="#temporal-variability" id="toc-temporal-variability" class="nav-link" data-scroll-target="#temporal-variability"><span class="header-section-number">4.3.2</span> Temporal variability</a></li>
@@ -253,8 +253,8 @@ window.Quarto = {
 </header>
 
 
-<section id="introduction-sec-intro" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="introduction-sec-intro"><span class="header-section-number">4.1</span> Introduction {#sec: intro}</h2>
+<section id="sec-intro" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-intro"><span class="header-section-number">4.1</span> Introduction</h2>
 <p>Wind variability is a result of the wind’s complex nature; these changes are manifested at different time scales that range from years and months to seconds, with inter-scale variability across those time frames. Their effects on wind turbine performance are manifested in different wind energy variables, from annual energy production to energy quality. Evaluating the impact of variable wind speeds on wind energy production involves assessing their performance under these conditions. This analysis helps us understand wind speeds behavior and pinpoint potential risks in scenarios with high variability. In particular, dynamical analyzes in the field of wind energy require capturing the turbulent scale to perform short-term simulations of mechanical, electrical, and aeroelastic components to assess the performance of wind turbines under specific environmental conditions <span class="citation" data-cites="hashemiAssessmentHurricaneGenerated2021 papiUncertaintyQuantificationEffects2020 hafeleImprovedTwostepSoilstructure2016">[<a href="references.html#ref-hashemiAssessmentHurricaneGenerated2021" role="doc-biblioref">1</a>–<a href="references.html#ref-hafeleImprovedTwostepSoilstructure2016" role="doc-biblioref">3</a>]</span>.</p>
 <p>Short-term fluctuations can influence the performance and fatigue of wind turbines in the wind. Turbine performance and fatigue are based on dynamic studies and require high-frequency data to describe wind speed dynamics and capture these variations accurately&nbsp;<span class="citation" data-cites="hollingWindEnergyImpact2014">[<a href="references.html#ref-hollingWindEnergyImpact2014" role="doc-biblioref">4</a>]</span>. The methodologies for generating those signals can include Monte Carlo simulations <span class="citation" data-cites="damicoFirstSecondOrder2013">[<a href="references.html#ref-damicoFirstSecondOrder2013" role="doc-biblioref">5</a>]</span>, data-driven models <span class="citation" data-cites="dambrosioDataDrivenGeneration2022">[<a href="references.html#ref-dambrosioDataDrivenGeneration2022" role="doc-biblioref">6</a>]</span>, probabilistic approaches <span class="citation" data-cites="bokdeComparisonReconstructionMethods2019">[<a href="references.html#ref-bokdeComparisonReconstructionMethods2019" role="doc-biblioref">7</a>]</span>, or statistical techniques based on the distribution of the wind speeds and their variability <span class="citation" data-cites="rosales2024">[<a href="references.html#ref-rosales2024" role="doc-biblioref">8</a>]</span>. The time series data used in these simulations are typically generated using synthetic signals to represent the variability of the wind. However, a caveat is that such signals are commonly not related to local wind conditions. With the method proposed here, the performance of particular technologies would be tested under local variability, ensuring its robustness.</p>
 <p>Reliable data on renewable resources, such as solar, wind, or wave energy, are necessary to develop feasibility analyses related to the performance of the technology in a region <span class="citation" data-cites="coxRenewableEnergyData2018">[<a href="references.html#ref-coxRenewableEnergyData2018" role="doc-biblioref">9</a>]</span>. Reanalyses data sets are valuable for assessing technology performance. In addition, they contribute to the modeling of renewable energy resources by providing consistent long-term data relevant to a particular local area <span class="citation" data-cites="wuGlobalTypicalMeteorological2023">[<a href="references.html#ref-wuGlobalTypicalMeteorological2023" role="doc-biblioref">10</a>]</span>.</p>
@@ -264,132 +264,425 @@ window.Quarto = {
 <p>In Mexico, the goal is to transition to a sustainable energy system, aiming for 50% clean energy sources in the electricity mix by 2050 <span class="citation" data-cites="dof2020acuerdo">[<a href="references.html#ref-dof2020acuerdo" role="doc-biblioref">28</a>]</span>. As of 2022, the country had an installed wind capacity of 7,317 MW, concentrated in two key regions: the Tehuantepec Isthmus in Oaxaca and Tamaulipas, which together account for 37.7% and 23.4% of the total installed wind capacity, respectively <span class="citation" data-cites="amdeeProyectos">[<a href="references.html#ref-amdeeProyectos" role="doc-biblioref">29</a>]</span>. Mexico plans to further increase its clean energy capacity, adding 88% from 2027 to 2037, with wind energy contributing 8.65% of this total, equating to approximately 3,430.42 MW <span class="citation" data-cites="prospectivaSENER">[<a href="references.html#ref-prospectivaSENER" role="doc-biblioref">30</a>]</span>. These regions are particularly rich in onshore and offshore wind resources, making them ideal for implementing the methodology proposed in this study. However, despite the potential of renewable sources, insufficient investment in research, development, and innovation of renewable energy technologies may limit Mexico’s ability to meet its renewable energy goals <span class="citation" data-cites="CASTREJONCAMPOS202229">[<a href="references.html#ref-CASTREJONCAMPOS202229" role="doc-biblioref">31</a>]</span>. Given the diverse environments across the country, linking short-term fluctuations to regional characteristics enables the development of customized technological solutions.</p>
 <p>The structure of the paper is as follows: First, the general methodology is introduced, including the identification of temporal and spatial variability through power spectrum analysis. This is followed by a detailed explanation of the resolution improvement method and a description of the reanalysis and experimental datasets. The subsequent section discusses the results, and finally, the conclusions are summarized.</p>
 </section>
-<section id="sec:meth" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="sec:meth"><span class="header-section-number">4.2</span> Data and methodology</h2>
-<section id="sec:preprocess" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="sec:preprocess"><span class="header-section-number">4.2.1</span> Data and pre-processing</h3>
-<p>Observational data is obtained from the “Atlas Eolico Mexicano” (AEM) project described on section <a href="#sub:%20aem" data-reference-type="ref" data-reference="sub: aem">[sub: aem]</a>. Data from the seven sites during 2018 is used; the sites are shown on Figure <a href="#fig:%20map_aem" data-reference-type="ref" data-reference="fig: map_aem">1</a>. Measurements were taken from sensors at 80 m above ground level at 1 Hz and averaged every 10 minutes, which is the resolution considered in this research.</p>
-<p>The reanalysis used in this investigation is the ERA5 hourly data on single levels for 2018 with a horizontal resolution of <span class="math inline">\(0.25^{\circ} \times 0.25^{\circ}\)</span>. The horizontal components of wind speed at <span class="math inline">\(10~m\)</span> and <span class="math inline">\(100~m\)</span> were obtained from ERA5 to calculate the wind speed magnitude and then bilinearly interpolated to obtain an hourly time series at the tower’s geographic locations. The time zones were then corrected from UTC-0 to the local time zone. Finally, the wind speeds were extrapolated vertically to the measured heights using the power law’s empirical expression described in Section <a href="#sub:%20abl" data-reference-type="ref" data-reference="sub: abl">[sub: abl]</a>. The coefficient <span class="math inline">\(\alpha\)</span>, is calculated at each time step using the wind speeds at 10 m and 100 m provided by the ERA5 dataset. It is derived by applying the power law profile relationship, as expressed in Equation <a href="#eq:%20power_law" data-reference-type="ref" data-reference="eq: power_law">[eq: power_law]</a>, using the ratio between the two heights and their corresponding wind speeds.</p>
-<p><embed src="tesis_diego/Tesis-UNAM-master/images/Fig02_map.pdf" class="img-fluid">{#fig: map_aem width=“\textwidth”}</p>
+<section id="sec-meth" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-meth"><span class="header-section-number">4.2</span> Data and methodology</h2>
+<section id="sec-preprocess" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="sec-preprocess"><span class="header-section-number">4.2.1</span> Data and pre-processing</h3>
+<p>Observational data is obtained from the “Atlas Eolico Mexicano” (AEM) project described on <a href="chp_02.html#sec-aem" class="quarto-xref"><span>Section 2.1.1</span></a>. Data from the seven sites during 2018 is used; the sites are shown on <a href="#fig-map_aem" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>. Measurements were taken from sensors at 80 m above ground level at 1 Hz and averaged every 10 minutes, which is the resolution considered in this research.</p>
+<div id="fig-map_aem" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-map_aem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/map_aem.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map_aem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Location of the sites provided by the AEM project. The specific location of each met tower is described in <a href="chp_02.html#tbl-sites" class="quarto-xref">Table&nbsp;<span>2.2</span></a>.
+</figcaption>
+</figure>
+</div>
+<p>The reanalysis used in this investigation is the ERA5 hourly data on single levels for 2018 with a horizontal resolution of <span class="math inline">\(0.25° \times 0.25°\)</span>. The horizontal components of wind speed at <span class="math inline">\(10~m\)</span> and <span class="math inline">\(100~m\)</span> were obtained from ERA5 to calculate the wind speed magnitude and then bilinearly interpolated to obtain an hourly time series at the tower’s geographic locations. The time zones were then corrected from UTC-0 to the local time zone. Finally, the wind speeds were extrapolated vertically to the measured heights using the power law’s empirical expression described in <a href="chp_02.html#sec-abl" class="quarto-xref"><span>Section 2.2.1</span></a>. The coefficient <span class="math inline">\(\alpha\)</span>, is calculated at each time step using the wind speeds at 10 m and 100 m provided by the ERA5 dataset. It is derived by applying the power law profile relationship, as expressed in <a href="chp_02.html#eq-power_law" class="quarto-xref">Equation&nbsp;<span>2.2</span></a>, using the ratio between the two heights and their corresponding wind speeds.</p>
 </section>
 <section id="methodology" class="level3" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="methodology"><span class="header-section-number">4.2.2</span> Methodology</h3>
 <p>The first stage of the methodology is to characterize the fluctuations in wind speed and their temporal and spatial variability. In this work, fluctuations are defined as the difference between each value at a 10-minute resolution and its hourly average; meanwhile, the variability is represented by the standard deviation of the fluctuations. To characterize those components, first, a temporal and spatial variability analysis of the wind speed data is performed to select suitable values per region, and then, the reconstruction method is implemented based on a statistical analysis described in the following section.</p>
 <p>The reconstruction method relies on finding the optimal period of observations needed to characterize the fluctuations and accurately fit a probability density function (pdf). This aspect is examined more carefully, given the importance of time-series length on wind power estimates demonstrated by previous studies&nbsp;<span class="citation" data-cites="Gross2020">[<a href="references.html#ref-Gross2020" role="doc-biblioref">32</a>]</span>. The initial phase involves an analysis of time-dependent variability, aiming to identify the specific time periods that have the most significant impact on experimental wind variability. To accomplish this, the power spectrum of the experimental time series is estimated and examined using a Fast Fourier Transform (FFT). With this information, the typical variability is studied in each location, and the enhanced ERA5 resolution time series is compared with the actual data. Subsequently, a spatial analysis is performed to identify regions with similar wind conditions where reconstruction can be implemented. This will offer an additional criterion for time-up-resolution reliability. Finally, an example is presented as a study case to discuss the method’s effectiveness.</p>
-<p>The described methodology is applied to the seven sites where data was collected. For the temporal analysis, the daily fluctuating components of wind speeds from the observed data are calculated for each day of the year as described in the next section on equation <a href="#eq:%20turbulent_obs" data-reference-type="ref" data-reference="eq: turbulent_obs">[eq: turbulent_obs]</a>. Then, the effectiveness of the reanalysis in reproducing the data at those specific sites is evaluated using the Pearson Correlation Coefficient (PCC) and the Root Mean Square Error (RMSE). The RMSE and PCC are used as complementary metrics to evaluate both the magnitude of errors and the similarity in temporal patterns between the reconstructed and observed data.</p>
-<p>For the spatial analysis, the reanalysis wind speeds during 2018 were first interpolated at the seven specific sites. Then a spatial grid was generated, in which the interpolated time series from each site were repeated at all points of the grid within the reanalysis domain. The PCC between the original reanalysis data and the newly generated grid with replicated time series was then calculated. This process was repeated by varying the wind speed time series for each site. Finally, a spatial classification is carried out between areas with a similar high PCC around each site. The methodology described in this section is summarized in Figure <a href="#fig:%20diagram" data-reference-type="ref" data-reference="fig: diagram">2</a>.</p>
-<p><img src="images/Fig01.png" class="img-fluid" alt="Methodology flow chart.">{#fig: diagram width=“\textwidth”}</p>
+<p>The described methodology is applied to the seven sites where data was collected. For the temporal analysis, the daily fluctuating components of wind speeds from the observed data are calculated for each day of the year as described in the next section on <a href="#eq-turbulent_obs" class="quarto-xref">Equation&nbsp;<span>4.2</span></a>. Then, the effectiveness of the reanalysis in reproducing the data at those specific sites is evaluated using the Pearson Correlation Coefficient (PCC) and the Root Mean Square Error (RMSE). The RMSE and PCC are used as complementary metrics to evaluate both the magnitude of errors and the similarity in temporal patterns between the reconstructed and observed data.</p>
+<p>For the spatial analysis, the reanalysis wind speeds during 2018 were first interpolated at the seven specific sites. Then a spatial grid was generated, in which the interpolated time series from each site were repeated at all points of the grid within the reanalysis domain. The PCC between the original reanalysis data and the newly generated grid with replicated time series was then calculated. This process was repeated by varying the wind speed time series for each site. Finally, a spatial classification is carried out between areas with a similar high PCC around each site. The methodology described in this section is summarized in <a href="#fig-diagram" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>.</p>
+<div id="fig-diagram" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Fig01.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Methodology flow chart.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="theory-sec-theory" class="level3" data-number="4.2.3">
-<h3 data-number="4.2.3" class="anchored" data-anchor-id="theory-sec-theory"><span class="header-section-number">4.2.3</span> Theory {#sec: theory}</h3>
+<section id="sec-theory" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="sec-theory"><span class="header-section-number">4.2.3</span> Theory</h3>
 <p>The reconstruction methodology consists of using high temporal resolution wind speed observations from meteorological tower measurements (Met), <span class="math inline">\(u_{obs}\)</span>, to enhance the temporal resolution of the hourly wind speed ERA5 reanalyses, <span class="math inline">\(u_{ren}\)</span>, obtained from a bilinear interpolation at the location of the Met towers.</p>
-<p>We assume the wind speed, <span class="math inline">\(u\)</span>, can be decomposed into a mean and a fluctuating (turbulent) component <span class="citation" data-cites="popeTurbulentFlows2000">[<a href="references.html#ref-popeTurbulentFlows2000" role="doc-biblioref">33</a>]</span>: <span class="math display">\[u = \overline{u}+u',
-    \label{eq: turbulent_flow}\]</span> where <span class="math inline">\(\overline{u}\)</span> is the mean and <span class="math inline">\(u'\)</span> is a fluctuating component. Because <span class="math inline">\(u_{obs}\)</span> is the time series with high temporal resolution, first, the mean values are obtained at the same resolution of <span class="math inline">\(u_{ren}\)</span>, which is hourly. This average is named <span class="math inline">\(\overline{u}_{obs}\)</span>. Then, the fluctuation of each observation at its original frequency is calculated, <span class="math inline">\(u_{obs}'\)</span>:</p>
-<p><span class="math display">\[u_{obs}'=u_{obs}-\overline{u}_{obs}
-    \label{eq: turbulent_obs}\]</span></p>
+<p>We assume the wind speed, <span class="math inline">\(u\)</span>, can be decomposed into a mean and a fluctuating (turbulent) component <span class="citation" data-cites="popeTurbulentFlows2000">[<a href="references.html#ref-popeTurbulentFlows2000" role="doc-biblioref">33</a>]</span>:</p>
+<p><span id="eq-turbulent_flow"><span class="math display">\[u = \overline{u}+u'
+\tag{4.1}\]</span></span></p>
+<p>where <span class="math inline">\(\overline{u}\)</span> is the mean and <span class="math inline">\(u'\)</span> is a fluctuating component. Because <span class="math inline">\(u_{obs}\)</span> is the time series with high temporal resolution, first, the mean values are obtained at the same resolution of <span class="math inline">\(u_{ren}\)</span>, which is hourly. This average is named <span class="math inline">\(\overline{u}_{obs}\)</span>. Then, the fluctuation of each observation at its original frequency is calculated, <span class="math inline">\(u_{obs}'\)</span>:</p>
+<p><span id="eq-turbulent_obs"><span class="math display">\[u_{obs}'=u_{obs}-\overline{u}_{obs}
+\tag{4.2}\]</span></span></p>
 <p>These fluctuations can be characterized by a normal probability density function (pdf) <span class="citation" data-cites="mcnerneyMarkovMethodSimulating1985">[<a href="references.html#ref-mcnerneyMarkovMethodSimulating1985" role="doc-biblioref">34</a>]</span>, also identified in our findings. Based on the normal pdf obtained, wind speed fluctuations with a random distribution at the resolution of the observations, <span class="math inline">\(u'_{pdf}\)</span>, are reconstructed and subsequently added to <span class="math inline">\(u{ren}\)</span>:</p>
-<p><span class="math display">\[u_{new} = u_{ren}+u'_{pdf},
-    \label{eq: new_time}\]</span></p>
-<p>Given that the average of <span class="math inline">\(u'_{pdf}\)</span> is zero, implicitly in equation <a href="#eq:%20new_time" data-reference-type="ref" data-reference="eq: new_time">[eq: new_time]</a>, it is assumed that <span class="math inline">\(u_{ren}\)</span> are equal to the hourly mean of <span class="math inline">\(u_{new}\)</span>. The fluctuations of <span class="math inline">\(u_{new}\)</span> are randomly obtained from the characterized pdf and have the resolution of the observations. With this strategy, <span class="math inline">\(u_{ren}\)</span> data is enriched by adding velocity fluctuations whose distributions coincide with <span class="math inline">\(u'_{obs}\)</span>. This apparent increased resolution is a consequence of incorporating information from the observations to the reanalysis data. Then, in a one-hour interval between times <span class="math inline">\(t_h\)</span> and <span class="math inline">\(t_{h+1}\)</span>, there are six data points with mean <span class="math inline">\(u_{ren}(t_h)\)</span> and six normally distributed fluctuations obtained from <span class="math inline">\(u'_{pdf}\)</span>. The variables introduced in the methodology are summarized in Table <a href="#tab:%20variables" data-reference-type="ref" data-reference="tab: variables">1</a>.</p>
-<p>::: {#tab: variables} Variable Meaning Status ———————- ————————————————————– ———— <span class="math inline">\(u_{obs}\)</span> Measured WS Input <span class="math inline">\(u_{ren}\)</span> Hourly WS from the reanalysis Input <span class="math inline">\(\overline{u}_{obs}\)</span> Hourly mean of the observed WS Calculated <span class="math inline">\(u_{obs}'\)</span> Fluctuation of the observed WS, obtained from an hourly mean Calculated <span class="math inline">\(u'_{pdf}\)</span> Fluctuations from the pdf Calculated <span class="math inline">\(u_{new}\)</span> New high frequency WS Output</p>
-<p>: Wind Speed (WS) Variables introduced in the Methodology section. :::</p>
-<p>[]{#tab: variables label=“tab: variables”}</p>
+<p><span id="eq-new_time"><span class="math display">\[u_{new} = u_{ren}+u'_{pdf}
+\tag{4.3}\]</span></span></p>
+<p>Given that the average of <span class="math inline">\(u'_{pdf}\)</span> is zero, implicitly in equation <a href="#eq-new_time" class="quarto-xref">Equation&nbsp;<span>4.3</span></a>, it is assumed that <span class="math inline">\(u_{ren}\)</span> are equal to the hourly mean of <span class="math inline">\(u_{new}\)</span>. The fluctuations of <span class="math inline">\(u_{new}\)</span> are randomly obtained from the characterized pdf and have the resolution of the observations. With this strategy, <span class="math inline">\(u_{ren}\)</span> data is enriched by adding velocity fluctuations whose distributions coincide with <span class="math inline">\(u'_{obs}\)</span>. This apparent increased resolution is a consequence of incorporating information from the observations to the reanalysis data. Then, in a one-hour interval between times <span class="math inline">\(t_h\)</span> and <span class="math inline">\(t_{h+1}\)</span>, there are six data points with mean <span class="math inline">\(u_{ren}(t_h)\)</span> and six normally distributed fluctuations obtained from <span class="math inline">\(u'_{pdf}\)</span>. The variables introduced in the methodology are summarized in <a href="#tbl-variables" class="quarto-xref">Table&nbsp;<span>4.1</span></a>.</p>
+<div id="tbl-variables" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.1: Wind Speed (WS) Variables introduced in the Methodology section.
+</figcaption>
+<div aria-describedby="tbl-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 64%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Meaning</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(u_{obs}\)</span></td>
+<td>Measured WS</td>
+<td>Input</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(u_{ren}\)</span></td>
+<td>Hourly WS from the reanalysis</td>
+<td>Input</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\overline{u}_{obs}\)</span></td>
+<td>Hourly mean of the observed WS</td>
+<td>Calculated</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(u_{obs}'\)</span></td>
+<td>Fluctuation of the observed WS, obtained from an hourly mean</td>
+<td>Calculated</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(u'_{pdf}\)</span></td>
+<td>Fluctuations from the pdf</td>
+<td>Calculated</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(u_{new}\)</span></td>
+<td>New high frequency WS</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
 </section>
-<section id="results-and-discussion-sec-case_studies" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="results-and-discussion-sec-case_studies"><span class="header-section-number">4.3</span> Results and discussion {#sec: case_studies}</h2>
+<section id="sec-case_studies" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-case_studies"><span class="header-section-number">4.3</span> Results and discussion</h2>
 <section id="power-spectrum-analysis" class="level3" data-number="4.3.1">
 <h3 data-number="4.3.1" class="anchored" data-anchor-id="power-spectrum-analysis"><span class="header-section-number">4.3.1</span> Power spectrum analysis</h3>
-<p>The initial aspect analyzed is the power spectrum of the experimental time series of the seven sites, as illustrated in Figure <a href="#fig:power_spectrums" data-reference-type="ref" data-reference="fig:power_spectrums">5</a>. Across these locations, the diurnal cycle is evident, although with varying intensities. Based on this, the daily cycle is selected as the frequency to analyze the variability. The stations are categorized into two groups reflecting low and high variability. Specifically, towers M01, M02, M05, and M06 exhibit lower variability (Fig. <a href="#fig:grupobajo" data-reference-type="ref" data-reference="fig:grupobajo">3</a>), whereas the other stations are classified as having higher variability (Fig. <a href="#fig:grupoalto" data-reference-type="ref" data-reference="fig:grupoalto">4</a>)</p>
-<figure id="fig:power_spectrums" class="figure">
-<figure id="fig:grupobajo" class="figure">
-<img src="images/Fig03a.png" class="figure-img">
-<figcaption aria-hidden="true">
+<p>The initial aspect analyzed is the power spectrum of the experimental time series of the seven sites, as illustrated in <a href="#fig-power_spectrums" class="quarto-xref">Figure&nbsp;<span>4.3</span></a>. Across these locations, the diurnal cycle is evident, although with varying intensities. Based on this, the daily cycle is selected as the frequency to analyze the variability. The stations are categorized into two groups reflecting low and high variability. Specifically, towers M01, M02, M05, and M06 exhibit lower variability <a href="#fig-grupobajo" class="quarto-xref">Figure&nbsp;<span>4.3 (a)</span></a>, whereas the other stations are classified as having higher variability <a href="#fig-grupoalto" class="quarto-xref">Figure&nbsp;<span>4.3 (b)</span></a>.</p>
+<div id="fig-power_spectrums" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-power_spectrums-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-power_spectrums" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-grupobajo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-grupobajo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Fig03a.png" class="img-fluid figure-img" data-ref-parent="fig-power_spectrums">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-grupobajo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Lower variability
 </figcaption>
 </figure>
-<figure id="fig:grupoalto" class="figure">
-<img src="images/Fig03b.png" class="figure-img">
-<figcaption aria-hidden="true">
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-power_spectrums" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-grupoalto" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-grupoalto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Fig03b.png" class="img-fluid figure-img" data-ref-parent="fig-power_spectrums">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-grupoalto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Higher variability
 </figcaption>
 </figure>
-<figcaption>
-Monthly, Weekly, Daily, and Half-Day cycles for each location. Stations were classified into two groups according to their diurnal spectrum magnitude. (a) Lower variability (b) Higher variability
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-power_spectrums-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: Monthly, Weekly, Daily, and Half-Day cycles for each location. Stations were classified into two groups according to their diurnal spectrum magnitude.
 </figcaption>
 </figure>
+</div>
 </section>
 <section id="temporal-variability" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="temporal-variability"><span class="header-section-number">4.3.2</span> Temporal variability</h3>
-<p>The subsequent element of our analysis focuses on the temporal variability throughout the year, characterized by the daily standard deviations (std) of the fluctuations. Figure&nbsp;<a href="#fig:std_anual" data-reference-type="ref" data-reference="fig:std_anual">8</a> illustrates the stds for each site, considering both the annual temporal progression and the number of days that show this degree of dispersion. The figure on the left, Figure <a href="#fig:Var_Month" data-reference-type="ref" data-reference="fig:Var_Month">6</a>, shows the changes in standard deviation over the year for each site. Lighter hues correlate with higher variability, while darker hues indicate lower variability. Note that the previous classification based on the variability magnitude remains consistent, as lighter colors are still prominent at the same sites.</p>
-<p>In Figure <a href="#fig:Var_cuentas" data-reference-type="ref" data-reference="fig:Var_cuentas">7</a>, the number of days associated with different levels of variability is shown for each site to determine their frequency. Analysis within defined variability ranges reveals that all sites predominantly exhibit low values, whereas high values are found mainly among the high-variability group.</p>
-<figure id="fig:std_anual" class="figure">
-<figure id="fig:Var_Month" class="figure">
-<img src="images/Fig04a.png" class="figure-img">
-<figcaption aria-hidden="true">
+<p>The subsequent element of our analysis focuses on the temporal variability throughout the year, characterized by the daily standard deviations (std) of the fluctuations. <a href="#fig-std_anual" class="quarto-xref">Figure&nbsp;<span>4.4</span></a> illustrates the stds for each site, considering both the annual temporal progression and the number of days that show this degree of dispersion. The figure on the left, <a href="#fig-Var_Month" class="quarto-xref">Figure&nbsp;<span>4.4 (a)</span></a>, shows the changes in standard deviation over the year for each site. Lighter hues correlate with higher variability, while darker hues indicate lower variability. Note that the previous classification based on the variability magnitude remains consistent, as lighter colors are still prominent at the same sites.</p>
+<p>In <a href="#fig-Var_cuentas" class="quarto-xref">Figure&nbsp;<span>4.4 (b)</span></a>, the number of days associated with different levels of variability is shown for each site to determine their frequency. Analysis within defined variability ranges reveals that all sites predominantly exhibit low values, whereas high values are found mainly among the high-variability group.</p>
+<div id="fig-std_anual" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-std_anual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-std_anual" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-Var_Month" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Var_Month-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Fig04a.png" class="img-fluid figure-img" data-ref-parent="fig-std_anual">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Var_Month-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Variabilities through the year per location.
 </figcaption>
 </figure>
-<figure id="fig:Var_cuentas" class="figure">
-<img src="images/Fig04b.png" class="figure-img">
-<figcaption aria-hidden="true">
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-std_anual" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-Var_cuentas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Var_cuentas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Fig04b.png" class="img-fluid figure-img" data-ref-parent="fig-std_anual">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Var_cuentas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Number of days and its variability at each location.
 </figcaption>
 </figure>
-<figcaption>
-Daily std values of the wind speed fluctuations. Blank spaces indicate missing data. (a) Variabilities trough the year per location. (b) Number of days and its variability at each location.
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-std_anual-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.4: Daily std values of the wind speed fluctuations. Blank spaces indicate missing data.
 </figcaption>
 </figure>
+</div>
 </section>
 <section id="variability-selection" class="level3" data-number="4.3.3">
 <h3 data-number="4.3.3" class="anchored" data-anchor-id="variability-selection"><span class="header-section-number">4.3.3</span> Variability selection</h3>
-<p>In this section, an analysis of specific ranges of variability is studied. For each month and location, the maximum and minimum values were identified and then used to reconstruct the interpolated ERA5 time series. Now, two analysis criteria are used, first the PCC between the hourly interpolated ERA5 and the experimental wind speeds, shown in Figure <a href="#fig:pearson_1h" data-reference-type="ref" data-reference="fig:pearson_1h">9</a>. This is done to identify how well wind speeds are reproduced at each location. Next, for every minimum-maximum pair of the std values, the time series reconstructions from one hour to ten minutes resolution were performed and subsequently compared against the experimental time series by estimating the Pearson correlation coefficient (PCC). Figure <a href="#fig:%20differences_pearson" data-reference-type="ref" data-reference="fig: differences_pearson">11</a> illustrates the variations in the monthly PCC values when using the minimum and maximum for reconstruction. The right columns at each month show that using the maximum values of the stds gives higher differences in the PCC values since the dispersion on the reconstructed series increases while using the minimum values maintains the original correlation.</p>
-<figure id="fig: differences_pearson" class="figure">
-<figure id="fig:pearson_1h" class="figure">
-<img src="images/Fig05a.png" class="figure-img">
-<figcaption aria-hidden="true">
+<p>In this section, an analysis of specific ranges of variability is studied. For each month and location, the maximum and minimum values were identified and then used to reconstruct the interpolated ERA5 time series. Now, two analysis criteria are used, first the PCC between the hourly interpolated ERA5 and the experimental wind speeds, shown in <a href="#fig-pearson_1h" class="quarto-xref">Figure&nbsp;<span>4.5 (a)</span></a>. This is done to identify how well wind speeds are reproduced at each location. Next, for every minimum-maximum pair of the std values, the time series reconstructions from one hour to ten minutes resolution were performed and subsequently compared against the experimental time series by estimating the Pearson correlation coefficient (PCC). <a href="#fig-differences_pearson" class="quarto-xref">Figure&nbsp;<span>4.5</span></a> illustrates the variations in the monthly PCC values when using the minimum and maximum for reconstruction. The right columns at each month show that using the maximum values of the stds gives higher differences in the PCC values since the dispersion on the reconstructed series increases while using the minimum values maintains the original correlation.</p>
+<div id="fig-differences_pearson" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-differences_pearson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-differences_pearson" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-pearson_1h" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-pearson_1h-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Fig05a.png" class="img-fluid figure-img" data-ref-parent="fig-differences_pearson">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-pearson_1h-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Pearson correlation coefficient at 1-hour resolution.
 </figcaption>
 </figure>
-<figure id="fig: differences_pearson" class="figure">
-<img src="images/Fig05b.png" class="figure-img">
-<figcaption aria-hidden="true">
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-differences_pearson" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-differences_pearson" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-differences_pearson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Fig05b.png" class="img-fluid figure-img" data-ref-parent="fig-differences_pearson">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-differences_pearson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Differences between Pearson at 1-hour resolution and 10 min reconstructed time series.
 </figcaption>
 </figure>
-<figcaption>
-Pearson Correlation Coefficients analysis. (a) Pearson correlation coefficient at 1-hour resolution. (b) Differences between Pearson at 1-hour resolution and 10 min reconstructed time series. The left columns at each month (<span class="math inline">()</span>) indicate using the reconstruction methodology with the min std, and the right columns (<span class="math inline">()</span>) are max std.
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-differences_pearson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.5: The left columns at each month (▽) indicate using the reconstruction methodology with the min std, and the right columns (△) are max std.
 </figcaption>
 </figure>
+</div>
 <p>After analyzing the temporal correlations, the RMSE values were calculated between the 10-minute observational time series and each reconstructed series using both maximum and minimum dispersion values. These results help identify the most effective dispersion values for reconstructing the time series. Notably, the analysis revealed that across all locations, the smallest errors were consistently observed when using the minimum monthly fluctuation values.</p>
-<p>Figure <a href="#fig:RMSE" data-reference-type="ref" data-reference="fig:RMSE">12</a> illustrates the RMSE between the 10-minute experimental time series and the reconstructed series based on minimum dispersion values. In general, the M01 and M04 sites exhibit higher RMSE values compared to the other locations. These larger errors are likely influenced by geographical factors. For instance, M01 is located in a region characterized by complex terrain, which increases variability and reduces reconstruction accuracy. In contrast, the elevated RMSE at the M04 site may be attributed to frequent high wind speeds and ERA5’s known underestimation bias in such conditions, contributing to the observed error index.</p>
-<div id="fig:RMSE" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/Fig06.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Monthly RMSE between 10-min experimental time series and the reconstructed by using minimum dispersion values.</figcaption>
+<p><a href="#fig-RMSE" class="quarto-xref">Figure&nbsp;<span>4.6</span></a> illustrates the RMSE between the 10-minute experimental time series and the reconstructed series based on minimum dispersion values. In general, the M01 and M04 sites exhibit higher RMSE values compared to the other locations. These larger errors are likely influenced by geographical factors. For instance, M01 is located in a region characterized by complex terrain, which increases variability and reduces reconstruction accuracy. In contrast, the elevated RMSE at the M04 site may be attributed to frequent high wind speeds and ERA5’s known underestimation bias in such conditions, contributing to the observed error index.</p>
+<div id="fig-RMSE" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-RMSE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Fig06.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RMSE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.6: Monthly RMSE between 10-min experimental time series and the reconstructed by using minimum dispersion values.
+</figcaption>
 </figure>
 </div>
 <p>Reconstructed time series of wind speeds using minimum and maximum dispersion approaches can occasionally result in negative values of wind speeds, particularly when reanalysis wind speeds are near zero. This issue is likely due to the underestimation inherent in the reanalysis data since fluctuations were characterized by observed data. When applying the minimum dispersion method, the occurrence of negative values is generally less than 1% for most months across the analyzed sites. In contrast, the maximum dispersion cases lead to a more frequent occurrence of negative wind speed magnitudes. Obviously, negative wind speed magnitudes are unrealistic, but given the small frequency of events for low variability, the existence of these cases is considered tolerable and focuses further analysis on these cases.</p>
 </section>
 <section id="spatial-variability" class="level3" data-number="4.3.4">
 <h3 data-number="4.3.4" class="anchored" data-anchor-id="spatial-variability"><span class="header-section-number">4.3.4</span> Spatial Variability</h3>
-<p>After conducting the variability analysis from both magnitude and temporal viewpoints, the next step involves examining the regional similarity of wind speeds. This is done to pinpoint areas with comparable wind conditions, suggesting potential sites for the reconstruction methodology’s application. Figure <a href="#fig:PCC_regional" data-reference-type="ref" data-reference="fig:PCC_regional">13</a> illustrates the PCCs between the ERA5 data at the mast location and the surrounding domain points. The range of correlation values between 0.7 and 1.0 are shown. It has been noted that as the distance from the mast being correlated increases, the correlation values tend to decrease, suggesting a geographic influence.</p>
-<figure id="fig:PCC_regional" class="figure">
-<figure class="figure">
-<img src="images/Fig07a.png" style="width:100.0%" class="figure-img">
-</figure>
-<figure class="figure">
-<embed src="images/Fig07b.pdf" style="width:100.0%">
-</figure>
-<figcaption>
-Spatial variability of annual wind speeds using the PCC as an indicator.
+<p>After conducting the variability analysis from both magnitude and temporal viewpoints, the next step involves examining the regional similarity of wind speeds. This is done to pinpoint areas with comparable wind conditions, suggesting potential sites for the reconstruction methodology’s application. <a href="#fig-PCC_regional" class="quarto-xref">Figure&nbsp;<span>4.7</span></a> illustrates the PCCs between the ERA5 data at the mast location and the surrounding domain points. The range of correlation values between 0.7 and 1.0 are shown. It has been noted that as the distance from the mast being correlated increases, the correlation values tend to decrease, suggesting a geographic influence.</p>
+<div id="fig-PCC_regional" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-PCC_regional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="images/Fig07a.png" class="img-fluid figure-img"></p>
+<p><img src="images/Fig07b.png" class="img-fluid figure-img"></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PCC_regional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.7: Spatial variability of annual wind speeds using the PCC as an indicator.
 </figcaption>
 </figure>
-<p>As a supplement to the analysis, the slope of sub-grid scale orography from the ERA5 dataset is depicted for each location. Sub-grid scale orography refers to terrain features such as valleys, hills, and small mountains that are smaller than the model grid resolution and therefore not directly resolved <span class="citation" data-cites="era_web">[<a href="references.html#ref-era_web" role="doc-biblioref">35</a>]</span>. Instead, their effects are parameterized using features derived from higher-resolution elevation data. In this study, the slope parameter is used as an indicator of terrain complexity. Higher slope values reflect more rugged or irregular topography, while lower values correspond to flatter landscapes. The parameter across Mexico is shown in Figure&nbsp;<a href="#fig:PCC_regional" data-reference-type="ref" data-reference="fig:PCC_regional">13</a>. This makes sub-grid orography a useful proxy for assessing how local terrain variations may influence wind patterns. The analysis shows that topography significantly affects areas with high correlation: complex terrains, such as those in M01, are associated with smaller high-correlation regions, whereas flatter areas like M02 or M06 exhibit more homogeneous, extensive zones.</p>
+</div>
+<p>As a supplement to the analysis, the slope of sub-grid scale orography from the ERA5 dataset is depicted for each location. Sub-grid scale orography refers to terrain features such as valleys, hills, and small mountains that are smaller than the model grid resolution and therefore not directly resolved <span class="citation" data-cites="era_web">[<a href="references.html#ref-era_web" role="doc-biblioref">35</a>]</span>. Instead, their effects are parameterized using features derived from higher-resolution elevation data. In this study, the slope parameter is used as an indicator of terrain complexity. Higher slope values reflect more rugged or irregular topography, while lower values correspond to flatter landscapes. The parameter across Mexico is shown in <a href="#fig-PCC_regional" class="quarto-xref">Figure&nbsp;<span>4.7</span></a>. This makes sub-grid orography a useful proxy for assessing how local terrain variations may influence wind patterns. The analysis shows that topography significantly affects areas with high correlation: complex terrains, such as those in M01, are associated with smaller high-correlation regions, whereas flatter areas like M02 or M06 exhibit more homogeneous, extensive zones.</p>
 <p>The topographic influence over the homogeneity of wind resources helps define the areas where the reconstruction method can be applied, under the assumption that wind speed fluctuations and variability remain similar within regions with high PCC. In this context, the methodology can be applied using observational data that fall within these identified zones of homogeneity. However, it is important to note that the method does not improve the correlation between reanalysis and observational data. Therefore, before applying the resolution enhancement, users should ensure that the reanalysis data and the observational series at the location of interest are already highly correlated.</p>
 </section>
 <section id="reconstruction-example" class="level3" data-number="4.3.5">
 <h3 data-number="4.3.5" class="anchored" data-anchor-id="reconstruction-example"><span class="header-section-number">4.3.5</span> Reconstruction example</h3>
-<p>Previous analyses demonstrate that the minimum value of the daily stds for each month can be properly used to increase the reanalysis wind speed time series from one hour to ten minutes, maintaining values nearly the original Pearson coefficient between the reanalysis and the actual data. Table <a href="#tab:%20final_std" data-reference-type="ref" data-reference="tab: final_std">2</a> shows the mentioned values of the stds.</p>
-<p>::: {#tab: final_std} <strong>Jan</strong> <strong>Feb</strong> <strong>Mar</strong> <strong>Apr</strong> <strong>May</strong> <strong>Jun</strong> <strong>Jul</strong> <strong>Aug</strong> <strong>Sep</strong> <strong>Oct</strong> <strong>Nov</strong> <strong>Dec</strong> ——— ——— ——— ——— ——— ——— ——— ——— ——— ——— ——— ——— ——— <strong>M01</strong> 0.37 0.39 0.36 0.37 0.38 0.37 0.46 0.29 0.31 0.37 0.37 0.36 <strong>M02</strong> 0.40 0.32 0.42 0.45 0.36 0.48 0.45 0.47 0.40 0.35 0.43 0.36 <strong>M03</strong> 0.39 0.59 0.53 0.62 0.67 0.56 0.64 0.49 0.47 0.48 0.46 0.36 <strong>M04</strong> 0.54 0.36 0.35 0.40 0.37 0.37 0.49 0.66 0.42 0.44 0.41 0.38 <strong>M05</strong> 0.39 0.42 0.54 0.49 0.45 0.47 0.49 0.48 0.43 0.33 0.38 0.33 <strong>M06</strong> 0.33 0.39 0.29 0.40 0.42 0.47 0.49 0.45 0.44 0.39 0.37 0.35 <strong>M07</strong> 0.61 0.59 0.60 0.69 0.61 0.47 0.66 0.56 0.46 0.46 0.45 0.40</p>
-<p>: Values of the monthly std fluctuations recommended to create a 10-minute time series from the hourly ERA5. :::</p>
+<p>Previous analyses demonstrate that the minimum value of the daily stds for each month can be properly used to increase the reanalysis wind speed time series from one hour to ten minutes, maintaining values nearly the original Pearson coefficient between the reanalysis and the actual data. <a href="#tbl-final_std" class="quarto-xref">Table&nbsp;<span>4.2</span></a> shows the mentioned values of the stds.</p>
+<div id="tbl-final_std" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-final_std-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.2: Values of the monthly std fluctuations recommended to create a 10-minute time series from the hourly ERA5.
+</figcaption>
+<div aria-describedby="tbl-final_std-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: right;">Jan</th>
+<th style="text-align: right;">Feb</th>
+<th style="text-align: right;">Mar</th>
+<th style="text-align: right;">Apr</th>
+<th style="text-align: right;">May</th>
+<th style="text-align: right;">Jun</th>
+<th style="text-align: right;">Jul</th>
+<th style="text-align: right;">Aug</th>
+<th style="text-align: right;">Sep</th>
+<th style="text-align: right;">Oct</th>
+<th style="text-align: right;">Nov</th>
+<th style="text-align: right;">Dec</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>M01</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.36</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0.38</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0.31</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0.36</td>
+</tr>
+<tr class="even">
+<td>M02</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">0.32</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.36</td>
+<td style="text-align: right;">0.48</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.43</td>
+<td style="text-align: right;">0.36</td>
+</tr>
+<tr class="odd">
+<td>M03</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.59</td>
+<td style="text-align: right;">0.53</td>
+<td style="text-align: right;">0.62</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">0.64</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.48</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.36</td>
+</tr>
+<tr class="even">
+<td>M04</td>
+<td style="text-align: right;">0.54</td>
+<td style="text-align: right;">0.36</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.44</td>
+<td style="text-align: right;">0.41</td>
+<td style="text-align: right;">0.38</td>
+</tr>
+<tr class="odd">
+<td>M05</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.54</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: right;">0.48</td>
+<td style="text-align: right;">0.43</td>
+<td style="text-align: right;">0.33</td>
+<td style="text-align: right;">0.38</td>
+<td style="text-align: right;">0.33</td>
+</tr>
+<tr class="even">
+<td>M06</td>
+<td style="text-align: right;">0.33</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">0.42</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.44</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0.35</td>
+</tr>
+<tr class="odd">
+<td>M07</td>
+<td style="text-align: right;">0.61</td>
+<td style="text-align: right;">0.59</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">0.69</td>
+<td style="text-align: right;">0.61</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.40</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 <p>As previously assumed, the fluctuations of the wind speeds present a normal distribution with zero mean; therefore, only the std varies between sites and time. These values can be used by users interested in creating a high-frequency time series from reanalysis.</p>
-<p>For example, Figure <a href="#fig:%20example_m03" data-reference-type="ref" data-reference="fig: example_m03">14</a> shows, for the site M03 during January, the actual data at a 10-minute frequency and the hourly reanalysis. To increase the frequency of the reanalysis, we should use the std value from Table <a href="#tab:%20final_std" data-reference-type="ref" data-reference="tab: final_std">2</a> corresponding to that month and site, in this case, 0.39.</p>
-<p><img src="images/Fig08.png" class="img-fluid" alt="Example of the reconstruction method to the site M03.">{#fig: example_m03 width=“100%”}</p>
+<p>For example, <a href="#fig-example_m03" class="quarto-xref">Figure&nbsp;<span>4.8</span></a> shows, for the site M03 during January, the actual data at a 10-minute frequency and the hourly reanalysis. To increase the frequency of the reanalysis, we should use the std value from <a href="#tbl-final_std" class="quarto-xref">Table&nbsp;<span>4.2</span></a> corresponding to that month and site, in this case, 0.39.</p>
+<div id="fig-example_m03" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-example_m03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Fig08.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example_m03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.8: Example of the reconstruction method to the site M03.
+</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="key-insights" class="level2" data-number="4.4">

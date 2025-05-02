@@ -1,5 +1,9 @@
 # Presentation {.unnumbered}
 
+This PhD research was conducted at the Instituto de Energías Renovables (Institute of Renewable Energies) at UNAM (National Autonomous University of Mexico), in the Laboratorio de Sistemas Eólicos, during the period from September 2020 to May 2025, under the supervision of Dr. Osvaldo Rodríguez-Hernández. The thesis focuses on the challenges of using wind speed data at different temporal resolutions and its implications for wind energy production in Mexico.
+
+Feel free to get in touch with any questions, comments, or for further discussion at [dacr@ier.unam.mx](mailto:dacr@ier.unam.mx).
+
 
 ## Abstract
 

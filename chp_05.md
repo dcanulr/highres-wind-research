@@ -30,8 +30,7 @@ floating platforms. This work aims to analyze the performance of an
 offshore wind turbine and its platform in the Gulf of Tehuantepec by
 analyzing the energy produced and structural loads due to the wind and
 sea conditions. Next, a review of studies about dynamic analysis of
-offshore wind turbines is given and summarized in table
-[1](#tab: review){reference-type="ref" reference="tab: review"}.
+offshore wind turbines is given and summarized in @tbl-review.
 
 Robertson and Jonkman [@robertsonLoadsAnalysisSeveral2011] analyzed the
 dynamic response of six offshore platforms for a 5 MW wind turbine
@@ -58,8 +57,8 @@ by the corresponding values from the land-based analysis. For the
 ultimate loads, the transverse bending moments of the blade root, the
 low-speed shaft at the main bearing, the yaw bearing, and the tower base
 were analyzed. For fatigue loads, simulations were performed for the
-in-plane and out-of-plane blade root bending moments, the 0$^{\circ}$
-and 90$^{\circ}$ low-speed-shaft bending moments at the main bearing,
+in-plane and out-of-plane blade root bending moments, the 0°
+and 90° low-speed-shaft bending moments at the main bearing,
 and the side-to-side and fore-aft bending moments in the yaw bearing and
 in the tower base.
 
@@ -115,235 +114,18 @@ $a$ is the distance from the keel to the upper deck of the external
 floats, and $d$ is the required draft. For extreme conditions, authors
 consider necessary the use of safety and stabilization methods.
 
-::: {#tab: review}
-+:------+:------------+:------+:------+:------+:------------+
-| Refe  | Gap         | Techn | Site  | Bas   | Comparison  |
-| rence |             | ology | condi | eline | criteria    |
-|       |             | t     | tions |       |             |
-|       |             | ested |       |       |             |
-+-------+-------------+-------+-------+-------+-------------+
-| \*    | Understand  | NREL  | North | NREL  | Sea-to-land |
-| Robe  | the         | off   | Sea   | 5MW   | ratio of    |
-| rtson | fundamental | shore |       | land  | Blade-Root  |
-| and   | design      | 5MW   |       | based | Bending     |
-| Jon   | trafe-off   | with  |       |       | Moment,     |
-| kman, | between the | the   |       |       | Low-        |
-| 2011  | different   | MIT   |       |       | Speed-Shaft |
-| [     | concepts    | /NREL |       |       | Bending     |
-| @robe |             | TLP,  |       |       | Moment,     |
-| rtson |             | U     |       |       | Yaw-Bearing |
-| Loads |             | Maine |       |       | Bending     |
-| Analy |             | TLP,  |       |       | Moment,     |
-| sisSe |             | OC3   |       |       | Tower-Base  |
-| veral |             | H     |       |       | Bending     |
-| 2011] |             | ywind |       |       | Moment,     |
-|       |             | spar, |       |       | Blade-Root  |
-|       |             | UMain |       |       | Bending     |
-|       |             | spar, |       |       | Momente     |
-|       |             | U     |       |       | In-Plane,   |
-|       |             | Maine |       |       | Blade-Root  |
-|       |             | s     |       |       | Bending     |
-|       |             | emisu |       |       | Moment      |
-|       |             | bmers |       |       | Ou          |
-|       |             | ible, |       |       | t-of-Plane, |
-|       |             | ITI   |       |       | Low-        |
-|       |             | E     |       |       | Speed-Shaft |
-|       |             | nergy |       |       | Bending     |
-|       |             | barge |       |       | Moment 0°,  |
-|       |             |       |       |       | Low-        |
-|       |             |       |       |       | Speed-Shaft |
-|       |             |       |       |       | Bending     |
-|       |             |       |       |       | Moment 90°, |
-|       |             |       |       |       | Yaw-Bearing |
-|       |             |       |       |       | Bending     |
-|       |             |       |       |       | Moment      |
-|       |             |       |       |       | Si          |
-|       |             |       |       |       | de-to-Side, |
-|       |             |       |       |       | Yaw-Bearing |
-|       |             |       |       |       | Bending     |
-|       |             |       |       |       | Moment      |
-|       |             |       |       |       | Fore-Aft,   |
-|       |             |       |       |       | Tower-Base  |
-|       |             |       |       |       | Bending     |
-|       |             |       |       |       | Moment      |
-|       |             |       |       |       | Si          |
-|       |             |       |       |       | de-to-Side, |
-|       |             |       |       |       | Tower-Base  |
-|       |             |       |       |       | Bending     |
-|       |             |       |       |       | Moment      |
-|       |             |       |       |       | Fore-Afte   |
-+-------+-------------+-------+-------+-------+-------------+
-| \* Ma | Dynamic     | 5MW   | Spe   |       | Loads on    |
-| et    | response of | tu    | cific |       | Tower base  |
-| al,   | a FOWT      | rbine | condi |       | of          |
-| 2014  | under       | with  | tions |       | Wind-wave,  |
-| [     | different   | OC3-H | of    |       | wave-only.  |
-| @maWi | en          | ywind | waves |       | Power       |
-| ndwav | vironmental | spar  | (T    |       | spectrum of |
-| eIndu | conditions  | -type | =10s, |       | platform    |
-| cedDy | using a     | stru  | H=6m) |       | heave,      |
-| namic | numerical   | cture | and   |       | surge and   |
-| 2014] | simulation  |       | wind  |       | pitch       |
-|       | method      |       | vel   |       | motions by  |
-|       |             |       | ocity |       | wind-wave   |
-|       |             |       | of    |       | and         |
-|       |             |       | 11.4  |       | wave-only   |
-|       |             |       | m/s   |       |             |
-+-------+-------------+-------+-------+-------+-------------+
-| \*    | Identify    | NREL  | Ij    |       | Parameters  |
-| M     | the         | 5MW   | muden |       | for the     |
-| orató | potential   | mon   | sh    |       | design of   |
-| et    | relevant    | opile | allow |       | the         |
-| al,   | design load | from  | water |       | ro          |
-| 2017  | cases from  | the   | site, |       | tor/nacelle |
-| [@mor | the IEC for | OC3   | Dutch |       | assembly    |
-| atoUl | su          | pr    | North |       | and the     |
-| timat | b-structure | oject | Sea   |       | suport      |
-| eLoad | design      |       |       |       | structure   |
-| sResp |             |       |       |       | as flapwise |
-| onse2 |             |       |       |       | (out        |
-| 017a] |             |       |       |       | -of-plane), |
-|       |             |       |       |       | and         |
-|       |             |       |       |       | edgewise    |
-|       |             |       |       |       | (in-plane)  |
-|       |             |       |       |       | moment at   |
-|       |             |       |       |       | the root of |
-|       |             |       |       |       | the blade,  |
-|       |             |       |       |       | the         |
-|       |             |       |       |       | overturning |
-|       |             |       |       |       | moment at   |
-|       |             |       |       |       | the seabed  |
-|       |             |       |       |       | (mudline    |
-|       |             |       |       |       | moment),    |
-|       |             |       |       |       | pitch angle |
-|       |             |       |       |       | and GenTq.  |
-+-------+-------------+-------+-------+-------+-------------+
-| \*    | Develop a   | Deep  | Spe   | Re    | Surge,      |
-| Tran  | hi          | Cwind | cific | sults | heave and   |
-| and   | gh-fidelity | semis | condi | were  | pitch       |
-| Kim,  | flui        | ubmer | tions | com   | motions,    |
-| 2018  | d-structure | sible | of    | pared | mooring     |
-| [     | simulation  | flo   | wind  | with  | cables      |
-| @tran | that        | ating | sp    | a     | tension,    |
-| CFDSt | consider    | pla   | eeds, | FAST  | thrust      |
-| udyCo | the         | tform | rot   | simul | c           |
-| upled | influence   | with  | ating | ation | oefficient, |
-| 2018] | of          | the   | speed |       | power       |
-|       | aero-h      | NREL  | of    |       | c           |
-|       | ydrodinamic | 5MW   | the   |       | oefficient, |
-|       | coupling    | tu    | rotor |       | platform    |
-|       | due to the  | rbine | b     |       | surge       |
-|       | dynamic     |       | lade, |       | respons,    |
-|       | motion of a |       | H and |       | blade root  |
-|       | FOWT        |       | T of  |       | force,      |
-|       |             |       | 11    |       | blade root  |
-|       |             |       | m/s,  |       | moment.     |
-|       |             |       | 11.89 |       | Tower based |
-|       |             |       | rpm,  |       | force       |
-|       |             |       | 7.14  |       | considering |
-|       |             |       | m and |       | Tower only  |
-|       |             |       | 14.3  |       | and         |
-|       |             |       | s.    |       | Blades+To   |
-|       |             |       |       |       | wer+Nacelle |
-+-------+-------------+-------+-------+-------+-------------+
-| \* Xu | Develop a   | NREL  | Cape  |       | O           |
-| et    | the average | 5MW   | Eliza |       | ut-of-plane |
-| al.,  | conditional | wind  | beth, |       | bending     |
-| 2020  | exceedance  | tu    | US    |       | moment,     |
-| [@xu  | rate method | rbine | coast |       | tower-base  |
-| Extre | for         | p     |       |       | s           |
-| meLoa | estimating  | laced |       |       | ide-to-side |
-| dsAna | extreme     | on    |       |       | bending     |
-| lysis | loads on    | the   |       |       | moment,     |
-| 2020] | FOWT        | Deep  |       |       | Tower-base  |
-|       |             | Cwind |       |       | fore-aft    |
-|       |             | s     |       |       | bending     |
-|       |             | emi-s |       |       | moment,     |
-|       |             | ubmer |       |       | anchor      |
-|       |             | sible |       |       | tension     |
-|       |             | pla   |       |       |             |
-|       |             | tform |       |       |             |
-+-------+-------------+-------+-------+-------+-------------+
-| \*    | Ch          | 5MW   | US    | Perce | Total tower |
-| Ha    | arachterize | off   | east  | ntage | base moment |
-| shemi | the spatial | shore | coast | c     | at the      |
-| et    | variability | mon   |       | hange | monopile    |
-| al.,  | of extreme  | opile |       | of    | base        |
-| 2021  | wind and    |       |       | the   | (reactMYss) |
-| [@    | wave loads  |       |       | diffe | and the     |
-| hashe | under       |       |       | rence | d           |
-| miAss | extreme     |       |       | to    | isplacement |
-| essme | hurricane   |       |       | the   | (PtfmSurge) |
-| ntHur | conditions  |       |       | mean  |             |
-| rican |             |       |       | of    |             |
-| eGene |             |       |       | the   |             |
-| rated |             |       |       | five  |             |
-| 2021] |             |       |       | p     |             |
-|       |             |       |       | oints |             |
-|       |             |       |       | spat  |             |
-|       |             |       |       | ially |             |
-|       |             |       |       | lo    |             |
-|       |             |       |       | cated |             |
-+-------+-------------+-------+-------+-------+-------------+
-| \*    | Analyze the | IEA   | Av    | Compa | RAOs of     |
-|       | technical   | 15 MW | erage | rison | heave,      |
-| Papi  | i           | and   | met   | be    | pitch and   |
-| and   | mplications | NREL  | ocean | tween | surge.      |
-| Bac   | of          | 5 MW, | data  | the   | Ratio       |
-| hini, | upscaling   | both  | from  | p     | offshore to |
-| 2022  | floating    | over  | the   | erfor | onshore of  |
-| [@p   | wind        | the   | west  | mance | GenPwr,     |
-| apiTe | turbines to | Deep  | coast | of    | GenTq,      |
-| chnic | understand  | CWind | of    | the   | RotSpeed,   |
-| alCha | how the     | s     | the   | two   | RotThrust,  |
-| lleng | benefits of | emi-s | US    | turb  | RtAeroFxh,  |
-| esFlo | upscaling   | ubmer |       | ines. | TwrBsMyt,   |
-| ating | can impact  | sible |       | Ratio | TwrBsMxt,   |
-| 2022] | not only    | pla   |       | off   | TwrBsFxt,   |
-|       | turbine     | tform |       | shore | YawBrFxp,   |
-|       | cost per    |       |       | to    | YawBrMyp,   |
-|       | installed   |       |       | on    | YawBrMxp,   |
-|       | kW but also |       |       | shore | TipDxc1,    |
-|       | the cost of |       |       |       | TipDxc2,    |
-|       | the         |       |       |       | TipDxc3,    |
-|       | floater,    |       |       |       | TTDspFA,    |
-|       | mooring     |       |       |       | TipDyc1,    |
-|       | lines, and  |       |       |       | TipDyc2,    |
-|       | a           |       |       |       | TipDyc3,    |
-|       | ncillaries. |       |       |       | TTDspSS,    |
-|       |             |       |       |       | RootMxb1,   |
-|       |             |       |       |       | RootMxb2, , |
-|       |             |       |       |       | RootMxb3, , |
-|       |             |       |       |       | RootMyb1,   |
-|       |             |       |       |       | RootMyb2,   |
-|       |             |       |       |       | RootMyb3    |
-+-------+-------------+-------+-------+-------+-------------+
-| \*    | The         | OC4   | Most  |       | Response    |
-|       | feasibility | Deep  | pro   |       | Amplitude   |
-| Bern  | of a        | Cwind | bable |       | Operators   |
-| al-Ca | floating    | semis | and   |       | (RAOs) of   |
-| macho | platform    | ubmer | most  |       | Surge,      |
-| et    | under the   | sible | ex    |       | Heave and   |
-| al.,  | wave and    | pla   | treme |       | Pitch of    |
-| 2022  | wind        | tform | condi |       | the         |
-| [@b   | conditions  |       | tions |       | platform    |
-| ernal | of the Gulf |       | at    |       | for         |
-| -cama | of          |       | the   |       | different   |
-| choTe | Tehuantepec |       | Gulf  |       | c           |
-| chnic |             |       | of    |       | ombinations |
-| alAss |             |       | T     |       | of the d/a  |
-| essme |             |       | ehuan |       | parameter   |
-| ntOff |             |       | tepec |       | and,        |
-| shore |             |       |       |       | d           |
-| 2022] |             |       |       |       | isplacement |
-|       |             |       |       |       | of the      |
-|       |             |       |       |       | platform    |
-+-------+-------------+-------+-------+-------+-------------+
-| \*    |             |       |       |       |             |
-+-------+-------------+-------+-------+-------+-------------+
+| Reference | Gap | Technology tested | Site conditions | Baseline | Comparison criteria |
+|-----------|-----|-------------------|------------------|----------|---------------------|
+| Robertson and Jonkman, 2011 @robertsonLoadsAnalysisSeveral2011 | Understand the fundamental design trade-off between the different concepts | NREL offshore 5MW with the MIT/NREL TLP, UMaine TLP, OC3 Hywind spar, UMain spar, UMaine semisubmersible, ITI Energy barge | North Sea | NREL 5MW land based | Sea-to-land ratio of Blade-Root Bending Moment, Low-Speed-Shaft Bending Moment, Yaw-Bearing Bending Moment, Tower-Base Bending Moment, Blade-Root Bending Moment In-Plane, Blade-Root Bending Moment Out-of-Plane, Low-Speed-Shaft Bending Moment 0°, Low-Speed-Shaft Bending Moment 90°, Yaw-Bearing Bending Moment Side-to-Side, Yaw-Bearing Bending Moment Fore-Aft, Tower-Base Bending Moment Side-to-Side, Tower-Base Bending Moment Fore-Aft |
+| Ma et al., 2014 @maWindwaveInducedDynamic2014 | Dynamic response of a FOWT under different environmental conditions using a numerical simulation method | 5MW turbine with OC3-Hywind spar-type structure | Specific conditions of waves (T=10s, H=6m) and wind velocity of 11.4 m/s |  | Loads on Tower base of wind-wave, wave-only. Power spectrum of platform heave, surge and pitch motions by wind-wave and wave-only |
+| Morató et al., 2017 @moratoUltimateLoadsResponse2017a | Identify the potential relevant design load cases from the IEC for sub-structure design | NREL 5MW monopile from the OC3 project | Ijmuiden shallow water site, Dutch North Sea |  | Parameters for the design of the rotor/nacelle assembly and the support structure: flapwise (out-of-plane), and edgewise (in-plane) moment at the root of the blade, the overturning moment at the seabed (mudline moment), pitch angle, and GenTq |
+| Tran and Kim, 2018 @tranCFDStudyCoupled2018 | Develop a high-fidelity fluid-structure simulation considering aero-hydrodynamic coupling due to the dynamic motion of a FOWT | DeepCwind semisubmersible floating platform with the NREL 5MW turbine | Specific conditions: wind speed 11 m/s, rotor speed 11.89 rpm, wave height 7.14 m, wave period 14.3 s | Results compared with a FAST simulation | Surge, heave and pitch motions, mooring cable tension, thrust and power coefficients, platform surge response, blade root force and moment, tower base force considering Tower only and Blades+Tower+Nacelle |
+| Xu et al., 2020 @xuExtremeLoadsAnalysis2020 | Develop an average conditional exceedance rate method for estimating extreme loads on FOWT | NREL 5MW turbine on the DeepCwind semi-submersible platform | Cape Elizabeth, US coast |  | Out-of-plane bending moment, tower-base side-to-side and fore-aft bending moments, anchor tension |
+| Hashemi et al., 2021 @hashemiAssessmentHurricaneGenerated2021 | Characterize the spatial variability of extreme wind and wave loads under hurricane conditions | 5MW offshore monopile | US east coast | % change relative to mean of five spatial points | Total tower base moment at the monopile base (reactMYss) and platform displacement (PtfmSurge) |
+| Papi and Bachini, 2022 @papiTechnicalChallengesFloating2022 | Analyze technical implications of upscaling floating wind turbines and impacts on floater, mooring, and ancillaries | IEA 15 MW and NREL 5 MW, both on the DeepCWind semi-submersible platform | Average metocean data from US west coast | Comparison between the two turbines. Ratio offshore/onshore | RAOs of heave, pitch, surge; ratio offshore/onshore of GenPwr, GenTq, RotSpeed, RotThrust, RtAeroFxh, TwrBsMyt, TwrBsMxt, TwrBsFxt, YawBrFxp, YawBrMyp, YawBrMxp, TipDxc1–3, TTDspFA, TipDyc1–3, TTDspSS, RootMxb1–3, RootMyb1–3 |
+| Bernal-Camacho et al., 2022 @bernal-camachoTechnicalAssessmentOffshore2022 | Assess feasibility of a floating platform under Gulf of Tehuantepec wave and wind conditions | OC4 DeepCwind semisubmersible platform | Most probable and most extreme conditions at Gulf of Tehuantepec |  | RAOs of surge, heave, and pitch of the platform for different d/a combinations; platform displacement |
 
-: Literature review on dynamical analysis of offshore wind turbines.
-:::
+: Literature review on dynamical analysis of offshore wind turbines. {#tbl-review}
 
 Previous studies give an overview of relevant parameters to be analyzed
 on wind turbine performance. This study presents a performance analysis
@@ -360,26 +142,21 @@ wind installations at other locations, providing decision-makers with
 valuable insights into the prospective future of wind energy in the
 region.
 
-The chapter is structured as follows. Section
-[2](#sec: data_meth){reference-type="ref" reference="sec: data_meth"}
+The chapter is structured as follows. @sec-data_meth_tehuantepec
 describes the location and characteristics of the sites, technology and
 data, also, the methodology to delimit the cases is given. The analysis
-and comparison of the results are presented in section
-[3](#sec: results){reference-type="ref" reference="sec: results"}, and
-finally, section [4](#sec: conc){reference-type="ref"
-reference="sec: conc"} presents the conclusions.
+and comparison of the results are presented in @sec-results_tehuantepec, and
+finally, @sec-conc_tehuantepec presents the conclusions.
 
-## Data and methodology {#sec: data_meth}
+## Data and methodology {#sec-data_meth_tehuantepec}
 
 ### Study area and baseline
 
 The study area for this research is delimited to the Gulf of
 Tehuantepec, located on the southeast side of Mexico on the Pacific
-Ocean, as shown in Figure [1](#fig: map_mexico){reference-type="ref"
-reference="fig: map_mexico"}. The interest in this site, as previously
+Ocean, as shown in @fig-map_mexico. The interest in this site, as previously
 described, is due to the high wind velocities present throughout the
-year. Figure [2](#fig: map_restrictions){reference-type="ref"
-reference="fig: map_restrictions"} shows the delimitation of potential
+year. @fig-map_restrictions shows the delimitation of potential
 areas using the same methodology as in [@CANULREYES2022211]; however,
 the bathymetry until 50 m, indicated by a red line is very near the
 coast, and higher velocities are away the coast, with a higher depth,
@@ -389,41 +166,22 @@ evaluated.
 The turbine's performance at the proposed site will be compared with the
 same technology but in a different place; since there are no other
 offshore facilities in Mexico, a baseline site in the North Sea is
-proposed. The study zone and the baseline site are shown in Figure
-[3](#fig: map_baseline){reference-type="ref"
-reference="fig: map_baseline"}. Both sites present ocean depth
+proposed. The study zone and the baseline site are shown in @fig-map_baseline. Both sites present ocean depth
 conditions for FOWT, usually above 50 m. For the selected locations, the
 water depth at the Gulf of Tehuantepec and the North Sea is 83 m and 168
 m, respectively [@gebco].
 
-<figure>
-<figure id="fig: map_mexico">
-<img src="images/tehuantepec_map.png" />
-<figcaption>Study area</figcaption>
-</figure>
-<figure id="fig: map_restrictions">
-<img src="images/techcnical_restrictions.png" />
-<figcaption>Technical delimitation of potential zone</figcaption>
-</figure>
-<figure id="fig: map_baseline">
-<img src="images/map_baseline.jpeg" />
-<figcaption>Study area and baseline site located at the North
-Sea.</figcaption>
-</figure>
-<figcaption>Figure <a href="#fig: map_mexico" data-reference-type="ref"
-data-reference="fig: map_mexico">1</a> shows the delimitation of the
-study area at the Gulf of Tehuantepec, located on Mexico’s southeast.
-Figure <a href="#fig: map_restrictions" data-reference-type="ref"
-data-reference="fig: map_restrictions">2</a> shows the delimitation of
-potential areas using the same methodology as in <span class="citation"
-data-cites="CANULREYES2022211"></span>: dashed lines indicate the
-distance from the coast until 44 km, yellow polygons indicate natural
-protected areas, and red line shows the bathymetry until 50 m depth.
-Figure <a href="#fig: map_baseline" data-reference-type="ref"
-data-reference="fig: map_baseline">3</a> shows the location of the study
-area and the baseline site that is used to compare the performance of
-the technology.</figcaption>
-</figure>
+::: {#fig-maps_group layout="[[1,1], [1]]"}
+
+![Study area.](images/tehuantepec_map.png){#fig-map_mexico}
+
+![Technical delimitation of potential zone.](images/techcnical_restrictions.png){#fig-map_restrictions}
+
+![Study area and baseline site located at the North Sea.](images/map_baseline.jpeg){#fig-map_baseline}
+
+@fig-map_mexico shows the delimitation of the study area at the Gulf of Tehuantepec, located on Mexico’s southeast. @fig-map_restrictions shows the delimitation of potential areas using the same methodology as in @CANULREYES2022211: dashed lines indicate the distance from the coast until 44 km, yellow polygons indicate natural protected areas, and the red line shows the bathymetry until 50 m depth. @fig-map_baseline shows the location of the study area and the baseline site used to compare the performance of the technology.
+
+:::
 
 ### Data
 
@@ -431,8 +189,7 @@ To analyze the effects of fatigue on the device during a typical
 turbine's lifetime, data from 25 years was used. The metocean data was
 obtained from the ERA5 reanalysis dataset from 1996 to 2020 with an
 hourly resolution, using a bi-linear interpolation at the points
-indicated in Figure [3](#fig: map_baseline){reference-type="ref"
-reference="fig: map_baseline"}. The next variables were extracted:
+indicated in @fig-map_baseline. The next variables were extracted:
 
 -   Significant wave height \[m\]
 
@@ -448,42 +205,33 @@ The technology selected to evaluate its performance was the 15-MW
 offshore reference wind turbine developed by NREL
 [@evangaertnerDefinitionIEAWind2020] with the UMaine semisubmersible
 platform [@allenDefinitionUMaineVolturnUSS2020]. The main parameters of
-the turbine and the platform are shown in Table
-[2](#tab: turbine_par){reference-type="ref"
-reference="tab: turbine_par"}, and a schematic diagram is shown in
-Figure [5](#fig: turbine_diagram){reference-type="ref"
-reference="fig: turbine_diagram"}.
+the turbine and the platform are shown in @tbl-turbine_par, and a schematic diagram is shown in
+@fig-turbine_diagram.
 
-::: {#tab: turbine_par}
-  **Parameter**                                      **Value**
-  -------------------------------- ---------------------------
-  **Turbine rating \[MW\]**                                 15
-  **Turbine class \[-\]**                         IEC Class 1B
-  **Hub height \[m\]**                                     150
-  **Rotor diameter \[m\]**                                 240
-  **Cut-in wind speed \[m/s\]**                              3
-  **Rated wind speed \[m/s\]**                           10.59
-  **Cut-out wind speed \[m/s\]**                            25
-  **Platform type**                            Semisubmersible
-  **Mooring system**                 Three-line chain catenary
+| Parameter                |                     Value |
+|--------------------------|--------------------------:|
+| Turbine rating [MW]      |                        15 |
+| Turbine class [-]        |              IEC Class 1B |
+| Hub height [m]           |                       150 |
+| Rotor diameter [m]       |                       240 |
+| Cut-in wind speed [m/s]  |                         3 |
+| Rated wind speed [m/s]   |                     10.59 |
+| Cut-out wind speed [m/s] |                        25 |
+| Platform type            |           Semisubmersible |
+| Mooring system           | Three-line chain catenary |
 
-  : Parameters of the 15 MW offshore reference wind turbine with a
-  semisubmersible platform, developed by NREL
-  [@evangaertnerDefinitionIEAWind2020] and UMaine
-  [@allenDefinitionUMaineVolturnUSS2020].
+: Parameters of the 15 MW offshore reference wind turbine with a semisubmersible platform, developed by NREL @evangaertnerDefinitionIEAWind2020 and UMaine @allenDefinitionUMaineVolturnUSS2020. {#tbl-turbine_par}
+
+::: {#fig-turbine_diagram layout-ncol=2}
+
+![](images/platform_a.png)
+
+![](images/platform_b.png)
+
+Schematic diagrams of the wind turbine and the semisubmersible platform, obtained from @allenDefinitionUMaineVolturnUSS2020.
+
 :::
 
-<figure id="fig: turbine_diagram">
-<figure>
-<img src="tesis_diego/Tesis-UNAM-master/images/platform_a.png" />
-</figure>
-<figure>
-<img src="tesis_diego/Tesis-UNAM-master/images/platform_b.png" />
-</figure>
-<figcaption>Schematic diagrams of the wind turbine and the
-semisubmersible platform, obtained from <span class="citation"
-data-cites="allenDefinitionUMaineVolturnUSS2020"></span>.</figcaption>
-</figure>
 
 ### Methodology
 
@@ -538,10 +286,8 @@ the process for constraining the input data is as follows:
 -   For the constrained data in each wind bin direction, a 2nd-grade
     polynomial is fitted between the wind speeds in the interval
     $v_{cut-in}$ to $v_{cut-out}$ and the significant wave heights. This
-    equation provides a "representative height\" corresponding to each
-    wind speed. An example of the interpolation is shown in Figure
-    [6](#fig: metocean_gulf){reference-type="ref"
-    reference="fig: metocean_gulf"}.
+    equation provides a "representative height" corresponding to each
+    wind speed. An example of the interpolation is shown in @fig-metocean_gulf.
 
 -   Finally, the frequencies of each wave period and direction that
     occur into the wind speed interval (3-5 m/s, 5-7 m/s, \..., 23-25
@@ -557,13 +303,14 @@ speed magnitude and direction, wave period, significant wave height, and
 wave directions. Each event may occur multiple times, and its frequency
 has been quantified.
 
-<figure id="fig: metocean_gulf">
-<img src="images/wind_wave_interpolation_mex_000.png"
-style="width:60.0%" />
-<figcaption>Example of the polynomial fit between the wind speeds and
-the wave heights segmented into the bin direction between 0° and
-30°.</figcaption>
-</figure>
+::: {#fig-metocean_gulf}
+
+![](images/wind_wave_interpolation_mex_000.png) 
+
+Example of the polynomial fit between the wind speeds and the wave heights segmented into the bin direction between 0° and 30°.
+
+:::
+
 
 Simulations were performed with a duration of ten minutes under
 operational conditions; therefore, events such as start-up or shutdown
@@ -574,8 +321,7 @@ between both sites, a rainflow counting algorithm was applied, a method
 commonly used to identify and count stress cycles in time series data
 for fatigue analysis. Using this approach, the Damage Equivalent Load
 (DEL) was calculated for each directional bin. The calculation of the
-DEL is described in Section
-[\[sub: del\]](#sub: del){reference-type="ref" reference="sub: del"}.
+DEL is described in @sec-del.
 
 In summary, this study's methodology first analyzed wind resources at
 the two sites and then estimated energy production under specific
@@ -587,23 +333,23 @@ directions was taken into account to construct a detailed simulation
 matrix for calculating the Damage Equivalent Load (DEL). This approach
 provided an understanding of the environmental conditions in the Gulf of
 Tehuantepec and the North Sea, allowing for robust performance analysis
-of the wind turbine. A diagram summarizing the methodology is shown in
-Figure [7](#fig: meth){reference-type="ref" reference="fig: meth"}.
+of the wind turbine. A diagram summarizing the methodology is shown in @fig-meth.
 
-![Data and methodology described on Section
-[2](#sec: data_meth){reference-type="ref"
-reference="sec: data_meth"}](images/meth_diagram_fowt_mx.png){#fig: meth
-width="70%"}
+::: {#fig-meth}
 
-# Results and discussion {#sec: results}
+![](images/meth_diagram_fowt_mx.png)
 
-## Wind resources and energy production
+Data and methodology described in Section @sec-data_meth_tehuantepec.
+
+:::
+
+## Results and discussion {#sec-results_tehuantepec}
+
+### Wind resources and energy production
 
 The wind resources were analyzed to estimate the energy production of an
 IEA 15 MW offshore wind turbine at the Gulf of Tehuantepec and a
-baseline site in the North Sea. Figure
-[8](#fig: boxplots_windspeed){reference-type="ref"
-reference="fig: boxplots_windspeed"} shows the monthly distribution of
+baseline site in the North Sea. @fig-boxplots_windspeed shows the monthly distribution of
 wind speeds over 25 years (1996-2020). Dashed lines indicate the
 turbine's cut-in and cut-out speeds at 3 and 25 m/s, respectively. Both
 locations exhibit similar seasonal trends, with lower wind speeds during
@@ -612,8 +358,7 @@ However, the North Sea generally shows higher average speeds and more
 pronounced extreme events.
 
 In terms of Capacity Factor, the monthly distribution of the energy
-produced is shown in Figure [9](#fig: boxplots_cf){reference-type="ref"
-reference="fig: boxplots_cf"}. Due to the distribution of wind speeds in
+produced is shown in @fig-boxplots_cf. Due to the distribution of wind speeds in
 Tehuantepec, the energy produced has a wider range compared to the North
 Sea, which has smaller intervals of energy values. In the previously
 identified season of lower wind speeds, there is also a low season of
@@ -621,22 +366,22 @@ energy production, in May and June, only for Tehuantepec. The annualized
 values of the Capacity Factors are 0.54 and 0.63 for Tehuantepec and the
 North Sea, respectively.
 
-<figure id="fig: boxplots_windspeed">
-<img src="images/boxplots_windspeed.png" />
-<figcaption>Monthly wind speed distribution (1996-2020) at Tehuantepec
-and the North Sea. Dashed lines indicate turbine operational
-thresholds.</figcaption>
-</figure>
+::: {#fig-boxplots_windspeed}
 
-<figure id="fig: boxplots_cf">
-<img src="images/boxplots_cf.png" />
-<figcaption>Monthly variation of the Capacity Factor, illustrating
-energy production differences between Tehuantepec and the North
-Sea.</figcaption>
-</figure>
+![](images/boxplots_windspeed.png) 
 
-Figure [10](#fig: energy_rose){reference-type="ref"
-reference="fig: energy_rose"} presents the annualized energy
+Monthly wind speed distribution (1996–2020) at Tehuantepec and the North Sea. Dashed lines indicate turbine operational thresholds.
+
+:::
+
+::: {#fig-boxplots_cf}
+
+![](images/boxplots_cf.png)
+
+Monthly variation of the Capacity Factor, illustrating energy production differences between Tehuantepec and the North Sea.
+:::
+
+@fig-energy_rose presents the annualized energy
 distribution across wind direction bins. The plot shows that the
 north-northeast direction dominates Tehuantepec's wind resource, whereas
 the North Sea exhibits a broader, more uniform distribution. The
@@ -644,9 +389,8 @@ annualized energy values are 70,134.79 MWh and 82,130.85 MWh for
 Tehuantepec and the North Sea, respectively, with the latter site
 producing approximately 17% more energy than the former.
 
-![Wind energy distribution across wind direction bins for Tehuantepec
-and the North Sea.](images/energy_rose.png){#fig: energy_rose
-width="50%"}
+![Wind energy distribution across wind direction bins for Tehuantepec and the North Sea.](images/energy_rose.png){#fig-energy_rose}
+
 
 ### Damage Equivalent Load analysis
 
@@ -659,9 +403,7 @@ cases for Tehuantepec and 5,321 for the North Sea.
 
 In the first stage, the wind and wave directions are analyzed to
 understand the metocean conditions at each site. This information is
-directly obtained from ERA5. Figure
-[11](#fig: incoming_conditions){reference-type="ref"
-reference="fig: incoming_conditions"} shows the distribution of wind
+directly obtained from ERA5. @fig-incoming_conditions shows the distribution of wind
 speeds and wave conditions at both sites. At Tehuantepec, the wind
 predominantly comes from the north-northeast, and the wave conditions
 display two prominent directional peaks: one from the northeast and
@@ -670,38 +412,37 @@ from the north are likely wind-induced. In contrast, the North Sea
 exhibits a more consistent wind and wave regime, which could lead to
 more uniform and predictable loading patterns on the turbine structure.
 
-<figure id="fig: incoming_conditions">
-<figure>
-<img src="images/incoming_oax.png" />
-</figure>
-<figure>
-<img src="images/incoming_ns.png" />
-</figure>
-<figcaption>Distributions of wind speeds and wave
-conditions.</figcaption>
-</figure>
+::: {#fig-incoming_conditions layout-ncol=2}
+
+![Wind speeds and wave conditions for Tehuantepec.](images/incoming_oax.png)
+
+![Wind speeds and wave conditions for the North Sea.](images/incoming_ns.png)
+
+Distributions of wind speeds and wave conditions.
+
+:::
+
+
 
 To assess fatigue damage, a rainflow counting algorithm was applied to
 the tower base moments, side-to-side (TwrBsMxt) and fore-to-aft
 (TwrBsMyt), to compute the Damage Equivalent Load (DEL) for each set of
-simulations. Figure [12](#fig: del_comparison){reference-type="ref"
-reference="fig: del_comparison"} compares the DEL values at both sites.
+simulations. @fig-del_comparison compares the DEL values at both sites.
 At Tehuantepec, the DEL values for both side-to-side and fore-aft
 moments are strongly influenced by the predominant wind direction,
 indicating that fatigue damage is primarily wind-driven. In contrast, at
 the North Sea, the DEL values exhibit a more uniform distribution,
 reflecting the combined influence of wind and wave loading.
 
-<figure id="fig: del_comparison">
-<figure>
-<img src="images/del_oax.png" />
-</figure>
-<figure>
-<img src="images/del_NS.png" />
-</figure>
-<figcaption>Comparison of DEL values for the tower base side-to-side
-(TwrBsMxt) and fore-to-aft (TwrBsMyt) moments.</figcaption>
-</figure>
+::: {#fig-del_comparison layout-ncol=2}
+
+![DEL values for the tower base side-to-side (TwrBsMxt) and fore-to-aft (TwrBsMyt) moments for Tehuantepec.](images/del_oax.png)
+
+![DEL values for the tower base side-to-side (TwrBsMxt) and fore-to-aft (TwrBsMyt) moments for the North Sea.](images/del_NS.png)
+
+Comparison of DEL values for the tower base side-to-side (TwrBsMxt) and fore-to-aft (TwrBsMyt) moments.
+
+:::
 
 To assess the impact of fatigue loads per unit of energy generated, the
 indicator $\text{DEL}/\text{Energy}$ is calculated for each directional
@@ -713,26 +454,21 @@ in the indicator for eastern and western directions are due to the lack
 of energy generation, as previously mentioned. In the North Sea case,
 the indicator remains homogeneously distributed, except for a peak in
 the east for the TwrBsMyt, which is caused by the absence of energy
-generation in that direction, as shown in Figure
-[12](#fig: del_comparison){reference-type="ref"
-reference="fig: del_comparison"}.
+generation in that direction, as shown in @fig-indicator.
 
-<figure id="fig: indicator">
-<figure>
-<img src="tesis_diego/Tesis-UNAM-master/images/indicator_oax.png" />
-</figure>
-<figure>
-<img src="tesis_diego/Tesis-UNAM-master/images/indicator_ns.png" />
-</figure>
-<figcaption>Comparison of the indicator DEL per unit of energy
-generated.</figcaption>
-</figure>
+::: {#fig-indicator layout-ncol=2}
+
+![Indicator DEL per unit of energy generated for Tehuantepec.](/images/indicator_oax.png)
+
+![Indicator DEL per unit of energy generated for the North Sea.](/images/indicator_ns.png)
+
+Comparison of the indicator DEL per unit of energy generated.
+
+:::
 
 The proposed indicator helps identify the optimal wind directions for
 turbine orientation, maximizing energy capture while minimizing exposure
-to fatigue loads in low-energy directions. Figure
-[14](#fig: comparison_indicator){reference-type="ref"
-reference="fig: comparison_indicator"} presents the normalized DEL and
+to fatigue loads in low-energy directions. @fig-comparison_indicator presents the normalized DEL and
 the proposed indicator, illustrating the relationship between fatigue
 loads and energy generation. In directions where damage is high,
 production is also significant, leading to lower indicator values. For
@@ -744,18 +480,19 @@ and energy production, allowing for a wider control position. The
 indicator remains consistent, except in the east direction, where the
 lack of energy results in a higher indicator value.
 
-<figure id="fig: comparison_indicator">
-<figure>
-<img src="tesis_diego/Tesis-UNAM-master/images/compare_oax.png" />
-</figure>
-<figure>
-<img src="tesis_diego/Tesis-UNAM-master/images/compare_ns.png" />
-</figure>
-<figcaption>Comparison of the normalized DEL and proposed
-indicator.</figcaption>
-</figure>
+::: {#fig-comparison_indicator layout-ncol=2}
 
-## Key insights {#sec: conc}
+![Comparison of the normalized DEL and proposed indicator for Tehuantepec.](/images/compare_oax.png)
+
+![Comparison of the normalized DEL and proposed indicator for the North Sea.](/images/compare_ns.png)
+
+Comparison of the normalized DEL and proposed indicator.
+
+:::
+
+
+
+## Key insights {#sec-conc_tehuantepec}
 
 This study analyzed the performance of a 15 MW floating offshore wind
 turbine in the Gulf of Tehuantepec and compared it with a baseline site
