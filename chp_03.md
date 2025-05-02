@@ -239,25 +239,19 @@ Solar PV site, spanning the years from 1979 to 2020. These sites were
 selected due to the notable complementarity demonstrated in previous
 studies [@Magana-Gonzalez.2023id] and the plentiful resources available.
 Red diamonds indicate the chosen locations in the illustration in
-[3](#fig:mexico_southeast){reference-type="ref"
-reference="fig:mexico_southeast"}.
+@fig-mexico_southeast.
 
-<figure id="fig:mexico_southeast">
-<figure id="fig:Mex">
-<img src="images/MapMex.png" />
-<figcaption>Mexico, general overview</figcaption>
-</figure>
-<figure id="fig:Mex_sureste">
-<img src="images/RegionPeninsula.png" />
-<figcaption>Southeaster electric region in the red
-rectangle</figcaption>
-</figure>
-<figcaption>These figures shows the broad outline of Mexico (left side).
-The southeastern electric region chosen for analysis is outlined in the
-red rectangle. The electric grid in this area is depicted in orange,
-with two specific locations marked by solid red circles for estimating
-OWP and SPV capacity factors (right side).</figcaption>
-</figure>
+
+::: {#fig-mexico_southeast layout-ncol=2}
+
+![Mexico, general overview.](images/MapMex.png){#fig-Mex}
+
+![Southeastern electric region in the red rectangle.](images/RegionPeninsula.png){#fig-Mex_sureste}
+
+These figures show the broad outline of Mexico (left side).  
+The southeastern electric region chosen for analysis is outlined in the red rectangle. The electric grid in this area is depicted in orange, with two specific locations marked by solid red circles for estimating OWP and SPV capacity factors (right side).
+
+:::
 
 The Mexican National Energy Control Center (CENACE) offers hourly data
 on documented electricity usage across each control zone within the
@@ -314,59 +308,45 @@ these specific instances to achieve the goals of the outlined scenarios.
 Human activities significantly impact electricity demand across daily,
 weekly, and annual periods. To effectively identify these patterns, the
 electricity time series from the studied period was analyzed and
-visualized using power spectrum analysis. Figure
-[4](#fig:PS_P){reference-type="ref" reference="fig:PS_P"} illustrates
+visualized using power spectrum analysis. @fig-PS_P illustrates
 the presence of diurnal, weekly, and annual cycles in electricity
 demand. While a 12-hour cycle is also noticeable, its amplitude is
 smaller than that of the 24-hour cycle. Consequently, the 24-hour
 contribution is prioritized in the time-scale analysis.
 
-<figure id="fig:PS_P">
-<img src="images/PS_pen.png" style="width:50.0%" />
-<figcaption>The power spectrum of electricity demand highlights daily,
-weekly, and yearly cycles as key periods to match with renewable energy
-integration.</figcaption>
-</figure>
+::: {#fig-PS_P}
 
-In Figure [7](#fig:ElectricDemand){reference-type="ref"
-reference="fig:ElectricDemand"}, the electrical demand patterns in the
+![](images/PS_pen.png)
+
+The power spectrum of electricity demand highlights daily, weekly, and yearly cycles as key periods to match with renewable energy integration.
+
+:::
+
+In @fig-ElectricDemand, the electrical demand patterns in the
 Yucatan peninsula are analyzed across various timescales such as hours,
-days, and months. The upper plot
-[\[fig:Day_vs_Hour\]](#fig:Day_vs_Hour){reference-type="ref"
-reference="fig:Day_vs_Hour"} presents an analysis of demand distribution
-during each day of the week relative to the hours, while the lower plot
-[6](#fig:Monts_vs_Hour){reference-type="ref"
-reference="fig:Monts_vs_Hour"} illustrates the demand variation across
+days, and months. The upper plot @fig-Day_vs_Hour presents an analysis of demand distribution
+during each day of the week relative to the hours, while the lower plot @fig-Monts_vs_Hour illustrates the demand variation across
 months and hours. Areas with darker shades represent periods of low
-demand, whereas lighter shades signify higher demand. Figure
-[6](#fig:Monts_vs_Hour){reference-type="ref"
-reference="fig:Monts_vs_Hour"} highlights two demand peaks: the first
+demand, whereas lighter shades signify higher demand. @fig-Monts_vs_Hour highlights two demand peaks: the first
 occurring from 8:00 h to 17:00 h, followed by a minor decrease, and a
 subsequent rise from 20:00 h until midnight. This trend is most notable
 from May through September.
 
-<figure id="fig:ElectricDemand">
-<figure id="fig:Monts_vs_Hour">
-<img src="images/heatmap_d_h.png" />
-<figure id="fig:Monts_vs_Hour">
-<img src="images/heatmap_m_h.png" />
-<figcaption>Month vs Hour</figcaption>
-</figure>
-<figcaption>Month vs Hour</figcaption>
-</figure>
-<figcaption>Graph <a href="#fig:Day_vs_Hour" data-reference-type="ref"
-data-reference="fig:Day_vs_Hour">[fig:Day_vs_Hour]</a> compares demand
-across different days of the week and hours, while <a
-href="#fig:Monts_vs_Hour" data-reference-type="ref"
-data-reference="fig:Monts_vs_Hour">6</a> compares it across months and
-hours. Consumption is highest during the daytime hours from Monday to
-Friday, and peak demand occurs between 9:00 PM and midnight from May to
-September.</figcaption>
-</figure>
+::: {#fig-ElectricDemand layout-ncol=2}
 
-Analyzing the data on a weekly basis, Figure
-[\[fig:Day_vs_Hour\]](#fig:Day_vs_Hour){reference-type="ref"
-reference="fig:Day_vs_Hour"} demonstrates that maximum electricity usage
+![Day vs Hour.](images/heatmap_d_h.png){#fig-Day_vs_Hour}
+
+![Month vs Hour.](images/heatmap_m_h.png){#fig-Monts_vs_Hour}
+
+Graph [@fig-Day_vs_Hour] compares demand across different days of the week and hours,  
+while [@fig-Monts_vs_Hour] compares it across months and hours.  
+Consumption is highest during the daytime hours from Monday to Friday, and peak demand occurs between 9:00 PM and midnight from May to September.
+
+:::
+
+
+Analyzing the data on a weekly basis, days, and months. The upper plot @fig-Day_vs_Hour presents an analysis of demand distribution
+ demonstrates that maximum electricity usage
 transpires from Monday to Friday. During these weekdays, demand
 escalates from 6:00 a.m., peaking up to midnight, briefly declining
 between 5:00 p.m. and 7:00 p.m., then rising again before tapering off
@@ -375,9 +355,7 @@ throughout the day on weekends.
 
 ### Analysis of the renewable resources
 
-Upon analysis of electricity consumption, Figure
-[8](#fig:cf_resources){reference-type="ref"
-reference="fig:cf_resources"} presents the monthly and hourly
+Upon analysis of electricity consumption, @fig-cf_resources presents the monthly and hourly
 fluctuations of Offshore Wind Power (OWP) capacity factor (CF) in blue
 and solar photovoltaic (PV) CF in orange over consecutive days. The top
 graph depicts hourly CFs for each renewable source across different
@@ -389,15 +367,14 @@ July, thus complementing OWP. The Spearman correlation coefficient
 remains negative throughout the year but indicates greater potential for
 complementarity during February, March, April, August, and September.
 
-<figure id="fig:cf_resources">
-<embed src="images/cf_resources_spearman.pdf" />
-<figcaption>The technologies’ hourly CFs are displayed in both annual
-(upper plot) and daily (lower plot) formats. OWP and Solar-PV are
-denoted in blue and orange, respectively. The background diagrams show
-the distribution of the capacity factor (CF), and the boxplots indicate
-the quartiles of the data. The SCC is shown in red at each time
-step</figcaption>
-</figure>
+::: {#fig-cf_resources}
+
+![](images/cf_resources_spearman.png)
+
+The technologies’ hourly CFs are displayed in both annual (upper plot) and daily (lower plot) formats. OWP and Solar-PV are denoted in blue and orange, respectively. The background diagrams show the distribution of the capacity factor (CF), and the boxplots indicate the quartiles of the data. The SCC is shown in red at each time step.
+
+:::
+
 
 In the daily analysis, Solar-PV generally follows a consistent
 trajectory, peaking around midday. Conversely, the OWP shows its lowest
@@ -430,49 +407,36 @@ achieve optimal synchronization. The peak synchronization points are
 identified as April at 12:00 h for the solar-PV resource and March at
 midnight for the OWP. With these minimal distances determined, installed
 capacities are proposed to supply 50% and 80% of the demand exclusively
-from renewable sources. The required capacities are presented in Table
-[1](#tab:cap){reference-type="ref" reference="tab:cap"}.
+from renewable sources. The required capacities are presented in @tbl-cap.
 
-::: {#tab:cap}
-                 Installed Capacity (MW) 
-  ------------ ------------------------- -----------------
-  Technology             50% RE Scenario   80% RE Scenario
-  PV                               950.2            1520.3
-  OWP                              966.1            1545.7
+|            | Installed Capacity (MW) |                  |
+|------------|:-----------------------:|-----------------:|
+| Technology | 50\% RE Scenario        | 80\% RE Scenario |
+| PV         |                   950.2 |           1520.3 |
+| OWP        |                   966.1 |           1545.7 |
 
-  : Installed capacity needed to supply the 50% and 80% of the
-  electricity demand by renewable energy.
-:::
+: Installed capacity needed to supply the 50\% and 80\% of the electricity demand by renewable energy. {#tbl-cap}
 
-[]{#tab:cap label="tab:cap"}
-
-Figure [11](#fig:mix){reference-type="ref" reference="fig:mix"} presents
+@fig-mix presents
 typical daytime series for two scenarios. For the 50% scenario, the
 contribution from OWP in blue and PV in orange consistently falls below
 the electricity demand. Their energy output varies seasonally, peaking
 in summer and spring but declining during autumn and winter.
-Importantly, the trend shown by the SCC in figure
-[8](#fig:cf_resources){reference-type="ref"
-reference="fig:cf_resources"} is reflected in the peak values seen in
-figures [9](#fig:50){reference-type="ref" reference="fig:50"} and
-[10](#fig:80){reference-type="ref" reference="fig:80"} throughout the
+Importantly, the trend shown by the SCC in @fig-cf_resources is reflected in the peak values seen in @fig-50 and @fig-80 throughout the
 day. Therefore, SCC results provide a dependable metric for assessing
 resource complementarity.
 
-<figure id="fig:mix">
-<figure id="fig:50">
-<img src="images/proposal_50_demand.png" />
-<figcaption>50% of renewable energy</figcaption>
-</figure>
-<figure id="fig:80">
-<img src="images/proposal_80_demand.png" />
-<figcaption>80% of renewable energy</figcaption>
-</figure>
-<figcaption>Typical days per month of OWP and solar-PV are plotted in
-blue and orange respectively. In green is represented the electricity
-demand. Each group of hours on the x-axis corresponds to a typical day
-of each month.</figcaption>
-</figure>
+::: {#fig-mix layout-ncol=2}
+
+![50% of renewable energy.](images/proposal_50_demand.png){#fig-50}
+
+![80% of renewable energy.](images/proposal_80_demand.png){#fig-80}
+
+Typical days per month of OWP and solar-PV are plotted in blue and orange respectively.  
+In green is represented the electricity demand. Each group of hours on the x-axis corresponds to a typical day of each month.
+
+:::
+
 
 The proposed technologies can be implemented within a conventional OWP
 facility. Nevertheless, solar PV allows for energy production through

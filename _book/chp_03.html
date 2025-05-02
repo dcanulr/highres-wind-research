@@ -278,24 +278,43 @@ window.Quarto = {
 <p>This section outlines the characteristics of the data and the analytical techniques employed to examine the complementary solar and wind energy resources available in the Yucatan Peninsula.</p>
 <section id="data-description-and-pre-processing" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="data-description-and-pre-processing"><span class="header-section-number">3.2.1</span> Data description and pre-processing</h3>
-<p>The analysis was conducted using two primary data sources. The first source provided observational data concerning electricity demand in the peninsular region, while the second comprised meteorological variables derived from ERA5 reanalysis interpolation. These data sets were essential for estimating the production of wind turbine operation and solar photovoltaic (PV) energy, along with the capacity factor (CF), at two predetermined coordinates: 21.5°N, -90°W, which corresponds to the offshore wind power (OWP) facility, and 21°N, -89°W, the location of the Solar PV site, spanning the years from 1979 to 2020. These sites were selected due to the notable complementarity demonstrated in previous studies <span class="citation" data-cites="Magana-Gonzalez.2023id">[<a href="references.html#ref-Magana-Gonzalez.2023id" role="doc-biblioref">7</a>]</span> and the plentiful resources available. Red diamonds indicate the chosen locations in the illustration in <a href="#fig:mexico_southeast" data-reference-type="ref" data-reference="fig:mexico_southeast">3</a>.</p>
-<figure id="fig:mexico_southeast" class="figure">
-<figure id="fig:Mex" class="figure">
-<img src="images/MapMex.png" class="figure-img">
-<figcaption>
-Mexico, general overview
+<p>The analysis was conducted using two primary data sources. The first source provided observational data concerning electricity demand in the peninsular region, while the second comprised meteorological variables derived from ERA5 reanalysis interpolation. These data sets were essential for estimating the production of wind turbine operation and solar photovoltaic (PV) energy, along with the capacity factor (CF), at two predetermined coordinates: 21.5°N, -90°W, which corresponds to the offshore wind power (OWP) facility, and 21°N, -89°W, the location of the Solar PV site, spanning the years from 1979 to 2020. These sites were selected due to the notable complementarity demonstrated in previous studies <span class="citation" data-cites="Magana-Gonzalez.2023id">[<a href="references.html#ref-Magana-Gonzalez.2023id" role="doc-biblioref">7</a>]</span> and the plentiful resources available. Red diamonds indicate the chosen locations in the illustration in <a href="#fig-mexico_southeast" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>.</p>
+<div id="fig-mexico_southeast" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mexico_southeast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-mexico_southeast" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-Mex" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Mex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/MapMex.png" class="img-fluid figure-img" data-ref-parent="fig-mexico_southeast">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Mex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Mexico, general overview.
 </figcaption>
 </figure>
-<figure id="fig:Mex_sureste" class="figure">
-<img src="images/RegionPeninsula.png" class="figure-img">
-<figcaption>
-Southeaster electric region in the red rectangle
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-mexico_southeast" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-Mex_sureste" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Mex_sureste-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/RegionPeninsula.png" class="img-fluid figure-img" data-ref-parent="fig-mexico_southeast">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Mex_sureste-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Southeastern electric region in the red rectangle.
 </figcaption>
 </figure>
-<figcaption>
-These figures shows the broad outline of Mexico (left side). The southeastern electric region chosen for analysis is outlined in the red rectangle. The electric grid in this area is depicted in orange, with two specific locations marked by solid red circles for estimating OWP and SPV capacity factors (right side).
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mexico_southeast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: These figures show the broad outline of Mexico (left side).<br>
+The southeastern electric region chosen for analysis is outlined in the red rectangle. The electric grid in this area is depicted in orange, with two specific locations marked by solid red circles for estimating OWP and SPV capacity factors (right side).
 </figcaption>
 </figure>
+</div>
 <p>The Mexican National Energy Control Center (CENACE) offers hourly data on documented electricity usage across each control zone within the National Interconnected System (SIN). Information about the peninsular region was gathered between 2016 and 2020 <span class="citation" data-cites="CENACE">[<a href="references.html#ref-CENACE" role="doc-biblioref">26</a>]</span>.</p>
 <p>The timestamp of the ERA5 dataset was aligned with Mexico’s time zone through synchronization with electricity demand information. The parameters derived from ERA5 included wind velocities <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> at an altitude of 100 meters, solar irradiance, and air temperature at 2 meters above ground level. The wind velocities <span class="math inline">\(w_s\)</span> were computed by combining the components <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span>. Thereafter, the wind speed at the rotor’s height, 119 meters, was projected using the power law profile. Wind energy production was then determined using the power curve of the DTU 10 MW reference wind turbine <span class="citation" data-cites="bc5f61cd4c51442f89eb02df89ab0aa4">[<a href="references.html#ref-bc5f61cd4c51442f89eb02df89ab0aa4" role="doc-biblioref">27</a>]</span>. For solar power estimation, downward solar surface radiation and ambient temperature at 2 meters were used to calculate solar photovoltaic output. A 190 W solar panel <span class="citation" data-cites="zhangQuantitativeSynergyAssessment2018">[<a href="references.html#ref-zhangQuantitativeSynergyAssessment2018" role="doc-biblioref">28</a>]</span> was chosen for technology evaluation.</p>
 </section>
@@ -308,95 +327,147 @@ These figures shows the broad outline of Mexico (left side). The southeastern el
 </section>
 <section id="results-and-discussion" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="results-and-discussion"><span class="header-section-number">3.3</span> Results and discussion</h2>
-<p>Human activities significantly impact electricity demand across daily, weekly, and annual periods. To effectively identify these patterns, the electricity time series from the studied period was analyzed and visualized using power spectrum analysis. Figure <a href="#fig:PS_P" data-reference-type="ref" data-reference="fig:PS_P">4</a> illustrates the presence of diurnal, weekly, and annual cycles in electricity demand. While a 12-hour cycle is also noticeable, its amplitude is smaller than that of the 24-hour cycle. Consequently, the 24-hour contribution is prioritized in the time-scale analysis.</p>
-<figure id="fig:PS_P" class="figure">
-<img src="images/PS_pen.png" style="width:50.0%" class="figure-img">
-<figcaption>
-The power spectrum of electricity demand highlights daily, weekly, and yearly cycles as key periods to match with renewable energy integration.
+<p>Human activities significantly impact electricity demand across daily, weekly, and annual periods. To effectively identify these patterns, the electricity time series from the studied period was analyzed and visualized using power spectrum analysis. <a href="#fig-PS_P" class="quarto-xref">Figure&nbsp;<span>3.2</span></a> illustrates the presence of diurnal, weekly, and annual cycles in electricity demand. While a 12-hour cycle is also noticeable, its amplitude is smaller than that of the 24-hour cycle. Consequently, the 24-hour contribution is prioritized in the time-scale analysis.</p>
+<div id="fig-PS_P" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-PS_P-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/PS_pen.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PS_P-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: The power spectrum of electricity demand highlights daily, weekly, and yearly cycles as key periods to match with renewable energy integration.
 </figcaption>
 </figure>
-<p>In Figure <a href="#fig:ElectricDemand" data-reference-type="ref" data-reference="fig:ElectricDemand">7</a>, the electrical demand patterns in the Yucatan peninsula are analyzed across various timescales such as hours, days, and months. The upper plot <a href="#fig:Day_vs_Hour" data-reference-type="ref" data-reference="fig:Day_vs_Hour">[fig:Day_vs_Hour]</a> presents an analysis of demand distribution during each day of the week relative to the hours, while the lower plot <a href="#fig:Monts_vs_Hour" data-reference-type="ref" data-reference="fig:Monts_vs_Hour">6</a> illustrates the demand variation across months and hours. Areas with darker shades represent periods of low demand, whereas lighter shades signify higher demand. Figure <a href="#fig:Monts_vs_Hour" data-reference-type="ref" data-reference="fig:Monts_vs_Hour">6</a> highlights two demand peaks: the first occurring from 8:00 h to 17:00 h, followed by a minor decrease, and a subsequent rise from 20:00 h until midnight. This trend is most notable from May through September.</p>
-<figure id="fig:ElectricDemand" class="figure">
-<figure id="fig:Monts_vs_Hour" class="figure">
-<img src="images/heatmap_d_h.png" class="figure-img">
-<figure id="fig:Monts_vs_Hour" class="figure">
-<img src="images/heatmap_m_h.png" class="figure-img">
-<figcaption>
-Month vs Hour
+</div>
+<p>In <a href="#fig-ElectricDemand" class="quarto-xref">Figure&nbsp;<span>3.3</span></a>, the electrical demand patterns in the Yucatan peninsula are analyzed across various timescales such as hours, days, and months. The upper plot <a href="#fig-Day_vs_Hour" class="quarto-xref">Figure&nbsp;<span>3.3 (a)</span></a> presents an analysis of demand distribution during each day of the week relative to the hours, while the lower plot <a href="#fig-Monts_vs_Hour" class="quarto-xref">Figure&nbsp;<span>3.3 (b)</span></a> illustrates the demand variation across months and hours. Areas with darker shades represent periods of low demand, whereas lighter shades signify higher demand. <a href="#fig-Monts_vs_Hour" class="quarto-xref">Figure&nbsp;<span>3.3 (b)</span></a> highlights two demand peaks: the first occurring from 8:00 h to 17:00 h, followed by a minor decrease, and a subsequent rise from 20:00 h until midnight. This trend is most notable from May through September.</p>
+<div id="fig-ElectricDemand" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ElectricDemand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ElectricDemand" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-Day_vs_Hour" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Day_vs_Hour-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/heatmap_d_h.png" class="img-fluid figure-img" data-ref-parent="fig-ElectricDemand">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Day_vs_Hour-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Day vs Hour.
 </figcaption>
 </figure>
-<figcaption>
-Month vs Hour
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ElectricDemand" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-Monts_vs_Hour" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-Monts_vs_Hour-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/heatmap_m_h.png" class="img-fluid figure-img" data-ref-parent="fig-ElectricDemand">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Monts_vs_Hour-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Month vs Hour.
 </figcaption>
 </figure>
-<figcaption>
-Graph <a href="#fig:Day_vs_Hour" data-reference-type="ref" data-reference="fig:Day_vs_Hour">[fig:Day_vs_Hour]</a> compares demand across different days of the week and hours, while <a href="#fig:Monts_vs_Hour" data-reference-type="ref" data-reference="fig:Monts_vs_Hour">6</a> compares it across months and hours. Consumption is highest during the daytime hours from Monday to Friday, and peak demand occurs between 9:00 PM and midnight from May to September.
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ElectricDemand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: Graph <a href="#fig-Day_vs_Hour" class="quarto-xref">Figure&nbsp;<span>3.3 (a)</span></a> compares demand across different days of the week and hours,<br>
+while <a href="#fig-Monts_vs_Hour" class="quarto-xref">Figure&nbsp;<span>3.3 (b)</span></a> compares it across months and hours.<br>
+Consumption is highest during the daytime hours from Monday to Friday, and peak demand occurs between 9:00 PM and midnight from May to September.
 </figcaption>
 </figure>
-<p>Analyzing the data on a weekly basis, Figure <a href="#fig:Day_vs_Hour" data-reference-type="ref" data-reference="fig:Day_vs_Hour">[fig:Day_vs_Hour]</a> demonstrates that maximum electricity usage transpires from Monday to Friday. During these weekdays, demand escalates from 6:00 a.m., peaking up to midnight, briefly declining between 5:00 p.m. and 7:00 p.m., then rising again before tapering off from midnight to 6:00 a.m. In contrast, energy consumption is reduced throughout the day on weekends.</p>
+</div>
+<p>Analyzing the data on a weekly basis, days, and months. The upper plot <a href="#fig-Day_vs_Hour" class="quarto-xref">Figure&nbsp;<span>3.3 (a)</span></a> presents an analysis of demand distribution demonstrates that maximum electricity usage transpires from Monday to Friday. During these weekdays, demand escalates from 6:00 a.m., peaking up to midnight, briefly declining between 5:00 p.m. and 7:00 p.m., then rising again before tapering off from midnight to 6:00 a.m. In contrast, energy consumption is reduced throughout the day on weekends.</p>
 <section id="analysis-of-the-renewable-resources" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="analysis-of-the-renewable-resources"><span class="header-section-number">3.3.1</span> Analysis of the renewable resources</h3>
-<p>Upon analysis of electricity consumption, Figure <a href="#fig:cf_resources" data-reference-type="ref" data-reference="fig:cf_resources">8</a> presents the monthly and hourly fluctuations of Offshore Wind Power (OWP) capacity factor (CF) in blue and solar photovoltaic (PV) CF in orange over consecutive days. The top graph depicts hourly CFs for each renewable source across different months. OWP displays a clear seasonal trend, achieving its highest CFs in March and April, declining in August or September, and exhibiting a varied production pattern from November to February. Solar PV maintains a consistent performance throughout the year, peaking between May and July, thus complementing OWP. The Spearman correlation coefficient remains negative throughout the year but indicates greater potential for complementarity during February, March, April, August, and September.</p>
-<figure id="fig:cf_resources" class="figure">
-<embed src="images/cf_resources_spearman.pdf">
-<figcaption>
-The technologies’ hourly CFs are displayed in both annual (upper plot) and daily (lower plot) formats. OWP and Solar-PV are denoted in blue and orange, respectively. The background diagrams show the distribution of the capacity factor (CF), and the boxplots indicate the quartiles of the data. The SCC is shown in red at each time step
+<p>Upon analysis of electricity consumption, <a href="#fig-cf_resources" class="quarto-xref">Figure&nbsp;<span>3.4</span></a> presents the monthly and hourly fluctuations of Offshore Wind Power (OWP) capacity factor (CF) in blue and solar photovoltaic (PV) CF in orange over consecutive days. The top graph depicts hourly CFs for each renewable source across different months. OWP displays a clear seasonal trend, achieving its highest CFs in March and April, declining in August or September, and exhibiting a varied production pattern from November to February. Solar PV maintains a consistent performance throughout the year, peaking between May and July, thus complementing OWP. The Spearman correlation coefficient remains negative throughout the year but indicates greater potential for complementarity during February, March, April, August, and September.</p>
+<div id="fig-cf_resources" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cf_resources-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/cf_resources_spearman.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cf_resources-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.4: The technologies’ hourly CFs are displayed in both annual (upper plot) and daily (lower plot) formats. OWP and Solar-PV are denoted in blue and orange, respectively. The background diagrams show the distribution of the capacity factor (CF), and the boxplots indicate the quartiles of the data. The SCC is shown in red at each time step.
 </figcaption>
 </figure>
+</div>
 <p>In the daily analysis, Solar-PV generally follows a consistent trajectory, peaking around midday. Conversely, the OWP shows its lowest output from 04:00 to 13:00, subsequently increasing at 14:00 and reaching maximum production around midnight. Notably, wind patterns complement solar output, as evidenced by SCC showing negative readings between 06:00 and 14:00, followed by positive readings. This transition highlights the synergy between wind and solar energy from 15:00 to 18:00.</p>
 <p>Regarding electricity demand alongside OWP and PV generation, it is critical to highlight the notable lack of renewable energy generation between 04:00 and 07:00, which coincides with a period of reduced electricity demand. Moreover, demand peaks noticeably during daytime, synchronizing with solar PV generation. Lastly, another demand peak takes place between 19:00 and midnight, corresponding with high wind energy availability.</p>
 </section>
 <section id="proposed-array-technology-diversification" class="level3" data-number="3.3.2">
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="proposed-array-technology-diversification"><span class="header-section-number">3.3.2</span> Proposed array technology diversification</h3>
-<p>An evaluation of installed capacity and its energy output is conducted under two scenarios: one with a 50% electricity demand supply and another with an 80% supply. The choice of the 80% supply level is based on the hypothesis that the distribution could resemble a Pareto distribution, where selecting 80% of the demand would result in demand exceeding 20% by no more than 20% of the days. This analysis involves examining two time series of representative monthly days, quantifying the minimum distance between each variable and electricity demand to achieve optimal synchronization. The peak synchronization points are identified as April at 12:00 h for the solar-PV resource and March at midnight for the OWP. With these minimal distances determined, installed capacities are proposed to supply 50% and 80% of the demand exclusively from renewable sources. The required capacities are presented in Table <a href="#tab:cap" data-reference-type="ref" data-reference="tab:cap">1</a>.</p>
-<div id="tab:cap">
+<p>An evaluation of installed capacity and its energy output is conducted under two scenarios: one with a 50% electricity demand supply and another with an 80% supply. The choice of the 80% supply level is based on the hypothesis that the distribution could resemble a Pareto distribution, where selecting 80% of the demand would result in demand exceeding 20% by no more than 20% of the days. This analysis involves examining two time series of representative monthly days, quantifying the minimum distance between each variable and electricity demand to achieve optimal synchronization. The peak synchronization points are identified as April at 12:00 h for the solar-PV resource and March at midnight for the OWP. With these minimal distances determined, installed capacities are proposed to supply 50% and 80% of the demand exclusively from renewable sources. The required capacities are presented in <a href="#tbl-cap" class="quarto-xref">Table&nbsp;<span>3.1</span></a>.</p>
+<div id="tbl-cap" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: Installed capacity needed to supply the 50% and 80% of the electricity demand by renewable energy.
+</figcaption>
+<div aria-describedby="tbl-cap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
-<caption>Installed capacity needed to supply the 50% and 80% of the electricity demand by renewable energy.</caption>
 <thead>
 <tr class="header">
 <th></th>
-<th style="text-align: right;">Installed Capacity (MW)</th>
-<th></th>
+<th style="text-align: center;">Installed Capacity (MW)</th>
+<th style="text-align: right;"></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Technology</td>
-<td style="text-align: right;">50% RE Scenario</td>
-<td>80% RE Scenario</td>
+<td style="text-align: center;">50% RE Scenario</td>
+<td style="text-align: right;">80% RE Scenario</td>
 </tr>
 <tr class="even">
 <td>PV</td>
-<td style="text-align: right;">950.2</td>
-<td>1520.3</td>
+<td style="text-align: center;">950.2</td>
+<td style="text-align: right;">1520.3</td>
 </tr>
 <tr class="odd">
 <td>OWP</td>
-<td style="text-align: right;">966.1</td>
-<td>1545.7</td>
+<td style="text-align: center;">966.1</td>
+<td style="text-align: right;">1545.7</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><span id="tab:cap" data-label="tab:cap"></span></p>
-<p>Figure <a href="#fig:mix" data-reference-type="ref" data-reference="fig:mix">11</a> presents typical daytime series for two scenarios. For the 50% scenario, the contribution from OWP in blue and PV in orange consistently falls below the electricity demand. Their energy output varies seasonally, peaking in summer and spring but declining during autumn and winter. Importantly, the trend shown by the SCC in figure <a href="#fig:cf_resources" data-reference-type="ref" data-reference="fig:cf_resources">8</a> is reflected in the peak values seen in figures <a href="#fig:50" data-reference-type="ref" data-reference="fig:50">9</a> and <a href="#fig:80" data-reference-type="ref" data-reference="fig:80">10</a> throughout the day. Therefore, SCC results provide a dependable metric for assessing resource complementarity.</p>
-<figure id="fig:mix" class="figure">
-<figure id="fig:50" class="figure">
-<img src="images/proposal_50_demand.png" class="figure-img">
-<figcaption>
-50% of renewable energy
+</figure>
+</div>
+<p><a href="#fig-mix" class="quarto-xref">Figure&nbsp;<span>3.5</span></a> presents typical daytime series for two scenarios. For the 50% scenario, the contribution from OWP in blue and PV in orange consistently falls below the electricity demand. Their energy output varies seasonally, peaking in summer and spring but declining during autumn and winter. Importantly, the trend shown by the SCC in <a href="#fig-cf_resources" class="quarto-xref">Figure&nbsp;<span>3.4</span></a> is reflected in the peak values seen in <a href="#fig-50" class="quarto-xref">Figure&nbsp;<span>3.5 (a)</span></a> and <a href="#fig-80" class="quarto-xref">Figure&nbsp;<span>3.5 (b)</span></a> throughout the day. Therefore, SCC results provide a dependable metric for assessing resource complementarity.</p>
+<div id="fig-mix" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-mix" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-50" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-50-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/proposal_50_demand.png" class="img-fluid figure-img" data-ref-parent="fig-mix">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-50-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) 50% of renewable energy.
 </figcaption>
 </figure>
-<figure id="fig:80" class="figure">
-<img src="images/proposal_80_demand.png" class="figure-img">
-<figcaption>
-80% of renewable energy
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-mix" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-80" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-80-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/proposal_80_demand.png" class="img-fluid figure-img" data-ref-parent="fig-mix">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-80-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) 80% of renewable energy.
 </figcaption>
 </figure>
-<figcaption>
-Typical days per month of OWP and solar-PV are plotted in blue and orange respectively. In green is represented the electricity demand. Each group of hours on the x-axis corresponds to a typical day of each month.
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.5: Typical days per month of OWP and solar-PV are plotted in blue and orange respectively.<br>
+In green is represented the electricity demand. Each group of hours on the x-axis corresponds to a typical day of each month.
 </figcaption>
 </figure>
+</div>
 <p>The proposed technologies can be implemented within a conventional OWP facility. Nevertheless, solar PV allows for energy production through distributed generation due to the abundance of resources available in the region.</p>
 <p>In the 80% scenario, the OWP-PV generation surpasses the electricity demand just 9% of the time, in alignment with Pareto’s principle. Batteries can be utilized to store a portion of the excess energy to be used during the subsequent peak in demand, occurring from 19:00 to midnight. This analysis, alongside energy efficiency strategies, may also promote specific actions to mitigate the second peak.</p>
 <p>The technical framework for implementing an 80% renewable energy portfolio, consisting of OWP and PV systems, involves multiple aspects. Primarily, it includes the deployment of 104 wind turbines, each with a capacity of 15 MW. This plan is viable for two key reasons: the site is located close to a densely populated area, facilitating energy production near the demand center, and the availability of local port facilities supports the feasibility of the project. The PV systems can be developed using a distributed generation model. The target region consists of the states of Campeche, Quintana Roo, and Yucatan, which collectively include approximately 1,941,252 occupied private homes as per the latest national census data. Thus, achieving the proposed PV capacity can be realized by installing 1 kW per household throughout the region, thanks to a reliable supply of resources.</p>

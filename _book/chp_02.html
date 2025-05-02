@@ -214,16 +214,16 @@ window.Quarto = {
   <ul>
   <li><a href="#data-and-study-area" id="toc-data-and-study-area" class="nav-link active" data-scroll-target="#data-and-study-area"><span class="header-section-number">2.1</span> Data and study area</a>
   <ul class="collapse">
-  <li><a href="#observational-data-sub-aem" id="toc-observational-data-sub-aem" class="nav-link" data-scroll-target="#observational-data-sub-aem"><span class="header-section-number">2.1.1</span> Observational data {#sub: aem}</a></li>
+  <li><a href="#sec-aem" id="toc-sec-aem" class="nav-link" data-scroll-target="#sec-aem"><span class="header-section-number">2.1.1</span> Observational data</a></li>
   <li><a href="#reanalysis-dataset" id="toc-reanalysis-dataset" class="nav-link" data-scroll-target="#reanalysis-dataset"><span class="header-section-number">2.1.2</span> Reanalysis dataset</a></li>
   </ul></li>
   <li><a href="#concepts" id="toc-concepts" class="nav-link" data-scroll-target="#concepts"><span class="header-section-number">2.2</span> Concepts</a>
   <ul class="collapse">
-  <li><a href="#atmospheric-boundary-layer-sub-abl" id="toc-atmospheric-boundary-layer-sub-abl" class="nav-link" data-scroll-target="#atmospheric-boundary-layer-sub-abl"><span class="header-section-number">2.2.1</span> Atmospheric Boundary Layer {#sub: abl}</a></li>
-  <li><a href="#power-curve-sub-power_curve" id="toc-power-curve-sub-power_curve" class="nav-link" data-scroll-target="#power-curve-sub-power_curve"><span class="header-section-number">2.2.2</span> Power curve {#sub: power_curve}</a></li>
+  <li><a href="#sec-abl" id="toc-sec-abl" class="nav-link" data-scroll-target="#sec-abl"><span class="header-section-number">2.2.1</span> Atmospheric Boundary Layer</a></li>
+  <li><a href="#sec-power_curve" id="toc-sec-power_curve" class="nav-link" data-scroll-target="#sec-power_curve"><span class="header-section-number">2.2.2</span> Power curve</a></li>
   <li><a href="#annual-energy-production-and-capacity-factor" id="toc-annual-energy-production-and-capacity-factor" class="nav-link" data-scroll-target="#annual-energy-production-and-capacity-factor"><span class="header-section-number">2.2.3</span> Annual energy production and capacity factor</a></li>
-  <li><a href="#estimation-of-solar-production-sub-solar_production" id="toc-estimation-of-solar-production-sub-solar_production" class="nav-link" data-scroll-target="#estimation-of-solar-production-sub-solar_production"><span class="header-section-number">2.2.4</span> Estimation of solar production {#sub: solar_production}</a></li>
-  <li><a href="#damage-equivalent-load-sub-del" id="toc-damage-equivalent-load-sub-del" class="nav-link" data-scroll-target="#damage-equivalent-load-sub-del"><span class="header-section-number">2.2.5</span> Damage equivalent load {#sub: del}</a></li>
+  <li><a href="#sec-solar_production" id="toc-sec-solar_production" class="nav-link" data-scroll-target="#sec-solar_production"><span class="header-section-number">2.2.4</span> Estimation of solar production</a></li>
+  <li><a href="#sec-del" id="toc-sec-del" class="nav-link" data-scroll-target="#sec-del"><span class="header-section-number">2.2.5</span> Damage equivalent load</a></li>
   </ul></li>
   <li><a href="#the-openfast-software" id="toc-the-openfast-software" class="nav-link" data-scroll-target="#the-openfast-software"><span class="header-section-number">2.3</span> The OpenFAST software</a></li>
   </ul>
@@ -254,109 +254,240 @@ window.Quarto = {
 <p>This chapter describes the data and the conceptual framework utilized in the following chapters. This research uses the ERA5 dataset as the primary data source and also employs experimental data. Finally, the software used in <a href="chp_05.html" class="quarto-xref"><span>Chapter 5</span></a> is introduced.</p>
 <section id="data-and-study-area" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="data-and-study-area"><span class="header-section-number">2.1</span> Data and study area</h2>
-<p>The different approaches covered in this thesis require the manipulation of diverse meteorological variables derived from distinct sources of information, such as the ERA5 <span class="citation" data-cites="ERA5">[<a href="references.html#ref-ERA5" role="doc-biblioref">1</a>]</span> reanalysis and measured data from the “Atlas Eolico Mexicano” (AEM) project <span class="citation" data-cites="ineelAtlasEolicoMexicano">[<a href="references.html#ref-ineelAtlasEolicoMexicano" role="doc-biblioref">2</a>]</span>. These sources also have different time resolutions, with the lowest resolution being hourly and the highest in the order of milliseconds. The time resolution has been selected according to the specific problem analyzed, and its details are thoroughly presented in the methodology section of each of the following chapters. Data is summarized in Table <a href="#tab:%20data" data-reference-type="ref" data-reference="tab: data">[tab: data]</a>, and the application areas are shown in Figure <a href="#fig:%20study_area" data-reference-type="ref" data-reference="fig: study_area">1</a>.</p>
-<figure id="fig: study_area" class="figure">
-<embed src="tesis_diego//Tesis-UNAM-master//images/study_area_thesis.pdf">
-<figcaption>
-Areas of application within Mexico of the topics in this thesis. Points indicate the location of the towers from the AEM, used on Chapter <a href="#chap: enhancing_frequency" data-reference-type="ref" data-reference="chap: enhancing_frequency">[chap: enhancing_frequency]</a>. The Yucatan Peninsula and the Gulf of Tehuantepec areas are analyzed in Chapters <a href="#chap: yucatan" data-reference-type="ref" data-reference="chap: yucatan">[chap: yucatan]</a> and <a href="#chap: tehuantepec" data-reference-type="ref" data-reference="chap: tehuantepec">[chap: tehuantepec]</a>, respectively.
+<p>The different approaches covered in this thesis require the manipulation of diverse meteorological variables derived from distinct sources of information, such as the ERA5 <span class="citation" data-cites="ERA5">[<a href="references.html#ref-ERA5" role="doc-biblioref">1</a>]</span> reanalysis and measured data from the “Atlas Eolico Mexicano” (AEM) project <span class="citation" data-cites="ineelAtlasEolicoMexicano">[<a href="references.html#ref-ineelAtlasEolicoMexicano" role="doc-biblioref">2</a>]</span>. These sources also have different time resolutions, with the lowest resolution being hourly and the highest in the order of milliseconds. The time resolution has been selected according to the specific problem analyzed, and its details are thoroughly presented in the methodology section of each of the following chapters. Data is summarized in <a href="#tbl-data" class="quarto-xref">Table&nbsp;<span>2.1</span></a>, and the application areas are shown in <a href="#fig-study_area" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>.</p>
+<div id="fig-study_area" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-study_area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/study_area_thesis.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-study_area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Areas of application within Mexico of the topics in this thesis. Points indicate the location of the towers from the AEM, used on <a href="chp_04.html" class="quarto-xref"><span>Chapter 4</span></a>. The Yucatan Peninsula and the Gulf of Tehuantepec areas are analyzed in <a href="chp_03.html" class="quarto-xref"><span>Chapter 3</span></a> and <a href="chp_05.html" class="quarto-xref"><span>Chapter 5</span></a>, respectively.
 </figcaption>
 </figure>
-<section id="observational-data-sub-aem" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="observational-data-sub-aem"><span class="header-section-number">2.1.1</span> Observational data {#sub: aem}</h3>
-<p>The “Atlas Eolico Mexicano” (AEM) <span class="citation" data-cites="ineelAtlasEolicoMexicano">[<a href="references.html#ref-ineelAtlasEolicoMexicano" role="doc-biblioref">2</a>]</span> project provides data at seven sites nationwide with a 10-minute resolution. The locations are shown in Figure <a href="#fig:%20study_area" data-reference-type="ref" data-reference="fig: study_area">1</a> and specified in Table <a href="#tab:%20sites" data-reference-type="ref" data-reference="tab: sites">1</a>. The measurements were taken from sensors at 80 m above ground level. At most sites, data is available from November 2017 to July 2020. For this research, we used data only from 2018, as it is the year with the most complete dataset across all sites.</p>
+</div>
+<div id="tbl-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: Sources of information used on this thesis. Meteorological data is obtained from the ERA5 reanalysis, and observational data is collected from met towers.
+</figcaption>
+<div aria-describedby="tbl-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 14%">
+<col style="width: 38%">
+<col style="width: 23%">
+<col style="width: 6%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>: {#tab</th>
-<th style="text-align: left;">: sites}</th>
 <th></th>
-<th></th>
+<th>Location</th>
+<th>Variables from ERA5</th>
+<th>Variables from other sources</th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Site</td>
-<td style="text-align: left;">Location</td>
-<td>Longitude</td>
-<td>Latitude</td>
-<td>Time Zone</td>
+<td></td>
+<td></td>
+<td>Hourly frequency</td>
+<td>Variable</td>
+<td>Time frequency</td>
+</tr>
+<tr class="even">
+<td><a href="chp_03.html" class="quarto-xref"><span>Chapter 3</span></a></td>
+<td>Yucatan Peninsula</td>
+<td>- Horizontal components of WS - Temperature - Solar radiation</td>
+<td>- Electrical demand obtained from CENACE <span class="citation" data-cites="CENACE">[<a href="references.html#ref-CENACE" role="doc-biblioref">3</a>]</span></td>
+<td>Hourly</td>
+</tr>
+<tr class="odd">
+<td><a href="chp_04.html" class="quarto-xref"><span>Chapter 4</span></a></td>
+<td>Points along Mexican territory</td>
+<td>- Horizontal components of WS</td>
+<td>- WS data from AEM <span class="citation" data-cites="ineelAtlasEolicoMexicano">[<a href="references.html#ref-ineelAtlasEolicoMexicano" role="doc-biblioref">2</a>]</span></td>
+<td>10 minutes</td>
+</tr>
+<tr class="even">
+<td><a href="chp_05.html" class="quarto-xref"><span>Chapter 5</span></a></td>
+<td>Gulf of Tehuantepec and North Sea</td>
+<td>- Horizontal components of WS - Significant wave heights - Wave direction - Wave peak period</td>
+<td>- Wind fields generated with TurbSim</td>
+<td>50 miliseconds</td>
 </tr>
 </tbody>
 </table>
-<p>M01 La Rumorosa, B. C. -116.11 32.48 UTC-08:00 M02 Merida, Yuc. -89.78 21.14 UTC-06:00 M03 Cd. Cuauhtémoc, Chih. -106.95 29.02 UTC-06:00 M04 CERTE, La Ventosa, Oax. -94.95 16.55 UTC-06:00 M05 Ojuelos, Jal. -101.71 21.67 UTC-06:00 M06 San Fernando, Tamps. -98.09 25.02 UTC-06:00 M07 Tepexi, Pue. -97.94 18.59 UTC-06:00 —— ————————- ———– ———- ———–</p>
-<p>: Locations of AEM meteorological tower sites in Mexico <span class="citation" data-cites="ineelAtlasEolicoMexicano">[<a href="references.html#ref-ineelAtlasEolicoMexicano" role="doc-biblioref">2</a>]</span>. :::</p>
+</div>
+</figure>
+</div>
+<section id="sec-aem" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="sec-aem"><span class="header-section-number">2.1.1</span> Observational data</h3>
+<p>The “Atlas Eolico Mexicano” (AEM) <span class="citation" data-cites="ineelAtlasEolicoMexicano">[<a href="references.html#ref-ineelAtlasEolicoMexicano" role="doc-biblioref">2</a>]</span> project provides data at seven sites nationwide with a 10-minute resolution. The locations are shown in <a href="#fig-study_area" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> and specified in <a href="#tbl-sites" class="quarto-xref">Table&nbsp;<span>2.2</span></a>. The measurements were taken from sensors at 80 m above ground level. At most sites, data is available from November 2017 to July 2020. For this research, we used data only from 2018, as it is the year with the most complete dataset across all sites.</p>
+<div id="tbl-sites" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.2: Locations of AEM meteorological tower sites in Mexico <span class="citation" data-cites="ineelAtlasEolicoMexicano">[<a href="references.html#ref-ineelAtlasEolicoMexicano" role="doc-biblioref">2</a>]</span>.
+</figcaption>
+<div aria-describedby="tbl-sites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Site</th>
+<th>Location</th>
+<th style="text-align: center;">Longitude</th>
+<th style="text-align: center;">Latitude</th>
+<th style="text-align: center;">Time Zone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>M01</td>
+<td>La Rumorosa, B. C.</td>
+<td style="text-align: center;">-116.11</td>
+<td style="text-align: center;">32.48</td>
+<td style="text-align: center;">UTC-08:00</td>
+</tr>
+<tr class="even">
+<td>M02</td>
+<td>Merida, Yuc.</td>
+<td style="text-align: center;">-89.78</td>
+<td style="text-align: center;">21.14</td>
+<td style="text-align: center;">UTC-06:00</td>
+</tr>
+<tr class="odd">
+<td>M03</td>
+<td>Cd. Cuauhtémoc, Chih.</td>
+<td style="text-align: center;">-106.95</td>
+<td style="text-align: center;">29.02</td>
+<td style="text-align: center;">UTC-06:00</td>
+</tr>
+<tr class="even">
+<td>M04</td>
+<td>CERTE, La Ventosa, Oax.</td>
+<td style="text-align: center;">-94.95</td>
+<td style="text-align: center;">16.55</td>
+<td style="text-align: center;">UTC-06:00</td>
+</tr>
+<tr class="odd">
+<td>M05</td>
+<td>Ojuelos, Jal.</td>
+<td style="text-align: center;">-101.71</td>
+<td style="text-align: center;">21.67</td>
+<td style="text-align: center;">UTC-06:00</td>
+</tr>
+<tr class="even">
+<td>M06</td>
+<td>San Fernando, Tamps.</td>
+<td style="text-align: center;">-98.09</td>
+<td style="text-align: center;">25.02</td>
+<td style="text-align: center;">UTC-06:00</td>
+</tr>
+<tr class="odd">
+<td>M07</td>
+<td>Tepexi, Pue.</td>
+<td style="text-align: center;">-97.94</td>
+<td style="text-align: center;">18.59</td>
+<td style="text-align: center;">UTC-06:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
 <section id="reanalysis-dataset" class="level3" data-number="2.1.2">
 <h3 data-number="2.1.2" class="anchored" data-anchor-id="reanalysis-dataset"><span class="header-section-number">2.1.2</span> Reanalysis dataset</h3>
-<p>Wind energy applications require reliable data sources that provide extensive temporal and regional descriptions of wind resources and other meteorological variables. Reanalysis datasets serve this purpose by offering long-term, consistent records of atmospheric conditions. A reanalysis is defined as “the process whereby an unchanging data assimilation system is used to provide a consistent reprocessing of meteorological observations, typically spanning an extended segment of the historical data record” <span class="citation" data-cites="MERRA2">[<a href="references.html#ref-MERRA2" role="doc-biblioref">3</a>]</span>.</p>
-<p>Reanalysis datasets offer key advantages for atmospheric research <span class="citation" data-cites="reanalysis">[<a href="references.html#ref-reanalysis" role="doc-biblioref">4</a>]</span>, providing spatially and temporally consistent data over several decades. Each reanalysis is produced using a fixed configuration of the numerical model, data assimilation scheme, and observational input streams, ensuring internal consistency across the entire period. This fixed framework allows reanalyses to assimilate extensive observational data into a coherent representation of the atmospheric state, facilitating the analysis of complex climate dynamics beyond the capabilities of sparse observational records alone.</p>
-<p>This thesis utilizes the ERA5 dataset <span class="citation" data-cites="ERA5">[<a href="references.html#ref-ERA5" role="doc-biblioref">1</a>]</span>, produced by the European Centre for Medium-Range Weather Forecasts (ECMWF). ERA5 provides global coverage at a spatial resolution of 0.25<span class="math inline">\(^\circ\)</span> x 0.25<span class="math inline">\(^\circ\)</span>, approximately 31 km at the equator, and an hourly temporal resolution, spanning several decades from 1940 to the present. The dataset is generated through 4D-Var data assimilation, a method used to estimate the best initial state of a system, like the atmosphere. It works by adjusting the initial conditions of a numerical model so that, when the model runs forward in time, its output stays close to the available observations throughout a defined time window. This is done by minimizing a cost function, using both the model’s equations and the observational data.</p>
+<p>Wind energy applications require reliable data sources that provide extensive temporal and regional descriptions of wind resources and other meteorological variables. Reanalysis datasets serve this purpose by offering long-term, consistent records of atmospheric conditions. A reanalysis is defined as “the process whereby an unchanging data assimilation system is used to provide a consistent reprocessing of meteorological observations, typically spanning an extended segment of the historical data record” <span class="citation" data-cites="MERRA2">[<a href="references.html#ref-MERRA2" role="doc-biblioref">4</a>]</span>.</p>
+<p>Reanalysis datasets offer key advantages for atmospheric research <span class="citation" data-cites="reanalysis">[<a href="references.html#ref-reanalysis" role="doc-biblioref">5</a>]</span>, providing spatially and temporally consistent data over several decades. Each reanalysis is produced using a fixed configuration of the numerical model, data assimilation scheme, and observational input streams, ensuring internal consistency across the entire period. This fixed framework allows reanalyses to assimilate extensive observational data into a coherent representation of the atmospheric state, facilitating the analysis of complex climate dynamics beyond the capabilities of sparse observational records alone.</p>
+<p>This thesis utilizes the ERA5 dataset <span class="citation" data-cites="ERA5">[<a href="references.html#ref-ERA5" role="doc-biblioref">1</a>]</span>, produced by the European Centre for Medium-Range Weather Forecasts (ECMWF). ERA5 provides global coverage at a spatial resolution of 0.25° x 0.25°, approximately 31 km at the equator, and an hourly temporal resolution, spanning several decades from 1940 to the present. The dataset is generated through 4D-Var data assimilation, a method used to estimate the best initial state of a system, like the atmosphere. It works by adjusting the initial conditions of a numerical model so that, when the model runs forward in time, its output stays close to the available observations throughout a defined time window. This is done by minimizing a cost function, using both the model’s equations and the observational data.</p>
 </section>
 </section>
 <section id="concepts" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="concepts"><span class="header-section-number">2.2</span> Concepts</h2>
-<section id="atmospheric-boundary-layer-sub-abl" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="atmospheric-boundary-layer-sub-abl"><span class="header-section-number">2.2.1</span> Atmospheric Boundary Layer {#sub: abl}</h3>
-<p>The atmospheric boundary layer (ABL) is the lowest segment of the atmosphere, where wind speed and other meteorological variables are significantly influenced by surface roughness, atmospheric stability, and, in coastal and oceanic regions, by wave momentum flux <span class="citation" data-cites="coeff manwell">[<a href="references.html#ref-coeff" role="doc-biblioref">5</a>, <a href="references.html#ref-manwell" role="doc-biblioref">6</a>]</span>.</p>
+<section id="sec-abl" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-abl"><span class="header-section-number">2.2.1</span> Atmospheric Boundary Layer</h3>
+<p>The atmospheric boundary layer (ABL) is the lowest segment of the atmosphere, where wind speed and other meteorological variables are significantly influenced by surface roughness, atmospheric stability, and, in coastal and oceanic regions, by wave momentum flux <span class="citation" data-cites="coeff manwell">[<a href="references.html#ref-coeff" role="doc-biblioref">6</a>, <a href="references.html#ref-manwell" role="doc-biblioref">7</a>]</span>.</p>
 <p>In wind energy applications, accurate wind speed measurements at the turbine hub height are crucial for optimal performance prediction. In the absence of direct measurements using models that describe the wind speed profile as a function of height within the ABL is commonly employed. Two such models are the logarithmic profile and the power-law profile, which provide distinct representations of the wind speed gradient with height.</p>
-<p>The logarithmic profile is frequently applied to model the wind speed in the surface layer of the ABL, particularly under neutral stability conditions. The model assumes that the wind speed increases logarithmically with height, reflecting the influence of surface roughness and turbulence. It is expressed as <span class="citation" data-cites="manwell">[<a href="references.html#ref-manwell" role="doc-biblioref">6</a>]</span>:</p>
-<p><span class="math display">\[U(z) = \frac{U_*}{\kappa} \ln\left(\frac{z}{z_0}\right)\]</span> where <span class="math inline">\(U(z)\)</span> is the wind speed at height <span class="math inline">\(z\)</span>, <span class="math inline">\(U_*\)</span> is the friction velocity, <span class="math inline">\(\kappa\)</span> is the von Kármán constant (approximately 0.4), and <span class="math inline">\(z_0\)</span> is the roughness length, which is a function of the surface’s roughness. The logarithmic profile is most applicable in conditions where the atmospheric flow is near neutral, with minimal stratification or significant wind shear.</p>
+<p>The logarithmic profile is frequently applied to model the wind speed in the surface layer of the ABL, particularly under neutral stability conditions. The model assumes that the wind speed increases logarithmically with height, reflecting the influence of surface roughness and turbulence. It is expressed as <span class="citation" data-cites="manwell">[<a href="references.html#ref-manwell" role="doc-biblioref">7</a>]</span>:</p>
+<p><span id="eq-log-profile"><span class="math display">\[U(z) = \frac{U_*}{\kappa} \ln\left(\frac{z}{z_0}\right) \tag{2.1}\]</span></span></p>
+<p>where <span class="math inline">\(U(z)\)</span> is the wind speed at height <span class="math inline">\(z\)</span>, <span class="math inline">\(U_*\)</span> is the friction velocity, <span class="math inline">\(\kappa\)</span> is the von Kármán constant (approximately 0.4), and <span class="math inline">\(z_0\)</span> is the roughness length, which is a function of the surface’s roughness. The logarithmic profile is most applicable in conditions where the atmospheric flow is near neutral, with minimal stratification or significant wind shear.</p>
 <p>In contrast, the power-law profile is an empirical model that describes the vertical wind speed profile based on the ratio of wind speeds at two heights. It is defined as:</p>
-<p><span class="math display">\[\frac{U(z)}{U(z_r)} = \left(\frac{z}{z_r}\right)^\alpha
-\label{eq: power_law}\]</span> where <span class="math inline">\(U(z)\)</span> is the wind speed at height <span class="math inline">\(z\)</span>, <span class="math inline">\(U(z_r)\)</span> is the reference wind speed at height <span class="math inline">\(z_r\)</span>, and <span class="math inline">\(\alpha\)</span> is the power-law exponent. The exponent <span class="math inline">\(\alpha\)</span> varies depending on factors such as atmospheric stability and surface roughness, but it is commonly set to 1/7 for onshore applications <span class="citation" data-cites="neutral_abl">[<a href="references.html#ref-neutral_abl" role="doc-biblioref">7</a>]</span>. This model is widely used in wind energy applications due to its simplicity and flexibility. The power-law profile is particularly effective when accurate data at multiple heights are unavailable, as it can be used with just a reference wind speed at one height and a corresponding power-law exponent.</p>
+<p><span id="eq-power_law"><span class="math display">\[\frac{U(z)}{U(z_r)} = \left(\frac{z}{z_r}\right)^\alpha
+\tag{2.2}\]</span></span></p>
+<p>where <span class="math inline">\(U(z)\)</span> is the wind speed at height <span class="math inline">\(z\)</span>, <span class="math inline">\(U(z_r)\)</span> is the reference wind speed at height <span class="math inline">\(z_r\)</span>, and <span class="math inline">\(\alpha\)</span> is the power-law exponent. The exponent <span class="math inline">\(\alpha\)</span> varies depending on factors such as atmospheric stability and surface roughness, but it is commonly set to 1/7 for onshore applications <span class="citation" data-cites="neutral_abl">[<a href="references.html#ref-neutral_abl" role="doc-biblioref">8</a>]</span>. This model is widely used in wind energy applications due to its simplicity and flexibility. The power-law profile is particularly effective when accurate data at multiple heights are unavailable, as it can be used with just a reference wind speed at one height and a corresponding power-law exponent.</p>
 <p>In this thesis, the power-law profile is used to estimate wind speeds at hub heights where wind speed data is not available. The selection of this model is based on its suitability for the available data, as it does not require the estimation of friction velocity or roughness length. Furthermore, instead of using a constant value for the <span class="math inline">\(\alpha\)</span> exponent, a value is calculated for each time step based on the available heights and then used to extrapolate to the required height.</p>
 </section>
-<section id="power-curve-sub-power_curve" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="power-curve-sub-power_curve"><span class="header-section-number">2.2.2</span> Power curve {#sub: power_curve}</h3>
-<p>The power curve is a fundamental characteristic of a wind turbine, representing the relationship between the average wind speed at hub height and the electrical power output. As shown in Figure <a href="#fig:%20power_curve" data-reference-type="ref" data-reference="fig: power_curve">2</a>, a typical power curve identifies three critical wind speeds:</p>
+<section id="sec-power_curve" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="sec-power_curve"><span class="header-section-number">2.2.2</span> Power curve</h3>
+<p>The power curve is a fundamental characteristic of a wind turbine, representing the relationship between the average wind speed at hub height and the electrical power output. As shown in <a href="#fig-power_curve" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>, a typical power curve identifies three critical wind speeds:</p>
 <ul>
 <li><p><strong>Cut-in wind speed</strong>: The minimum wind speed at which the turbine begins generating power.</p></li>
 <li><p><strong>Rated wind speed</strong>: The wind speed at which the turbine reaches its maximum nominal power output.</p></li>
 <li><p><strong>Cut-out wind speed</strong>: The wind speed at which the turbine shuts down to prevent damage.</p></li>
 </ul>
-<p><embed src="images/power_c.pdf" class="img-fluid">{#fig: power_curve}</p>
-<p>The power curve, provided by the manufacturer, is used to estimate energy production by evaluating wind speeds against the curve. This curve typically represents the net electrical power output, meaning that drivetrain and electrical losses are already included. However, it remains an idealized representation, as it does not account for site-specific factors such as turbulence or wake effects <span class="citation" data-cites="wind_turbine">[<a href="references.html#ref-wind_turbine" role="doc-biblioref">8</a>]</span>.</p>
+<div id="fig-power_curve" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-power_curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/power_c.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-power_curve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Power curve for a typical wind turbine, highlighting cut-in, rated, and cut-out wind speeds.
+</figcaption>
+</figure>
+</div>
+<p>The power curve, provided by the manufacturer, is used to estimate energy production by evaluating wind speeds against the curve. This curve typically represents the net electrical power output, meaning that drivetrain and electrical losses are already included. However, it remains an idealized representation, as it does not account for site-specific factors such as turbulence or wake effects <span class="citation" data-cites="wind_turbine">[<a href="references.html#ref-wind_turbine" role="doc-biblioref">9</a>]</span>.</p>
 </section>
 <section id="annual-energy-production-and-capacity-factor" class="level3" data-number="2.2.3">
 <h3 data-number="2.2.3" class="anchored" data-anchor-id="annual-energy-production-and-capacity-factor"><span class="header-section-number">2.2.3</span> Annual energy production and capacity factor</h3>
-<p>The annual energy production (AEP) of a wind turbine represents the total electrical energy generated over a one-year period. It is computed by summing the power output, evaluated using the turbine’s power curve <span class="math inline">\(P(U_t)\)</span>, across all time steps <span class="citation" data-cites="manwell">[<a href="references.html#ref-manwell" role="doc-biblioref">6</a>]</span>:</p>
-<p><span class="math display">\[AEP = \sum_{t=1}^{N} P(U_t) \, \Delta t
-\label{eq: aep}\]</span> where <span class="math inline">\(N\)</span> is the number of wind speed observations, <span class="math inline">\(U_t\)</span> is the wind speed at time step <span class="math inline">\(t\)</span>, and <span class="math inline">\(\Delta t\)</span> is the time interval between successive observations, determined by the temporal resolution of the dataset. Thus, if <span class="math inline">\(\Delta t\)</span> is constant, the total time covered in the period is given by:</p>
-<p><span class="math display">\[\text{Time} = \sum_{t=1}^{N} \Delta t = N \cdot \Delta t\]</span></p>
+<p>The annual energy production (AEP) of a wind turbine represents the total electrical energy generated over a one-year period. It is computed by summing the power output, evaluated using the turbine’s power curve <span class="math inline">\(P(U_t)\)</span>, across all time steps <span class="citation" data-cites="manwell">[<a href="references.html#ref-manwell" role="doc-biblioref">7</a>]</span>:</p>
+<p><span id="eq-aep"><span class="math display">\[AEP = \sum_{t=1}^{N} P(U_t) \, \Delta t
+\tag{2.3}\]</span></span></p>
+<p>where <span class="math inline">\(N\)</span> is the number of wind speed observations, <span class="math inline">\(U_t\)</span> is the wind speed at time step <span class="math inline">\(t\)</span>, and <span class="math inline">\(\Delta t\)</span> is the time interval between successive observations, determined by the temporal resolution of the dataset. Thus, if <span class="math inline">\(\Delta t\)</span> is constant, the total time covered in the period is given by:</p>
+<p><span id="eq-period"><span class="math display">\[\text{Time} = \sum_{t=1}^{N} \Delta t = N \cdot \Delta t
+\tag{2.4}\]</span></span></p>
 <p>The AEP is idealized and does not account for losses such as wake effects, transmission inefficiencies, or turbine downtime due to maintenance or curtailment.</p>
-<p>The capacity factor (CF) quantifies the turbine’s actual energy output relative to the theoretical maximum it could produce if it operated at nominal power throughout the entire period. It is defined as <span class="citation" data-cites="manwell">[<a href="references.html#ref-manwell" role="doc-biblioref">6</a>]</span>:</p>
-<p><span class="math display">\[CF = \frac{AEP}{P_{\text{rated}} \cdot \text{Time}}
-\label{eq: cf}\]</span></p>
+<p>The capacity factor (CF) quantifies the turbine’s actual energy output relative to the theoretical maximum it could produce if it operated at nominal power throughout the entire period. It is defined as <span class="citation" data-cites="manwell">[<a href="references.html#ref-manwell" role="doc-biblioref">7</a>]</span>:</p>
+<p><span id="eq-cf"><span class="math display">\[CF = \frac{AEP}{P_{\text{rated}} \cdot \text{Time}}
+\tag{2.5}\]</span></span></p>
 <p>where <span class="math inline">\(P_{\text{rated}}\)</span> is the turbine’s nominal power. The CF is a measure of the performance of a wind turbine or wind farm at a specific location, a 100% value indicates that the turbine is producing its maximum power output over a given period, typically a year.</p>
 <p>It is essential that the same time period is used when calculating both AEP and CF to ensure consistency and comparability across different turbines or sites.</p>
 </section>
-<section id="estimation-of-solar-production-sub-solar_production" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="estimation-of-solar-production-sub-solar_production"><span class="header-section-number">2.2.4</span> Estimation of solar production {#sub: solar_production}</h3>
+<section id="sec-solar_production" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="sec-solar_production"><span class="header-section-number">2.2.4</span> Estimation of solar production</h3>
 <p>The power output <span class="math inline">\(P_{out}\)</span> of a PV module with a rated power, <span class="math inline">\(P_N\)</span>, a power temperature coefficient, <span class="math inline">\(\gamma\)</span> and a rate coefficient <span class="math inline">\(c_1\)</span> is calculated as:</p>
-<p><span class="math display">\[P_{out} = \frac{G_t}{G_{STC}} \cdot P_N \cdot c_1 \left[1 + \frac{\gamma}{100}(T_{PV} - T_{STC})\right],
-\label{eq: solar_power}\]</span> where <span class="math inline">\(G_t\)</span> and <span class="math inline">\(G_{STC}\)</span> are the solar irradiances at the site and standard test conditions (STC), respectively, and <span class="math inline">\(T_{STC} = 25^\circ\)</span> C. The PV module temperature <span class="math inline">\(T_{PV}\)</span> is calculated as:</p>
+<p><span id="eq-solar_power"><span class="math display">\[P_{out} = \frac{G_t}{G_{STC}} \cdot P_N \cdot c_1 \left[1 + \frac{\gamma}{100}(T_{PV} - T_{STC})\right]
+\tag{2.6}\]</span></span></p>
+<p>where <span class="math inline">\(G_t\)</span> and <span class="math inline">\(G_{STC}\)</span> are the solar irradiances at the site and standard test conditions (STC), respectively, and <span class="math inline">\(T_{STC} = 25^\circ\)</span> C. The PV module temperature <span class="math inline">\(T_{PV}\)</span> is calculated as:</p>
 <p><span class="math display">\[T_{PV} = T_a + G_t \cdot \frac{T_{PV, TETC} - T_{a, TETC}}{G_{TETC}}
-\label{eq: temp_panel}\]</span> where <span class="math inline">\(T_a\)</span> is the ambient temperature, <span class="math inline">\(T_{PV, TETC} = 47^\circ\)</span> C and <span class="math inline">\(T_{a, TETC} = 20^\circ\)</span> C are the module and ambient temperatures at Temperature Estimation Test Condition (TETC), and <span class="math inline">\(G_{TETC} = 800\)</span> W/m<span class="math inline">\(^2\)</span> is the irradiance at TETC.</p>
+\]</span> {<span class="quarto-unresolved-ref">?eq-temp_panel</span>}</p>
+<p>where <span class="math inline">\(T_a\)</span> is the ambient temperature, <span class="math inline">\(T_{PV, TETC} = 47^\circ\)</span> C and <span class="math inline">\(T_{a, TETC} = 20^\circ\)</span> C are the module and ambient temperatures at Temperature Estimation Test Condition (TETC), and <span class="math inline">\(G_{TETC} = 800\)</span> W/m<span class="math inline">\(^2\)</span> is the irradiance at TETC.</p>
 </section>
-<section id="damage-equivalent-load-sub-del" class="level3" data-number="2.2.5">
-<h3 data-number="2.2.5" class="anchored" data-anchor-id="damage-equivalent-load-sub-del"><span class="header-section-number">2.2.5</span> Damage equivalent load {#sub: del}</h3>
-<p>The damage equivalent load (DEL) represents a simplified measure of fatigue damage commonly used in wind turbine analysis, by converting varying load cycles into an equivalent constant amplitude load <span class="citation" data-cites="grieve2022 lee2005fatigue">[<a href="references.html#ref-grieve2022" role="doc-biblioref">9</a>, <a href="references.html#ref-lee2005fatigue" role="doc-biblioref">10</a>]</span>. This allows quantifying the fatigue loads experienced by a wind turbine due to external factors such as wind and waves.</p>
+<section id="sec-del" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="sec-del"><span class="header-section-number">2.2.5</span> Damage equivalent load</h3>
+<p>The damage equivalent load (DEL) represents a simplified measure of fatigue damage commonly used in wind turbine analysis, by converting varying load cycles into an equivalent constant amplitude load <span class="citation" data-cites="grieve2022 lee2005fatigue">[<a href="references.html#ref-grieve2022" role="doc-biblioref">10</a>, <a href="references.html#ref-lee2005fatigue" role="doc-biblioref">11</a>]</span>. This allows quantifying the fatigue loads experienced by a wind turbine due to external factors such as wind and waves.</p>
 <p>The <span class="math inline">\({DEL}_{M_{dir_{p}}}\)</span> is the total damage equivalent load for all events in wind direction <em>p</em> during 25 years, a typical lifetime for a turbine, is defined as:</p>
-<p><span class="math display">\[\text{DEL}_{M_{dir_{p}}} = \left( \sum_r P_r \left(\sum_i \frac{n_i M_i^k}{T_{sim}}\right) \right)^{1/k}\]</span> where <span class="math inline">\(P_r\)</span> is the probability of occurrence of a load case <span class="math inline">\(r\)</span>, representing a specific combination of meteorological conditions. <span class="math inline">\(n_i\)</span> is the number of load cycles for the <span class="math inline">\(i\)</span>-th event, obtained from a load time series. <span class="math inline">\(M_i\)</span> is the magnitude of the load (e.g., bending moment or stress) for the <span class="math inline">\(i\)</span>-th event. <span class="math inline">\(k\)</span> is the fatigue exponent, a material property that reflects the sensitivity of the material to fatigue damage. <span class="math inline">\(T_{\text{sim}}\)</span> is the duration over which the load time series is evaluated. This formulation aggregates the fatigue contributions from all load events, scales them by their probabilities, and computes an equivalent constant load.</p>
+<p><span id="eq-del"><span class="math display">\[\text{DEL}_{M_{dir_{p}}} = \left( \sum_r P_r \left(\sum_i \frac{n_i M_i^k}{T_{sim}}\right) \right)^{1/k}
+\tag{2.7}\]</span></span></p>
+<p>where <span class="math inline">\(P_r\)</span> is the probability of occurrence of a load case <span class="math inline">\(r\)</span>, representing a specific combination of meteorological conditions. <span class="math inline">\(n_i\)</span> is the number of load cycles for the <span class="math inline">\(i\)</span>-th event, obtained from a load time series. <span class="math inline">\(M_i\)</span> is the magnitude of the load (e.g., bending moment or stress) for the <span class="math inline">\(i\)</span>-th event. <span class="math inline">\(k\)</span> is the fatigue exponent, a material property that reflects the sensitivity of the material to fatigue damage. <span class="math inline">\(T_{\text{sim}}\)</span> is the duration over which the load time series is evaluated. This formulation aggregates the fatigue contributions from all load events, scales them by their probabilities, and computes an equivalent constant load.</p>
 </section>
 </section>
 <section id="the-openfast-software" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="the-openfast-software"><span class="header-section-number">2.3</span> The OpenFAST software</h2>
-<p>OpenFAST is an open-source, multi-physics simulation tool developed by the National Renewable Energy Laboratory (NREL) to model Fatigue, Aerodynamics, Structures, and Turbulence of wind turbines <span class="citation" data-cites="openfast_documentation">[<a href="references.html#ref-openfast_documentation" role="doc-biblioref">11</a>]</span>. It is widely used in the wind energy industry and academy for analyzing the performance, structural loads, and stability of both onshore and offshore wind turbines <span class="citation" data-cites="fast_gov tranCFDStudyCoupled2018 hashemiAssessmentHurricaneGenerated2021 maWindwaveInducedDynamic2014 moratoUltimateLoadsResponse2017a xuExtremeLoadsAnalysis2020 papiTechnicalChallengesFloating2022">[<a href="references.html#ref-fast_gov" role="doc-biblioref">12</a>–<a href="references.html#ref-papiTechnicalChallengesFloating2022" role="doc-biblioref">18</a>]</span>.</p>
+<p>OpenFAST is an open-source, multi-physics simulation tool developed by the National Renewable Energy Laboratory (NREL) to model Fatigue, Aerodynamics, Structures, and Turbulence of wind turbines <span class="citation" data-cites="openfast_documentation">[<a href="references.html#ref-openfast_documentation" role="doc-biblioref">12</a>]</span>. It is widely used in the wind energy industry and academy for analyzing the performance, structural loads, and stability of both onshore and offshore wind turbines <span class="citation" data-cites="fast_gov tranCFDStudyCoupled2018 hashemiAssessmentHurricaneGenerated2021 maWindwaveInducedDynamic2014 moratoUltimateLoadsResponse2017a xuExtremeLoadsAnalysis2020 papiTechnicalChallengesFloating2022">[<a href="references.html#ref-fast_gov" role="doc-biblioref">13</a>–<a href="references.html#ref-papiTechnicalChallengesFloating2022" role="doc-biblioref">19</a>]</span>.</p>
 <p>To achieve realistic simulations, OpenFAST employs a multi-body dynamics approach, where each component of the wind turbine such as blades, tower, drivetrain, and foundation is modeled as a flexible or rigid body with defined degrees of freedom. These components interact through aerodynamic, hydrodynamic, and structural coupling, capturing the intricate physics of turbine operation under various conditions. OpenFAST solves the coupled equations of motion governing a wind turbine system by integrating these multiple physical interactions.</p>
-<p>OpenFAST requires detailed input data to initialize a simulation, including turbine geometry, material properties, environmental conditions such as wind and wave characteristics, and control system parameters. The software processes these inputs and employs advanced numerical solvers to iteratively compute structural deformations, aerodynamic loads, and hydrodynamic interactions over time. Figure <a href="#fig:%20turbine_sim" data-reference-type="ref" data-reference="fig: turbine_sim">3</a> presents a schematic of the wind turbine model, illustrating key components such as the blades, hub, nacelle, tower, and platform, along with relevant geometric and dynamic parameters.</p>
-<figure id="fig: turbine_sim" class="figure">
-<img src="tesis_diego/Tesis-UNAM-master/images/turbine_schema.png" style="width:85.0%" class="figure-img">
-<figcaption>
-Geometric layout of a wind turbine in OpenFAST, illustrating key structural elements and reference distances such as tower height, hub and nacelle positions, rotor axis orientation, and blade angles. . Obtained from <span class="citation" data-cites="singh2014simulation"></span>.
+<p>OpenFAST requires detailed input data to initialize a simulation, including turbine geometry, material properties, environmental conditions such as wind and wave characteristics, and control system parameters. The software processes these inputs and employs advanced numerical solvers to iteratively compute structural deformations, aerodynamic loads, and hydrodynamic interactions over time. <a href="#fig-turbine_sim" class="quarto-xref">Figure&nbsp;<span>2.3</span></a> presents a schematic of the wind turbine model, illustrating key components such as the blades, hub, nacelle, tower, and platform, along with relevant geometric and dynamic parameters.</p>
+<div id="fig-turbine_sim" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-turbine_sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/turbine_schema.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-turbine_sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Geometric layout of a wind turbine in OpenFAST, illustrating key structural elements and reference distances such as tower height, hub and nacelle positions, rotor axis orientation, and blade angles. Obtained from <span class="citation" data-cites="singh2014simulation">[<a href="references.html#ref-singh2014simulation" role="doc-biblioref">20</a>]</span>.
 </figcaption>
 </figure>
+</div>
 <p>OpenFAST employs a time-domain approach to simulate turbine responses to environmental conditions, including wind, waves, and currents. Advanced numerical methods ensure accuracy and stability, even for highly complex systems like floating offshore wind turbines. Once the simulation is completed, the results can be analyzed to assess turbine performance, identify potential structural stresses, and optimize design configurations. Its modular design allows users to activate or deactivate specific components depending on their analysis objectives.</p>
 <p>The software’s modular architecture enables users to model individual components or simulate the entire turbine system based on specific research and design needs. OpenFAST consists of several specialized modules, each dedicated to a specific aspect of wind turbine modeling:</p>
 <ul>
@@ -376,53 +507,59 @@ Geometric layout of a wind turbine in OpenFAST, illustrating key structural elem
 <div id="ref-ineelAtlasEolicoMexicano" class="csl-entry" role="listitem">
 <div class="csl-left-margin">2. </div><div class="csl-right-inline">INEEL Atlas <span>Eolico Mexicano</span></div>
 </div>
+<div id="ref-CENACE" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">CENACE (Consulted - 2022) Centro nacional de control de energ<span>í</span>a - <span class="nocase">https://www.gob.mx/cenace</span>. Gobierno de M<span>é</span>xico</div>
+</div>
 <div id="ref-MERRA2" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Gelaro R, McCarty W, Suárez MJ, et al (2017) The modern-era retrospective analysis for research and applications, version 2 (<span>MERRA-2</span>). Journal of Climate 30:5419–5454. <a href="https://doi.org/10.1175/JCLI-D-16-0758.1">https://doi.org/10.1175/JCLI-D-16-0758.1</a></div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Gelaro R, McCarty W, Suárez MJ, et al (2017) The modern-era retrospective analysis for research and applications, version 2 (<span>MERRA-2</span>). Journal of Climate 30:5419–5454. <a href="https://doi.org/10.1175/JCLI-D-16-0758.1">https://doi.org/10.1175/JCLI-D-16-0758.1</a></div>
 </div>
 <div id="ref-reanalysis" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Dee D, Fasullo J, Shea D, Walsh J, for Atmospheric Research Staff NC The climate data guide: <span>Atmospheric</span> reanalysis: <span>Overview</span> &amp; comparison tables</div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Dee D, Fasullo J, Shea D, Walsh J, for Atmospheric Research Staff NC The climate data guide: <span>Atmospheric</span> reanalysis: <span>Overview</span> &amp; comparison tables</div>
 </div>
 <div id="ref-coeff" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Hsu SA, Meindl EA, Gilhousen DB (1994) Determining the power-law wind-profile exponent under near-neutral stability conditions at sea. Journal of Applied Meteorology 33(6):757–765</div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Hsu SA, Meindl EA, Gilhousen DB (1994) Determining the power-law wind-profile exponent under near-neutral stability conditions at sea. Journal of Applied Meteorology 33(6):757–765</div>
 </div>
 <div id="ref-manwell" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Manwell J, Mcgowan J, Rogers A (2006) <a href="https://doi.org/10.1002/9781119994367">Wind energy explained: <span>Theory</span>, design and application, second edition</a>. John Wiley &amp; Sons, Ltd</div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Manwell J, Mcgowan J, Rogers A (2006) <a href="https://doi.org/10.1002/9781119994367">Wind energy explained: <span>Theory</span>, design and application, second edition</a>. John Wiley &amp; Sons, Ltd</div>
 </div>
 <div id="ref-neutral_abl" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Arya SP (1988) <a href="https://doi.org/10.1016/S0074-6142(08)60425-8">Chapter 10 neutral boundary layers</a>. In: Introduction to micrometeorology. Academic Press, pp 141–156</div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Arya SP (1988) <a href="https://doi.org/10.1016/S0074-6142(08)60425-8">Chapter 10 neutral boundary layers</a>. In: Introduction to micrometeorology. Academic Press, pp 141–156</div>
 </div>
 <div id="ref-wind_turbine" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Lydia M, Kumar SS, Selvakumar AI, Prem Kumar GE (2014) A comprehensive review on wind turbine power curve modeling techniques. Renewable and Sustainable Energy Reviews 30:452–460</div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Lydia M, Kumar SS, Selvakumar AI, Prem Kumar GE (2014) A comprehensive review on wind turbine power curve modeling techniques. Renewable and Sustainable Energy Reviews 30:452–460</div>
 </div>
 <div id="ref-grieve2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Grieve N, Kazemi Amiri AM, Leithead WE (2022) A straightforward approach to site-wide assessment of wind turbine tower lifetime extension potential. Energies 15(3380). <a href="https://doi.org/10.3390/en15093380">https://doi.org/10.3390/en15093380</a></div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Grieve N, Kazemi Amiri AM, Leithead WE (2022) A straightforward approach to site-wide assessment of wind turbine tower lifetime extension potential. Energies 15(3380). <a href="https://doi.org/10.3390/en15093380">https://doi.org/10.3390/en15093380</a></div>
 </div>
 <div id="ref-lee2005fatigue" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Lee YL (2005) Fatigue testing and analysis: <span>Theory</span> and practice. Elsevier Science</div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Lee YL (2005) Fatigue testing and analysis: <span>Theory</span> and practice. Elsevier Science</div>
 </div>
 <div id="ref-openfast_documentation" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">National Renewable Energy Laboratory (2025) <span>OpenFAST</span> documentation</div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">National Renewable Energy Laboratory (2025) <span>OpenFAST</span> documentation</div>
 </div>
 <div id="ref-fast_gov" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">U.S. Department of Energy (2023) Modeling the future of wind energy</div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">U.S. Department of Energy (2023) Modeling the future of wind energy</div>
 </div>
 <div id="ref-tranCFDStudyCoupled2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline">Tran TT, Kim D-H (2018) A <span>CFD</span> study of coupled aerodynamic-hydrodynamic loads on a semisubmersible floating offshore wind turbine. Wind Energy 21(1):70–85. <a href="https://doi.org/10.1002/we.2145">https://doi.org/10.1002/we.2145</a></div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Tran TT, Kim D-H (2018) A <span>CFD</span> study of coupled aerodynamic-hydrodynamic loads on a semisubmersible floating offshore wind turbine. Wind Energy 21(1):70–85. <a href="https://doi.org/10.1002/we.2145">https://doi.org/10.1002/we.2145</a></div>
 </div>
 <div id="ref-hashemiAssessmentHurricaneGenerated2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline">Hashemi MR, Kresning B, Hashemi J, Ginis I (2021) Assessment of hurricane generated loads on offshore wind farms; a closer look at most extreme historical hurricanes in <span>New England</span>. Renewable Energy 175:593–609. <a href="https://doi.org/10.1016/j.renene.2021.05.042">https://doi.org/10.1016/j.renene.2021.05.042</a></div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Hashemi MR, Kresning B, Hashemi J, Ginis I (2021) Assessment of hurricane generated loads on offshore wind farms; a closer look at most extreme historical hurricanes in <span>New England</span>. Renewable Energy 175:593–609. <a href="https://doi.org/10.1016/j.renene.2021.05.042">https://doi.org/10.1016/j.renene.2021.05.042</a></div>
 </div>
 <div id="ref-maWindwaveInducedDynamic2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline">Ma Y, Hu Z, Xiao L (2014) Wind-wave induced dynamic response analysis for motions and mooring loads of a spar-type offshore floating wind turbine. Journal of Hydrodynamics 26(6):865–874. <a href="https://doi.org/10.1016/S1001-6058(14)60095-0">https://doi.org/10.1016/S1001-6058(14)60095-0</a></div>
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Ma Y, Hu Z, Xiao L (2014) Wind-wave induced dynamic response analysis for motions and mooring loads of a spar-type offshore floating wind turbine. Journal of Hydrodynamics 26(6):865–874. <a href="https://doi.org/10.1016/S1001-6058(14)60095-0">https://doi.org/10.1016/S1001-6058(14)60095-0</a></div>
 </div>
 <div id="ref-moratoUltimateLoadsResponse2017a" class="csl-entry" role="listitem">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline">Morató A, Sriramula S, Krishnan N, Nichols J (2017) Ultimate loads and response analysis of a monopile supported offshore wind turbine using fully coupled simulation. Renewable Energy 101:126–143. <a href="https://doi.org/10.1016/j.renene.2016.08.056">https://doi.org/10.1016/j.renene.2016.08.056</a></div>
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Morató A, Sriramula S, Krishnan N, Nichols J (2017) Ultimate loads and response analysis of a monopile supported offshore wind turbine using fully coupled simulation. Renewable Energy 101:126–143. <a href="https://doi.org/10.1016/j.renene.2016.08.056">https://doi.org/10.1016/j.renene.2016.08.056</a></div>
 </div>
 <div id="ref-xuExtremeLoadsAnalysis2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline">Xu X, Gaidai O, Naess A, Sahoo P (2020) Extreme loads analysis of a site-specific semi-submersible type wind turbine. Ships and Offshore Structures 15(sup1):S46–S54. <a href="https://doi.org/10.1080/17445302.2020.1733315">https://doi.org/10.1080/17445302.2020.1733315</a></div>
+<div class="csl-left-margin">18. </div><div class="csl-right-inline">Xu X, Gaidai O, Naess A, Sahoo P (2020) Extreme loads analysis of a site-specific semi-submersible type wind turbine. Ships and Offshore Structures 15(sup1):S46–S54. <a href="https://doi.org/10.1080/17445302.2020.1733315">https://doi.org/10.1080/17445302.2020.1733315</a></div>
 </div>
 <div id="ref-papiTechnicalChallengesFloating2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline">Papi F, Bianchini A (2022) Technical challenges in floating offshore wind turbine upscaling: <span>A</span> critical analysis based on the <span>NREL</span> 5 <span>MW</span> and <span>IEA</span> 15 <span>MW Reference Turbines</span>. Renewable and Sustainable Energy Reviews 162:112489. <a href="https://doi.org/10.1016/j.rser.2022.112489">https://doi.org/10.1016/j.rser.2022.112489</a></div>
+<div class="csl-left-margin">19. </div><div class="csl-right-inline">Papi F, Bianchini A (2022) Technical challenges in floating offshore wind turbine upscaling: <span>A</span> critical analysis based on the <span>NREL</span> 5 <span>MW</span> and <span>IEA</span> 15 <span>MW Reference Turbines</span>. Renewable and Sustainable Energy Reviews 162:112489. <a href="https://doi.org/10.1016/j.rser.2022.112489">https://doi.org/10.1016/j.rser.2022.112489</a></div>
+</div>
+<div id="ref-singh2014simulation" class="csl-entry" role="listitem">
+<div class="csl-left-margin">20. </div><div class="csl-right-inline">Singh M, Muljadi E, Jonkman J, Gevorgian V, Girsang I, Dhupia J (2014) Simulation for wind turbine generators—with <span>FAST</span> and <span class="nocase">MATLAB-simulink</span> modules. National Renewable Energy Laboratory</div>
 </div>
 </div>
 </section>

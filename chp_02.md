@@ -15,54 +15,51 @@ These sources also have different time resolutions, with the lowest
 resolution being hourly and the highest in the order of milliseconds.
 The time resolution has been selected according to the specific problem
 analyzed, and its details are thoroughly presented in the methodology
-section of each of the following chapters. Data is summarized in Table
-[\[tab: data\]](#tab: data){reference-type="ref" reference="tab: data"},
-and the application areas are shown in Figure
-[1](#fig: study_area){reference-type="ref" reference="fig: study_area"}.
+section of each of the following chapters. Data is summarized in @tbl-data,
+and the application areas are shown in @fig-study_area.
 
-<figure id="fig: study_area">
-<embed
-src="tesis_diego//Tesis-UNAM-master//images/study_area_thesis.pdf" />
-<figcaption>Areas of application within Mexico of the topics in this
+::: {#fig-study_area}
+
+![](images/study_area_thesis.png)
+
+Areas of application within Mexico of the topics in this
 thesis. Points indicate the location of the towers from the AEM, used on
-Chapter <a href="#chap: enhancing_frequency" data-reference-type="ref"
-data-reference="chap: enhancing_frequency">[chap:
-enhancing_frequency]</a>. The Yucatan Peninsula and the Gulf of
-Tehuantepec areas are analyzed in Chapters <a href="#chap: yucatan"
-data-reference-type="ref" data-reference="chap: yucatan">[chap:
-yucatan]</a> and <a href="#chap: tehuantepec" data-reference-type="ref"
-data-reference="chap: tehuantepec">[chap: tehuantepec]</a>,
-respectively.</figcaption>
-</figure>
+@sec-enhancing_frequency. The Yucatan Peninsula and the Gulf of
+Tehuantepec areas are analyzed in @sec-yucatan and @sec-tehuantepec,
+respectively.
 
-### Observational data {#sub: aem}
+:::
+
+|                                         | Location                          | Variables from ERA5                                                                          | Variables from other sources                            |                |
+|-----------------------------------------|-----------------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------|----------------|
+|                                         |                                   | Hourly frequency                                                                             | Variable                                                | Time frequency |
+| @sec-yucatan             | Yucatan Peninsula                 | - Horizontal components of WS - Temperature - Solar radiation                                | - Electrical demand  obtained from CENACE @CENACE | Hourly         |
+| @sec-enhancing_frequency | Points along  Mexican territory   | - Horizontal components of WS                                                                | - WS data from AEM @ineelAtlasEolicoMexicano      | 10 minutes     |
+| @sec-tehuantepec         | Gulf of Tehuantepec and North Sea | - Horizontal components of WS - Significant wave heights - Wave direction - Wave peak period | - Wind fields generated with TurbSim                    | 50 miliseconds |
+
+: Sources of information used on this thesis. Meteorological data is obtained from the ERA5 reanalysis, and observational data is collected from met towers. {#tbl-data}
+
+### Observational data {#sec-aem}
 
 The "Atlas Eolico Mexicano" (AEM) [@ineelAtlasEolicoMexicano] project
 provides data at seven sites nationwide with a 10-minute resolution. The
-locations are shown in Figure [1](#fig: study_area){reference-type="ref"
-reference="fig: study_area"} and specified in Table
-[1](#tab: sites){reference-type="ref" reference="tab: sites"}. The
+locations are shown in @fig-study_area and specified in @tbl-sites. The
 measurements were taken from sensors at 80 m above ground level. At most
 sites, data is available from November 2017 to July 2020. For this
 research, we used data only from 2018, as it is the year with the most
 complete dataset across all sites.
 
-::: {#tab: sites}
-  ------ ------------------------- ----------- ---------- -----------
-  Site   Location                    Longitude   Latitude   Time Zone
-                                                          
-  M01    La Rumorosa, B. C.            -116.11      32.48   UTC-08:00
-  M02    Merida, Yuc.                   -89.78      21.14   UTC-06:00
-  M03    Cd. Cuauhtémoc, Chih.         -106.95      29.02   UTC-06:00
-  M04    CERTE, La Ventosa, Oax.        -94.95      16.55   UTC-06:00
-  M05    Ojuelos, Jal.                 -101.71      21.67   UTC-06:00
-  M06    San Fernando, Tamps.           -98.09      25.02   UTC-06:00
-  M07    Tepexi, Pue.                   -97.94      18.59   UTC-06:00
-  ------ ------------------------- ----------- ---------- -----------
+| Site | Location                | Longitude | Latitude | Time Zone |
+|------|-------------------------|:---------:|:--------:|:---------:|
+| M01  | La Rumorosa, B. C.      |   -116.11 |    32.48 | UTC-08:00 |
+| M02  | Merida, Yuc.            |    -89.78 |    21.14 | UTC-06:00 |
+| M03  | Cd. Cuauhtémoc, Chih.   |   -106.95 |    29.02 | UTC-06:00 |
+| M04  | CERTE, La Ventosa, Oax. |    -94.95 |    16.55 | UTC-06:00 |
+| M05  | Ojuelos, Jal.           |   -101.71 |    21.67 | UTC-06:00 |
+| M06  | San Fernando, Tamps.    |    -98.09 |    25.02 | UTC-06:00 |
+| M07  | Tepexi, Pue.            |    -97.94 |    18.59 | UTC-06:00 |
 
-  : Locations of AEM meteorological tower sites in Mexico
-  [@ineelAtlasEolicoMexicano].
-:::
+: Locations of AEM meteorological tower sites in Mexico [@ineelAtlasEolicoMexicano]. {#tbl-sites}
 
 ### Reanalysis dataset
 
@@ -87,7 +84,7 @@ capabilities of sparse observational records alone.
 
 This thesis utilizes the ERA5 dataset [@ERA5], produced by the European
 Centre for Medium-Range Weather Forecasts (ECMWF). ERA5 provides global
-coverage at a spatial resolution of 0.25$^\circ$ x 0.25$^\circ$,
+coverage at a spatial resolution of 0.25° x 0.25°,
 approximately 31 km at the equator, and an hourly temporal resolution,
 spanning several decades from 1940 to the present. The dataset is
 generated through 4D-Var data assimilation, a method used to estimate
@@ -100,7 +97,7 @@ observational data.
 
 ## Concepts
 
-### Atmospheric Boundary Layer {#sub: abl}
+### Atmospheric Boundary Layer {#sec-abl}
 
 The atmospheric boundary layer (ABL) is the lowest segment of the
 atmosphere, where wind speed and other meteorological variables are
@@ -122,7 +119,9 @@ conditions. The model assumes that the wind speed increases
 logarithmically with height, reflecting the influence of surface
 roughness and turbulence. It is expressed as [@manwell]:
 
-$$U(z) = \frac{U_*}{\kappa} \ln\left(\frac{z}{z_0}\right)$$ where $U(z)$
+$$U(z) = \frac{U_*}{\kappa} \ln\left(\frac{z}{z_0}\right)$$ {#eq-log-profile}
+
+where $U(z)$
 is the wind speed at height $z$, $U_*$ is the friction velocity,
 $\kappa$ is the von Kármán constant (approximately 0.4), and $z_0$ is
 the roughness length, which is a function of the surface's roughness.
@@ -135,7 +134,9 @@ the vertical wind speed profile based on the ratio of wind speeds at two
 heights. It is defined as:
 
 $$\frac{U(z)}{U(z_r)} = \left(\frac{z}{z_r}\right)^\alpha
-\label{eq: power_law}$$ where $U(z)$ is the wind speed at height $z$,
+$$ {#eq-power_law} 
+
+where $U(z)$ is the wind speed at height $z$,
 $U(z_r)$ is the reference wind speed at height $z_r$, and $\alpha$ is
 the power-law exponent. The exponent $\alpha$ varies depending on
 factors such as atmospheric stability and surface roughness, but it is
@@ -154,13 +155,11 @@ length. Furthermore, instead of using a constant value for the $\alpha$
 exponent, a value is calculated for each time step based on the
 available heights and then used to extrapolate to the required height.
 
-### Power curve {#sub: power_curve}
+### Power curve {#sec-power_curve}
 
 The power curve is a fundamental characteristic of a wind turbine,
 representing the relationship between the average wind speed at hub
-height and the electrical power output. As shown in Figure
-[2](#fig: power_curve){reference-type="ref"
-reference="fig: power_curve"}, a typical power curve identifies three
+height and the electrical power output. As shown in @fig-power_curve, a typical power curve identifies three
 critical wind speeds:
 
 -   **Cut-in wind speed**: The minimum wind speed at which the turbine
@@ -172,8 +171,14 @@ critical wind speeds:
 -   **Cut-out wind speed**: The wind speed at which the turbine shuts
     down to prevent damage.
 
-![Power curve for a typical wind turbine, highlighting cut-in, rated,
-and cut-out wind speeds.](images/power_c.pdf){#fig: power_curve}
+::: {#fig-power_curve}
+
+![](images/power_c.png)
+
+Power curve for a typical wind turbine, highlighting cut-in, rated,
+and cut-out wind speeds.
+
+:::
 
 The power curve, provided by the manufacturer, is used to estimate
 energy production by evaluating wind speeds against the curve. This
@@ -191,13 +196,16 @@ by summing the power output, evaluated using the turbine's power curve
 $P(U_t)$, across all time steps [@manwell]:
 
 $$AEP = \sum_{t=1}^{N} P(U_t) \, \Delta t
-\label{eq: aep}$$ where $N$ is the number of wind speed observations,
+$$ {#eq-aep}
+
+where $N$ is the number of wind speed observations,
 $U_t$ is the wind speed at time step $t$, and $\Delta t$ is the time
 interval between successive observations, determined by the temporal
 resolution of the dataset. Thus, if $\Delta t$ is constant, the total
 time covered in the period is given by:
 
-$$\text{Time} = \sum_{t=1}^{N} \Delta t = N \cdot \Delta t$$
+$$\text{Time} = \sum_{t=1}^{N} \Delta t = N \cdot \Delta t
+$$ {#eq-period} 
 
 The AEP is idealized and does not account for losses such as wake
 effects, transmission inefficiencies, or turbine downtime due to
@@ -208,7 +216,7 @@ relative to the theoretical maximum it could produce if it operated at
 nominal power throughout the entire period. It is defined as [@manwell]:
 
 $$CF = \frac{AEP}{P_{\text{rated}} \cdot \text{Time}}
-\label{eq: cf}$$
+$$ {#eq-cf}
 
 where $P_{\text{rated}}$ is the turbine's nominal power. The CF is a
 measure of the performance of a wind turbine or wind farm at a specific
@@ -219,25 +227,29 @@ It is essential that the same time period is used when calculating both
 AEP and CF to ensure consistency and comparability across different
 turbines or sites.
 
-### Estimation of solar production {#sub: solar_production}
+### Estimation of solar production {#sec-solar_production}
 
 The power output $P_{out}$ of a PV module with a rated power, $P_N$, a
 power temperature coefficient, $\gamma$ and a rate coefficient $c_1$ is
 calculated as:
 
-$$P_{out} = \frac{G_t}{G_{STC}} \cdot P_N \cdot c_1 \left[1 + \frac{\gamma}{100}(T_{PV} - T_{STC})\right],
-\label{eq: solar_power}$$ where $G_t$ and $G_{STC}$ are the solar
+$$P_{out} = \frac{G_t}{G_{STC}} \cdot P_N \cdot c_1 \left[1 + \frac{\gamma}{100}(T_{PV} - T_{STC})\right]
+$$ {#eq-solar_power}
+
+where $G_t$ and $G_{STC}$ are the solar
 irradiances at the site and standard test conditions (STC),
 respectively, and $T_{STC} = 25^\circ$ C. The PV module temperature
 $T_{PV}$ is calculated as:
 
 $$T_{PV} = T_a + G_t \cdot \frac{T_{PV, TETC} - T_{a, TETC}}{G_{TETC}}
-\label{eq: temp_panel}$$ where $T_a$ is the ambient temperature,
+$$ {@eq-temp_panel}
+
+where $T_a$ is the ambient temperature,
 $T_{PV, TETC} = 47^\circ$ C and $T_{a, TETC} = 20^\circ$ C are the
 module and ambient temperatures at Temperature Estimation Test Condition
 (TETC), and $G_{TETC} = 800$ W/m$^2$ is the irradiance at TETC.
 
-### Damage equivalent load {#sub: del}
+### Damage equivalent load {#sec-del}
 
 The damage equivalent load (DEL) represents a simplified measure of
 fatigue damage commonly used in wind turbine analysis, by converting
@@ -250,7 +262,9 @@ The ${DEL}_{M_{dir_{p}}}$ is the total damage equivalent load for all
 events in wind direction *p* during 25 years, a typical lifetime for a
 turbine, is defined as:
 
-$$\text{DEL}_{M_{dir_{p}}} = \left( \sum_r P_r \left(\sum_i \frac{n_i M_i^k}{T_{sim}}\right) \right)^{1/k}$$
+$$\text{DEL}_{M_{dir_{p}}} = \left( \sum_r P_r \left(\sum_i \frac{n_i M_i^k}{T_{sim}}\right) \right)^{1/k}
+$$ {#eq-del}
+
 where $P_r$ is the probability of occurrence of a load case $r$,
 representing a specific combination of meteorological conditions. $n_i$
 is the number of load cycles for the $i$-th event, obtained from a load
@@ -286,22 +300,20 @@ including turbine geometry, material properties, environmental
 conditions such as wind and wave characteristics, and control system
 parameters. The software processes these inputs and employs advanced
 numerical solvers to iteratively compute structural deformations,
-aerodynamic loads, and hydrodynamic interactions over time. Figure
-[3](#fig: turbine_sim){reference-type="ref"
-reference="fig: turbine_sim"} presents a schematic of the wind turbine
+aerodynamic loads, and hydrodynamic interactions over time. @fig-turbine_sim presents a schematic of the wind turbine
 model, illustrating key components such as the blades, hub, nacelle,
 tower, and platform, along with relevant geometric and dynamic
 parameters.
 
-<figure id="fig: turbine_sim">
-<img src="tesis_diego/Tesis-UNAM-master/images/turbine_schema.png"
-style="width:85.0%" />
-<figcaption>Geometric layout of a wind turbine in OpenFAST, illustrating
+::: {#fig-turbine_sim}
+
+![](images/turbine_schema.png)
+
+Geometric layout of a wind turbine in OpenFAST, illustrating
 key structural elements and reference distances such as tower height,
-hub and nacelle positions, rotor axis orientation, and blade angles. .
-Obtained from <span class="citation"
-data-cites="singh2014simulation"></span>.</figcaption>
-</figure>
+hub and nacelle positions, rotor axis orientation, and blade angles. Obtained from @singh2014simulation.
+
+::: 
 
 OpenFAST employs a time-domain approach to simulate turbine responses to
 environmental conditions, including wind, waves, and currents. Advanced
