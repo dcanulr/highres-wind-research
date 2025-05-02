@@ -16,7 +16,9 @@ book:
     - chp_05.md
     - chp_06.md
     - references.qmd
-
+  sidebar:
+    search: true
+    contents: section 
 bibliography: thesis_bib.bib
 csl: diabetologia.csl
 format:
