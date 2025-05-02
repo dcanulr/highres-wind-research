@@ -22,8 +22,7 @@ csl: diabetologia.csl
 format:
   html:
     theme:
-      light: cosmo
       dark: darkly
-
+      light: cosmo
 
 
