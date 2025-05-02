@@ -6,6 +6,8 @@ book:
   author: 
     - name: Diego Arturo Canul Reyes
       email: dacr@ier.unam.mx
+      affiliations:
+        - name: Instituto de Energías Renovables, UNAM
   # date: "3/3/2025"
   chapters:
     - index.md
