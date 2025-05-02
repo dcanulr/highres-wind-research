@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Performance of an offshore wind turbine in the Gulf of Tehuantepec – High-resolution wind speed data and its influence on wind energy aspects in Mexico</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chp_06.html" rel="next">
+<link href="./chp_04.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chp_05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Performance of an offshore wind turbine in the Gulf of Tehuantepec</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">High-resolution wind speed data and its influence on wind energy aspects in Mexico</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chp_01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chp_02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conceptual framework and data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chp_03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Integration of wind and solar energy for electric demand in the Yucatan Peninsula</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chp_04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wind speed variability: temporal and spatial analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chp_05.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Performance of an offshore wind turbine in the Gulf of Tehuantepec</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chp_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">5.1</span> Introduction</a></li>
+  <li><a href="#data-and-methodology-sec-data_meth" id="toc-data-and-methodology-sec-data_meth" class="nav-link" data-scroll-target="#data-and-methodology-sec-data_meth"><span class="header-section-number">5.2</span> Data and methodology {#sec: data_meth}</a>
+  <ul class="collapse">
+  <li><a href="#study-area-and-baseline" id="toc-study-area-and-baseline" class="nav-link" data-scroll-target="#study-area-and-baseline"><span class="header-section-number">5.2.1</span> Study area and baseline</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">5.2.2</span> Data</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">5.2.3</span> Methodology</a></li>
+  </ul></li>
+  <li><a href="#results-and-discussion-sec-results" id="toc-results-and-discussion-sec-results" class="nav-link" data-scroll-target="#results-and-discussion-sec-results"><span class="header-section-number">6</span> Results and discussion {#sec: results}</a>
+  <ul class="collapse">
+  <li><a href="#wind-resources-and-energy-production" id="toc-wind-resources-and-energy-production" class="nav-link" data-scroll-target="#wind-resources-and-energy-production"><span class="header-section-number">6.1</span> Wind resources and energy production</a>
+  <ul class="collapse">
+  <li><a href="#damage-equivalent-load-analysis" id="toc-damage-equivalent-load-analysis" class="nav-link" data-scroll-target="#damage-equivalent-load-analysis"><span class="header-section-number">6.1.1</span> Damage Equivalent Load analysis</a></li>
+  </ul></li>
+  <li><a href="#key-insights-sec-conc" id="toc-key-insights-sec-conc" class="nav-link" data-scroll-target="#key-insights-sec-conc"><span class="header-section-number">6.2</span> Key insights {#sec: conc}</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-tehuantepec" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Performance of an offshore wind turbine in the Gulf of Tehuantepec</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">5.1</span> Introduction</h2>
+<p>Offshore wind energy is gaining increasing attention as a promising renewable energy source due to its significant advantages over traditional fossil fuels. Offshore wind turbines can take advantage of higher and more consistent wind speeds, resulting in higher energy output than their onshore counterparts. In recent years, there has been a growing trend toward installing new offshore wind facilities globally <span class="citation" data-cites="gwr_2024">[<a href="references.html#ref-gwr_2024" role="doc-biblioref">1</a>]</span>, with increasing investments and technological advancements in offshore wind energy.</p>
+<p>In Mexico, some studies have been performed to assess the technical and economic feasibility of offshore wind in the Gulf of Mexico and the Pacific Ocean <span class="citation" data-cites="CANULREYES2022211 arenas-lopezAnalysisOffshoreWind2022 hernandezgalvezHarnessingOffshoreWind2022">[<a href="references.html#ref-CANULREYES2022211" role="doc-biblioref">2</a>–<a href="references.html#ref-hernandezgalvezHarnessingOffshoreWind2022" role="doc-biblioref">4</a>]</span>. According to the World Bank Group <span class="citation" data-cites="worldbankgroupOffshoreWindTechnical2020">[<a href="references.html#ref-worldbankgroupOffshoreWindTechnical2020" role="doc-biblioref">5</a>]</span>, there are four zones suitable for floating offshore wind technology (FOWT) in the country: the Gulf of California, the eastern region of Tamaulipas, the northern region of the Yucatan Peninsula, and the southern region of Oaxaca at the Gulf of Tehuantepec being this last zone the area with the highest wind resources on the country.</p>
+<p>The conditions in the Gulf of Tehuantepec include high wind speeds <span class="citation" data-cites="romero-centenoIsthmusTehuantepecWind2003">[<a href="references.html#ref-romero-centenoIsthmusTehuantepecWind2003" role="doc-biblioref">6</a>]</span> and high water depth <span class="citation" data-cites="gebco">[<a href="references.html#ref-gebco" role="doc-biblioref">7</a>]</span>, which allows for exploring the technical feasibility of floating platforms. This work aims to analyze the performance of an offshore wind turbine and its platform in the Gulf of Tehuantepec by analyzing the energy produced and structural loads due to the wind and sea conditions. Next, a review of studies about dynamic analysis of offshore wind turbines is given and summarized in table <a href="#tab:%20review" data-reference-type="ref" data-reference="tab: review">1</a>.</p>
+<p>Robertson and Jonkman <span class="citation" data-cites="robertsonLoadsAnalysisSeveral2011">[<a href="references.html#ref-robertsonLoadsAnalysisSeveral2011" role="doc-biblioref">8</a>]</span> analyzed the dynamic response of six offshore platforms for a 5 MW wind turbine according to the IEC 61400-3 design standard located on the northern North Sea. These platforms are the MIT/NREL tension leg platform, OC3-Hywind spar, ITI energy barge, UMaine tension leg platform, UMaine-Hywind spar, and UMaine semi-submersible. For the different analyses on each platform, the specifications of the wind turbine and the metocean data were the same. Also, the properties of every structure and the mooring system designs were required to develop a fully dynamic model for each one. With this model, the loads analysis is performed to identify the ultimate loads and fatigue loads by simulating a set of load cases. With those results, the systems’ dynamic response is characterized and compared with a land-based system.</p>
+<p>The load cases presented on <span class="citation" data-cites="robertsonLoadsAnalysisSeveral2011">[<a href="references.html#ref-robertsonLoadsAnalysisSeveral2011" role="doc-biblioref">8</a>]</span> consider different scenarios, including power production under normal operation and with fault occurrences, parked with and without faults, using normal and extreme turbulence models, and wind conditions. The different combinations of the scenarios give a total of 2,190 simulations for each offshore platform model. Results were presented in terms of the ratio between the resulting loads from the floating systems by the corresponding values from the land-based analysis. For the ultimate loads, the transverse bending moments of the blade root, the low-speed shaft at the main bearing, the yaw bearing, and the tower base were analyzed. For fatigue loads, simulations were performed for the in-plane and out-of-plane blade root bending moments, the 0<span class="math inline">\(^{\circ}\)</span> and 90<span class="math inline">\(^{\circ}\)</span> low-speed-shaft bending moments at the main bearing, and the side-to-side and fore-aft bending moments in the yaw bearing and in the tower base.</p>
+<p>Tran and Kim <span class="citation" data-cites="tranCFDStudyCoupled2018">[<a href="references.html#ref-tranCFDStudyCoupled2018" role="doc-biblioref">9</a>]</span> conducted a CFD simulation of the OC4 DeepCwind semi-submersible platform for the NREL 5MW turbine with the objective of analyzing the influences between floating platform motions and wind turbine aerodynamic performance considering the influence of wind and waves. Results were compared with an OpenFAST simulation. They analyze the surge, heave, pitch, and mooring line tension response along the thrust and power coefficients under an operating condition. Also, aerodynamic loads at different positions of the tower were obtained. Their findings highlight the importance of accurately capturing unsteady aerodynamic and hydrodynamic interactions, as these significantly affect platform motion, aerodynamic loads, and mooring tension, with notable differences observed between CFD and FAST simulations under coupled wind-wave conditions.</p>
+<p>Hashemi et al. <span class="citation" data-cites="hashemiAssessmentHurricaneGenerated2021">[<a href="references.html#ref-hashemiAssessmentHurricaneGenerated2021" role="doc-biblioref">10</a>]</span> simulated the effects of wind and wave loads generated by the hurricanes Carol and 1938, with peak wind velocities of 49 and 45 m/s, respectively. They used a monopile offshore wind turbine located on the US East Coast to assess the sub-structural response to load variability. Using OpenFAST, they analyzed the total tower base moment at the monopile base and the displacement at the transition point of the tower and the monopile structure.</p>
+<p>Zambrano et al. <span class="citation" data-cites="zambranoDynamicModelingDeepwater2006">[<a href="references.html#ref-zambranoDynamicModelingDeepwater2006" role="doc-biblioref">11</a>]</span> analyzed the motion response of a floating structure designed to support three wind turbines. It was performed under different storm conditions of the sea states in the Gulf of Mexico. Analysis of the floating platform’s response amplitude operator was carried out for surge, heave, and pitch for those conditions and for two proposed turbines.</p>
+<p>The feasibility of a floating offshore wind farm in United Arab Emirates was studied by Al Qubaisi et al. <span class="citation" data-cites="alqubaisiFeasibilityStudyDesign2018">[<a href="references.html#ref-alqubaisiFeasibilityStudyDesign2018" role="doc-biblioref">12</a>]</span>. The criteria for the selection of the site include the water depth and wind speed; for the proposed location, the water depth is between 10 and 30 m, and the average wind speed above 5.4 m/s. Costs of the installation were estimated and compared with the Gemini offshore wind farm located in the Netherlands. The study does not analyze the performance of the proposed technology under the site conditions.</p>
+<p>In the Tehuantepec Isthmus, Bernal Camacho et al. <span class="citation" data-cites="bernal-camachoTechnicalAssessmentOffshore2022">[<a href="references.html#ref-bernal-camachoTechnicalAssessmentOffshore2022" role="doc-biblioref">13</a>]</span> estimated the wind potential of the 5 MW NREL wind turbine and analyzed the dynamic behavior of the semisubmersible OC4 DeepCwind platform through numerical analysis using ANSYS, under the following environmental scenarios: the highest probability of occurrence and the most extreme conditions (Hurricane Barbara, 2019). Results analyze the variations in the heave, pitch, and surge of the platform under those conditions in terms of the displacement of the center of gravity (CG) and the parameter <span class="math inline">\(d/a\)</span> where <span class="math inline">\(a\)</span> is the distance from the keel to the upper deck of the external floats, and <span class="math inline">\(d\)</span> is the required draft. For extreme conditions, authors consider necessary the use of safety and stabilization methods.</p>
+<p>::: {#tab: review} +:——+:————+:——+:——+:——+:————+ | Refe | Gap | Techn | Site | Bas | Comparison | | rence | | ology | condi | eline | criteria | | | | t | tions | | | | | | ested | | | | +——-+————-+——-+——-+——-+————-+ | * | Understand | NREL | North | NREL | Sea-to-land | | Robe | the | off | Sea | 5MW | ratio of | | rtson | fundamental | shore | | land | Blade-Root | | and | design | 5MW | | based | Bending | | Jon | trafe-off | with | | | Moment, | | kman, | between the | the | | | Low- | | 2011 | different | MIT | | | Speed-Shaft | | <span class="citation" data-cites="robe">[| concepts | /NREL | | | Bending | | <a href="references.html#ref-robe" role="doc-biblioref"><strong>robe?</strong></a> | | TLP, | | | Moment, | | rtson | | U | | | Yaw-Bearing | | Loads | | Maine | | | Bending | | Analy | | TLP, | | | Moment, | | sisSe | | OC3 | | | Tower-Base | | veral | | H | | | Bending | | 2011]</span> | | ywind | | | Moment, | | | | spar, | | | Blade-Root | | | | UMain | | | Bending | | | | spar, | | | Momente | | | | U | | | In-Plane, | | | | Maine | | | Blade-Root | | | | s | | | Bending | | | | emisu | | | Moment | | | | bmers | | | Ou | | | | ible, | | | t-of-Plane, | | | | ITI | | | Low- | | | | E | | | Speed-Shaft | | | | nergy | | | Bending | | | | barge | | | Moment 0°, | | | | | | | Low- | | | | | | | Speed-Shaft | | | | | | | Bending | | | | | | | Moment 90°, | | | | | | | Yaw-Bearing | | | | | | | Bending | | | | | | | Moment | | | | | | | Si | | | | | | | de-to-Side, | | | | | | | Yaw-Bearing | | | | | | | Bending | | | | | | | Moment | | | | | | | Fore-Aft, | | | | | | | Tower-Base | | | | | | | Bending | | | | | | | Moment | | | | | | | Si | | | | | | | de-to-Side, | | | | | | | Tower-Base | | | | | | | Bending | | | | | | | Moment | | | | | | | Fore-Afte | +——-+————-+——-+——-+——-+————-+ | * Ma | Dynamic | 5MW | Spe | | Loads on | | et | response of | tu | cific | | Tower base | | al, | a FOWT | rbine | condi | | of | | 2014 | under | with | tions | | Wind-wave, | | <span class="citation" data-cites="maWi">[| different | OC3-H | of | | wave-only. | | <a href="references.html#ref-maWi" role="doc-biblioref"><strong>maWi?</strong></a> | en | ywind | waves | | Power | | ndwav | vironmental | spar | (T | | spectrum of | | eIndu | conditions | -type | =10s, | | platform | | cedDy | using a | stru | H=6m) | | heave, | | namic | numerical | cture | and | | surge and | | 2014]</span> | simulation | | wind | | pitch | | | method | | vel | | motions by | | | | | ocity | | wind-wave | | | | | of | | and | | | | | 11.4 | | wave-only | | | | | m/s | | | +——-+————-+——-+——-+——-+————-+ | * | Identify | NREL | Ij | | Parameters | | M | the | 5MW | muden | | for the | | orató | potential | mon | sh | | design of | | et | relevant | opile | allow | | the | | al, | design load | from | water | | ro | | 2017 | cases from | the | site, | | tor/nacelle | | <span class="citation" data-cites="mor">[<a href="references.html#ref-mor" role="doc-biblioref"><strong>mor?</strong></a> | the IEC for | OC3 | Dutch | | assembly | | atoUl | su | pr | North | | and the | | timat | b-structure | oject | Sea | | suport | | eLoad | design | | | | structure | | sResp | | | | | as flapwise | | onse2 | | | | | (out | | 017a]</span> | | | | | -of-plane), | | | | | | | and | | | | | | | edgewise | | | | | | | (in-plane) | | | | | | | moment at | | | | | | | the root of | | | | | | | the blade, | | | | | | | the | | | | | | | overturning | | | | | | | moment at | | | | | | | the seabed | | | | | | | (mudline | | | | | | | moment), | | | | | | | pitch angle | | | | | | | and GenTq. | +——-+————-+——-+——-+——-+————-+ | * | Develop a | Deep | Spe | Re | Surge, | | Tran | hi | Cwind | cific | sults | heave and | | and | gh-fidelity | semis | condi | were | pitch | | Kim, | flui | ubmer | tions | com | motions, | | 2018 | d-structure | sible | of | pared | mooring | | <span class="citation" data-cites="tran">[| simulation | flo | wind | with | cables | | <a href="references.html#ref-tran" role="doc-biblioref"><strong>tran?</strong></a> | that | ating | sp | a | tension, | | CFDSt | consider | pla | eeds, | FAST | thrust | | udyCo | the | tform | rot | simul | c | | upled | influence | with | ating | ation | oefficient, | | 2018]</span> | of | the | speed | | power | | | aero-h | NREL | of | | c | | | ydrodinamic | 5MW | the | | oefficient, | | | coupling | tu | rotor | | platform | | | due to the | rbine | b | | surge | | | dynamic | | lade, | | respons, | | | motion of a | | H and | | blade root | | | FOWT | | T of | | force, | | | | | 11 | | blade root | | | | | m/s, | | moment. | | | | | 11.89 | | Tower based | | | | | rpm, | | force | | | | | 7.14 | | considering | | | | | m and | | Tower only | | | | | 14.3 | | and | | | | | s. | | Blades+To | | | | | | | wer+Nacelle | +——-+————-+——-+——-+——-+————-+ | * Xu | Develop a | NREL | Cape | | O | | et | the average | 5MW | Eliza | | ut-of-plane | | al., | conditional | wind | beth, | | bending | | 2020 | exceedance | tu | US | | moment, | | <span class="citation" data-cites="xu">[<a href="references.html#ref-xu" role="doc-biblioref"><strong>xu?</strong></a> | rate method | rbine | coast | | tower-base | | Extre | for | p | | | s | | meLoa | estimating | laced | | | ide-to-side | | dsAna | extreme | on | | | bending | | lysis | loads on | the | | | moment, | | 2020]</span> | FOWT | Deep | | | Tower-base | | | | Cwind | | | fore-aft | | | | s | | | bending | | | | emi-s | | | moment, | | | | ubmer | | | anchor | | | | sible | | | tension | | | | pla | | | | | | | tform | | | | +——-+————-+——-+——-+——-+————-+ | * | Ch | 5MW | US | Perce | Total tower | | Ha | arachterize | off | east | ntage | base moment | | shemi | the spatial | shore | coast | c | at the | | et | variability | mon | | hange | monopile | | al., | of extreme | opile | | of | base | | 2021 | wind and | | | the | (reactMYss) | | [@ | wave loads | | | diffe | and the | | hashe | under | | | rence | d | | miAss | extreme | | | to | isplacement | | essme | hurricane | | | the | (PtfmSurge) | | ntHur | conditions | | | mean | | | rican | | | | of | | | eGene | | | | the | | | rated | | | | five | | | 2021] | | | | p | | | | | | | oints | | | | | | | spat | | | | | | | ially | | | | | | | lo | | | | | | | cated | | +——-+————-+——-+——-+——-+————-+ | * | Analyze the | IEA | Av | Compa | RAOs of | | | technical | 15 MW | erage | rison | heave, | | Papi | i | and | met | be | pitch and | | and | mplications | NREL | ocean | tween | surge. | | Bac | of | 5 MW, | data | the | Ratio | | hini, | upscaling | both | from | p | offshore to | | 2022 | floating | over | the | erfor | onshore of | | <span class="citation" data-cites="p">[<a href="references.html#ref-p" role="doc-biblioref"><strong>p?</strong></a> | wind | the | west | mance | GenPwr, | | apiTe | turbines to | Deep | coast | of | GenTq, | | chnic | understand | CWind | of | the | RotSpeed, | | alCha | how the | s | the | two | RotThrust, | | lleng | benefits of | emi-s | US | turb | RtAeroFxh, | | esFlo | upscaling | ubmer | | ines. | TwrBsMyt, | | ating | can impact | sible | | Ratio | TwrBsMxt, | | 2022]</span> | not only | pla | | off | TwrBsFxt, | | | turbine | tform | | shore | YawBrFxp, | | | cost per | | | to | YawBrMyp, | | | installed | | | on | YawBrMxp, | | | kW but also | | | shore | TipDxc1, | | | the cost of | | | | TipDxc2, | | | the | | | | TipDxc3, | | | floater, | | | | TTDspFA, | | | mooring | | | | TipDyc1, | | | lines, and | | | | TipDyc2, | | | a | | | | TipDyc3, | | | ncillaries. | | | | TTDspSS, | | | | | | | RootMxb1, | | | | | | | RootMxb2, , | | | | | | | RootMxb3, , | | | | | | | RootMyb1, | | | | | | | RootMyb2, | | | | | | | RootMyb3 | +——-+————-+——-+——-+——-+————-+ | * | The | OC4 | Most | | Response | | | feasibility | Deep | pro | | Amplitude | | Bern | of a | Cwind | bable | | Operators | | al-Ca | floating | semis | and | | (RAOs) of | | macho | platform | ubmer | most | | Surge, | | et | under the | sible | ex | | Heave and | | al., | wave and | pla | treme | | Pitch of | | 2022 | wind | tform | condi | | the | | <span class="citation" data-cites="b">[<a href="references.html#ref-b" role="doc-biblioref"><strong>b?</strong></a> | conditions | | tions | | platform | | ernal | of the Gulf | | at | | for | | -cama | of | | the | | different | | choTe | Tehuantepec | | Gulf | | c | | chnic | | | of | | ombinations | | alAss | | | T | | of the d/a | | essme | | | ehuan | | parameter | | ntOff | | | tepec | | and, | | shore | | | | | d | | 2022]</span> | | | | | isplacement | | | | | | | of the | | | | | | | platform | +——-+————-+——-+——-+——-+————-+ | * | | | | | | +——-+————-+——-+——-+——-+————-+</p>
+<p>: Literature review on dynamical analysis of offshore wind turbines. :::</p>
+<p>Previous studies give an overview of relevant parameters to be analyzed on wind turbine performance. This study presents a performance analysis of a floating offshore wind turbine under the specific metocean conditions of the Tehuantepec Isthmus, using the OpenFAST software. Those relevant conditions, characterized by wind speeds, peak (or mean) wave period, significant wave height, and wind and wave directions, are obtained from the ERA5 reanalysis dataset. Due to the lack of studies on offshore wind turbine performance in Mexico, particularly on floating technology, the results are compared with the same technology in metocean conditions in the North Sea. The assessment presented in this research will facilitate direct comparisons with established offshore wind installations at other locations, providing decision-makers with valuable insights into the prospective future of wind energy in the region.</p>
+<p>The chapter is structured as follows. Section <a href="#sec:%20data_meth" data-reference-type="ref" data-reference="sec: data_meth">2</a> describes the location and characteristics of the sites, technology and data, also, the methodology to delimit the cases is given. The analysis and comparison of the results are presented in section <a href="#sec:%20results" data-reference-type="ref" data-reference="sec: results">3</a>, and finally, section <a href="#sec:%20conc" data-reference-type="ref" data-reference="sec: conc">4</a> presents the conclusions.</p>
+</section>
+<section id="data-and-methodology-sec-data_meth" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="data-and-methodology-sec-data_meth"><span class="header-section-number">5.2</span> Data and methodology {#sec: data_meth}</h2>
+<section id="study-area-and-baseline" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="study-area-and-baseline"><span class="header-section-number">5.2.1</span> Study area and baseline</h3>
+<p>The study area for this research is delimited to the Gulf of Tehuantepec, located on the southeast side of Mexico on the Pacific Ocean, as shown in Figure <a href="#fig:%20map_mexico" data-reference-type="ref" data-reference="fig: map_mexico">1</a>. The interest in this site, as previously described, is due to the high wind velocities present throughout the year. Figure <a href="#fig:%20map_restrictions" data-reference-type="ref" data-reference="fig: map_restrictions">2</a> shows the delimitation of potential areas using the same methodology as in <span class="citation" data-cites="CANULREYES2022211">[<a href="references.html#ref-CANULREYES2022211" role="doc-biblioref">2</a>]</span>; however, the bathymetry until 50 m, indicated by a red line is very near the coast, and higher velocities are away the coast, with a higher depth, therefore, in this study, the performance of a FOWT technology is evaluated.</p>
+<p>The turbine’s performance at the proposed site will be compared with the same technology but in a different place; since there are no other offshore facilities in Mexico, a baseline site in the North Sea is proposed. The study zone and the baseline site are shown in Figure <a href="#fig:%20map_baseline" data-reference-type="ref" data-reference="fig: map_baseline">3</a>. Both sites present ocean depth conditions for FOWT, usually above 50 m. For the selected locations, the water depth at the Gulf of Tehuantepec and the North Sea is 83 m and 168 m, respectively <span class="citation" data-cites="gebco">[<a href="references.html#ref-gebco" role="doc-biblioref">7</a>]</span>.</p>
+<figure class="figure">
+<figure id="fig: map_mexico" class="figure">
+<img src="images/tehuantepec_map.png" class="figure-img">
+<figcaption>
+Study area
+</figcaption>
+</figure>
+<figure id="fig: map_restrictions" class="figure">
+<img src="images/techcnical_restrictions.png" class="figure-img">
+<figcaption>
+Technical delimitation of potential zone
+</figcaption>
+</figure>
+<figure id="fig: map_baseline" class="figure">
+<img src="images/map_baseline.jpeg" class="figure-img">
+<figcaption>
+Study area and baseline site located at the North Sea.
+</figcaption>
+</figure>
+<figcaption>
+Figure <a href="#fig: map_mexico" data-reference-type="ref" data-reference="fig: map_mexico">1</a> shows the delimitation of the study area at the Gulf of Tehuantepec, located on Mexico’s southeast. Figure <a href="#fig: map_restrictions" data-reference-type="ref" data-reference="fig: map_restrictions">2</a> shows the delimitation of potential areas using the same methodology as in <span class="citation" data-cites="CANULREYES2022211"></span>: dashed lines indicate the distance from the coast until 44 km, yellow polygons indicate natural protected areas, and red line shows the bathymetry until 50 m depth. Figure <a href="#fig: map_baseline" data-reference-type="ref" data-reference="fig: map_baseline">3</a> shows the location of the study area and the baseline site that is used to compare the performance of the technology.
+</figcaption>
+</figure>
+</section>
+<section id="data" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="data"><span class="header-section-number">5.2.2</span> Data</h3>
+<p>To analyze the effects of fatigue on the device during a typical turbine’s lifetime, data from 25 years was used. The metocean data was obtained from the ERA5 reanalysis dataset from 1996 to 2020 with an hourly resolution, using a bi-linear interpolation at the points indicated in Figure <a href="#fig:%20map_baseline" data-reference-type="ref" data-reference="fig: map_baseline">3</a>. The next variables were extracted:</p>
+<ul>
+<li><p>Significant wave height [m]</p></li>
+<li><p>Peak wave period [s]</p></li>
+<li><p>Wave direction [°]</p></li>
+<li><p>Wind direction [°]</p></li>
+<li><p>Wind speed [m/s]</p></li>
+</ul>
+<p>The technology selected to evaluate its performance was the 15-MW offshore reference wind turbine developed by NREL <span class="citation" data-cites="evangaertnerDefinitionIEAWind2020">[<a href="references.html#ref-evangaertnerDefinitionIEAWind2020" role="doc-biblioref">14</a>]</span> with the UMaine semisubmersible platform <span class="citation" data-cites="allenDefinitionUMaineVolturnUSS2020">[<a href="references.html#ref-allenDefinitionUMaineVolturnUSS2020" role="doc-biblioref">15</a>]</span>. The main parameters of the turbine and the platform are shown in Table <a href="#tab:%20turbine_par" data-reference-type="ref" data-reference="tab: turbine_par">2</a>, and a schematic diagram is shown in Figure <a href="#fig:%20turbine_diagram" data-reference-type="ref" data-reference="fig: turbine_diagram">5</a>.</p>
+<p>::: {#tab: turbine_par} <strong>Parameter</strong> <strong>Value</strong> ——————————– ————————— <strong>Turbine rating [MW]</strong> 15 <strong>Turbine class [-]</strong> IEC Class 1B <strong>Hub height [m]</strong> 150 <strong>Rotor diameter [m]</strong> 240 <strong>Cut-in wind speed [m/s]</strong> 3 <strong>Rated wind speed [m/s]</strong> 10.59 <strong>Cut-out wind speed [m/s]</strong> 25 <strong>Platform type</strong> Semisubmersible <strong>Mooring system</strong> Three-line chain catenary</p>
+<p>: Parameters of the 15 MW offshore reference wind turbine with a semisubmersible platform, developed by NREL <span class="citation" data-cites="evangaertnerDefinitionIEAWind2020">[<a href="references.html#ref-evangaertnerDefinitionIEAWind2020" role="doc-biblioref">14</a>]</span> and UMaine <span class="citation" data-cites="allenDefinitionUMaineVolturnUSS2020">[<a href="references.html#ref-allenDefinitionUMaineVolturnUSS2020" role="doc-biblioref">15</a>]</span>. :::</p>
+<figure id="fig: turbine_diagram" class="figure">
+<figure class="figure">
+<img src="tesis_diego/Tesis-UNAM-master/images/platform_a.png" class="figure-img">
+</figure>
+<figure class="figure">
+<img src="tesis_diego/Tesis-UNAM-master/images/platform_b.png" class="figure-img">
+</figure>
+<figcaption>
+Schematic diagrams of the wind turbine and the semisubmersible platform, obtained from <span class="citation" data-cites="allenDefinitionUMaineVolturnUSS2020"></span>.
+</figcaption>
+</figure>
+</section>
+<section id="methodology" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="methodology"><span class="header-section-number">5.2.3</span> Methodology</h3>
+<p>In the first stage, the wind speeds for both sites were analyzed. Then, energy production was estimated by evaluating the wind speed time series in a fitted function for the wind turbine power curve.</p>
+<p>To compare the FOWT’s performance under the metocean conditions on the Gulf of Tehuantepec against the conditions on the North Sea, fatigue loads are proposed as the performance indicator, particularly the Tower base side-to-side moment (TwrBsMxt) and the Tower base fore-aft moment (TwrBsMyt). These time series are outputs of the OpenFAST software. The selection of these two load components is justified by their direct relevance to structural fatigue at the tower base, which is a critical point for the integrity and lifetime of the wind turbine. TwrBsMyt captures the influence of wind thrust and wave-induced pitch motions, typically dominant in aligned environmental conditions, while TwrBsMxt reflects the effects of yaw misalignment, directional wave loading, and lateral turbulence.</p>
+<p>In the next step, the structure of the IEC 61400-3-2 standard for the design of floating offshore wind turbines <span class="citation" data-cites="IECTS61400322019">[<a href="references.html#ref-IECTS61400322019" role="doc-biblioref">16</a>]</span> is followed to define the cases to be performed for the wind turbine, in particular the Design Load Case (DLC) 1.2 for fatigue analysis. Since the DLCs are standards for design and require testing of all possible scenarios, they are used as guidelines for the simulation inputs in this research since the actual metocean conditions of the sites are available. DLC 1.2 suggests a normal turbulence model for the wind condition to be generated in bin intervals of at least 2 m/s between the wind turbine cut-in and cut-out speeds. This is to generate a wind field from 3 m/s to 25 m/s. To generate these wind fields, the Turbsim software, a stochastic full-field turbulent wind simulator, is used <span class="citation" data-cites="jonkmanTurbSimUserGuide2014">[<a href="references.html#ref-jonkmanTurbSimUserGuide2014" role="doc-biblioref">17</a>]</span>.</p>
+<p>The wind field outputs from TurbSim are time series of three-dimensional wind velocity components, defined on a specified grid over a vertical plane perpendicular to the mean wind direction. These wind fields vary in time and space, capturing turbulent fluctuations across the rotor-swept area. In this research, the generated wind fields have a ten-minute duration with a time resolution of 0.05 seconds.</p>
+<p>To delimit the cases for analysis and set up the matrix simulation for OpenFAST, DLC 1.2 suggests simulating for each joint probability of sea states at each 2 m/s wind bin interval, considering the misalignment and multidirectional between wind and waves. Since the actual conditions of the sites are being used and a design process is not being performed, the process for constraining the input data is as follows:</p>
+<ul>
+<li><p>The complete data set is segmented into bins for each 30° for the wind directions (0°-30°, 30°-60°, ..., 330°-360°).</p></li>
+<li><p>For the constrained data in each wind bin direction, a 2nd-grade polynomial is fitted between the wind speeds in the interval <span class="math inline">\(v_{cut-in}\)</span> to <span class="math inline">\(v_{cut-out}\)</span> and the significant wave heights. This equation provides a “representative height" corresponding to each wind speed. An example of the interpolation is shown in Figure <a href="#fig:%20metocean_gulf" data-reference-type="ref" data-reference="fig: metocean_gulf">6</a>.</p></li>
+<li><p>Finally, the frequencies of each wave period and direction that occur into the wind speed interval (3-5 m/s, 5-7 m/s, ..., 23-25 m/s) are obtained.</p></li>
+<li><p>Each input for a simulation would be defined as a wave period with a representative height and direction for each wind speed interval for each wind direction interval.</p></li>
+</ul>
+<p>The simulations were conducted using data from previous classifications of cases. Each simulation is identified by a unique combination of wind speed magnitude and direction, wave period, significant wave height, and wave directions. Each event may occur multiple times, and its frequency has been quantified.</p>
+<figure id="fig: metocean_gulf" class="figure">
+<img src="images/wind_wave_interpolation_mex_000.png" style="width:60.0%" class="figure-img">
+<figcaption>
+Example of the polynomial fit between the wind speeds and the wave heights segmented into the bin direction between 0° and 30°.
+</figcaption>
+</figure>
+<p>Simulations were performed with a duration of ten minutes under operational conditions; therefore, events such as start-up or shutdown sequences were not considered. Subsequently, the TwrBsMxt and TwrBsMyt time series obtained from OpenFAST were analyzed. These variables represent the moments at the base of the tower. To enable comparison between both sites, a rainflow counting algorithm was applied, a method commonly used to identify and count stress cycles in time series data for fatigue analysis. Using this approach, the Damage Equivalent Load (DEL) was calculated for each directional bin. The calculation of the DEL is described in Section <a href="#sub:%20del" data-reference-type="ref" data-reference="sub: del">[sub: del]</a>.</p>
+<p>In summary, this study’s methodology first analyzed wind resources at the two sites and then estimated energy production under specific metocean conditions. Following IEC standards for floating offshore wind turbine design, Turbsim is used to generate wind fields, and OpenFAST for fatigue load simulations. The input data was constrained based on actual site conditions, and the joint probability of sea states and wind directions was taken into account to construct a detailed simulation matrix for calculating the Damage Equivalent Load (DEL). This approach provided an understanding of the environmental conditions in the Gulf of Tehuantepec and the North Sea, allowing for robust performance analysis of the wind turbine. A diagram summarizing the methodology is shown in Figure <a href="#fig:%20meth" data-reference-type="ref" data-reference="fig: meth">7</a>.</p>
+<p><img src="images/meth_diagram_fowt_mx.png" class="img-fluid" alt="Data and methodology described on Section 2">{#fig: meth width=“70%”}</p>
+</section>
+</section>
+<section id="results-and-discussion-sec-results" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Results and discussion {#sec: results}</h1>
+<section id="wind-resources-and-energy-production" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="wind-resources-and-energy-production"><span class="header-section-number">6.1</span> Wind resources and energy production</h2>
+<p>The wind resources were analyzed to estimate the energy production of an IEA 15 MW offshore wind turbine at the Gulf of Tehuantepec and a baseline site in the North Sea. Figure <a href="#fig:%20boxplots_windspeed" data-reference-type="ref" data-reference="fig: boxplots_windspeed">8</a> shows the monthly distribution of wind speeds over 25 years (1996-2020). Dashed lines indicate the turbine’s cut-in and cut-out speeds at 3 and 25 m/s, respectively. Both locations exhibit similar seasonal trends, with lower wind speeds during summer, May to July, and higher speeds in winter, December to February. However, the North Sea generally shows higher average speeds and more pronounced extreme events.</p>
+<p>In terms of Capacity Factor, the monthly distribution of the energy produced is shown in Figure <a href="#fig:%20boxplots_cf" data-reference-type="ref" data-reference="fig: boxplots_cf">9</a>. Due to the distribution of wind speeds in Tehuantepec, the energy produced has a wider range compared to the North Sea, which has smaller intervals of energy values. In the previously identified season of lower wind speeds, there is also a low season of energy production, in May and June, only for Tehuantepec. The annualized values of the Capacity Factors are 0.54 and 0.63 for Tehuantepec and the North Sea, respectively.</p>
+<figure id="fig: boxplots_windspeed" class="figure">
+<img src="images/boxplots_windspeed.png" class="figure-img">
+<figcaption>
+Monthly wind speed distribution (1996-2020) at Tehuantepec and the North Sea. Dashed lines indicate turbine operational thresholds.
+</figcaption>
+</figure>
+<figure id="fig: boxplots_cf" class="figure">
+<img src="images/boxplots_cf.png" class="figure-img">
+<figcaption>
+Monthly variation of the Capacity Factor, illustrating energy production differences between Tehuantepec and the North Sea.
+</figcaption>
+</figure>
+<p>Figure <a href="#fig:%20energy_rose" data-reference-type="ref" data-reference="fig: energy_rose">10</a> presents the annualized energy distribution across wind direction bins. The plot shows that the north-northeast direction dominates Tehuantepec’s wind resource, whereas the North Sea exhibits a broader, more uniform distribution. The annualized energy values are 70,134.79 MWh and 82,130.85 MWh for Tehuantepec and the North Sea, respectively, with the latter site producing approximately 17% more energy than the former.</p>
+<p><img src="images/energy_rose.png" class="img-fluid" alt="Wind energy distribution across wind direction bins for Tehuantepec and the North Sea.">{#fig: energy_rose width=“50%”}</p>
+<section id="damage-equivalent-load-analysis" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="damage-equivalent-load-analysis"><span class="header-section-number">6.1.1</span> Damage Equivalent Load analysis</h3>
+<p>The fatigue performance of the FOWT was evaluated through OpenFAST simulations. Here, an event is defined as a combination of wind speed, significant wave height, wave direction, and peak wave period. Over the 25-year period, 186360 events were identified at Tehuantepec and 204,102 at the North Sea. These events are grouped into 1,772 unique simulation cases for Tehuantepec and 5,321 for the North Sea.</p>
+<p>In the first stage, the wind and wave directions are analyzed to understand the metocean conditions at each site. This information is directly obtained from ERA5. Figure <a href="#fig:%20incoming_conditions" data-reference-type="ref" data-reference="fig: incoming_conditions">11</a> shows the distribution of wind speeds and wave conditions at both sites. At Tehuantepec, the wind predominantly comes from the north-northeast, and the wave conditions display two prominent directional peaks: one from the northeast and another from the south. Due to the wind distribution, waves incoming from the north are likely wind-induced. In contrast, the North Sea exhibits a more consistent wind and wave regime, which could lead to more uniform and predictable loading patterns on the turbine structure.</p>
+<figure id="fig: incoming_conditions" class="figure">
+<figure class="figure">
+<img src="images/incoming_oax.png" class="figure-img">
+</figure>
+<figure class="figure">
+<img src="images/incoming_ns.png" class="figure-img">
+</figure>
+<figcaption>
+Distributions of wind speeds and wave conditions.
+</figcaption>
+</figure>
+<p>To assess fatigue damage, a rainflow counting algorithm was applied to the tower base moments, side-to-side (TwrBsMxt) and fore-to-aft (TwrBsMyt), to compute the Damage Equivalent Load (DEL) for each set of simulations. Figure <a href="#fig:%20del_comparison" data-reference-type="ref" data-reference="fig: del_comparison">12</a> compares the DEL values at both sites. At Tehuantepec, the DEL values for both side-to-side and fore-aft moments are strongly influenced by the predominant wind direction, indicating that fatigue damage is primarily wind-driven. In contrast, at the North Sea, the DEL values exhibit a more uniform distribution, reflecting the combined influence of wind and wave loading.</p>
+<figure id="fig: del_comparison" class="figure">
+<figure class="figure">
+<img src="images/del_oax.png" class="figure-img">
+</figure>
+<figure class="figure">
+<img src="images/del_NS.png" class="figure-img">
+</figure>
+<figcaption>
+Comparison of DEL values for the tower base side-to-side (TwrBsMxt) and fore-to-aft (TwrBsMyt) moments.
+</figcaption>
+</figure>
+<p>To assess the impact of fatigue loads per unit of energy generated, the indicator <span class="math inline">\(\text{DEL}/\text{Energy}\)</span> is calculated for each directional bin. This metric represents the structural fatigue effects relative to energy production. In the case of Tehuantepec, the directional bins with low values of the indicator can be identified, indicating smaller fatigue effects due to high energy generation in those directions. Peaks in the indicator for eastern and western directions are due to the lack of energy generation, as previously mentioned. In the North Sea case, the indicator remains homogeneously distributed, except for a peak in the east for the TwrBsMyt, which is caused by the absence of energy generation in that direction, as shown in Figure <a href="#fig:%20del_comparison" data-reference-type="ref" data-reference="fig: del_comparison">12</a>.</p>
+<figure id="fig: indicator" class="figure">
+<figure class="figure">
+<img src="tesis_diego/Tesis-UNAM-master/images/indicator_oax.png" class="figure-img">
+</figure>
+<figure class="figure">
+<img src="tesis_diego/Tesis-UNAM-master/images/indicator_ns.png" class="figure-img">
+</figure>
+<figcaption>
+Comparison of the indicator DEL per unit of energy generated.
+</figcaption>
+</figure>
+<p>The proposed indicator helps identify the optimal wind directions for turbine orientation, maximizing energy capture while minimizing exposure to fatigue loads in low-energy directions. Figure <a href="#fig:%20comparison_indicator" data-reference-type="ref" data-reference="fig: comparison_indicator">14</a> presents the normalized DEL and the proposed indicator, illustrating the relationship between fatigue loads and energy generation. In directions where damage is high, production is also significant, leading to lower indicator values. For Tehuantepec, it is recommended to position turbines primarily in the dominant north and northeast directions, as other directions contribute minimally to energy generation while inducing fatigue loads. In contrast, the North Sea shows a more uniform distribution of both damage and energy production, allowing for a wider control position. The indicator remains consistent, except in the east direction, where the lack of energy results in a higher indicator value.</p>
+<figure id="fig: comparison_indicator" class="figure">
+<figure class="figure">
+<img src="tesis_diego/Tesis-UNAM-master/images/compare_oax.png" class="figure-img">
+</figure>
+<figure class="figure">
+<img src="tesis_diego/Tesis-UNAM-master/images/compare_ns.png" class="figure-img">
+</figure>
+<figcaption>
+Comparison of the normalized DEL and proposed indicator.
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="key-insights-sec-conc" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="key-insights-sec-conc"><span class="header-section-number">6.2</span> Key insights {#sec: conc}</h2>
+<p>This study analyzed the performance of a 15 MW floating offshore wind turbine in the Gulf of Tehuantepec and compared it with a baseline site in the North Sea, focusing on wind resources, energy production, and fatigue loads. Meteorological and oceanic conditions were characterized using reanalysis datasets, and high-resolution simulations were performed using OpenFAST to capture turbulence variability.</p>
+<p>The Gulf of Tehuantepec exhibits strong wind resources, particularly from the north-northeast direction, while the North Sea shows homogeneous wind incoming directions. Fatigue loads, measured through the Damage Equivalent Load (DEL), were higher in Tehuantepec, especially in dominant wind directions, indicating significant fatigue damage due to strong wind-driven loads. In contrast, the North Sea exhibited a more uniform distribution of fatigue loads, reflecting the combined influence of wind and wave conditions.</p>
+<p>The proposed DEL/Energy indicator revealed that in Tehuantepec, the north and northeast directions are optimal for turbine orientation, offering high energy production with lower fatigue damage per unit of energy. In the North Sea, the indicator showed a more uniform distribution, allowing greater flexibility in turbine positioning, though the east direction should be avoided due to higher fatigue damage relative to energy production.</p>
+<p>The Gulf of Tehuantepec offers significant potential for offshore wind energy, its higher fatigue loads and seasonal variability require careful turbine design, placement, and maintenance strategies. These insights can guide future offshore wind projects in Mexico and similar regions.</p>
+
+
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-gwr_2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">(GWEC) GWEC (2024) Global wind report 2024</div>
+</div>
+<div id="ref-CANULREYES2022211" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Canul-Reyes DA, Rodríguez-Hernández O, Jarquin-Laguna A (2022) Potential zones for offshore wind power development in the <span>Gulf</span> of <span>Mexico</span> using reanalyses data and capacity factor seasonal analysis. Energy for Sustainable Development 68:211–219. <a href="https://doi.org/10.1016/j.esd.2022.03.008">https://doi.org/10.1016/j.esd.2022.03.008</a></div>
+</div>
+<div id="ref-arenas-lopezAnalysisOffshoreWind2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Arenas-López JP, Badaoui M (2022) Analysis of the offshore wind resource and its economic assessment in two zones of <span>Mexico</span>. Sustainable Energy Technologies and Assessments 52:101997. <a href="https://doi.org/10.1016/j.seta.2022.101997">https://doi.org/10.1016/j.seta.2022.101997</a></div>
+</div>
+<div id="ref-hernandezgalvezHarnessingOffshoreWind2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Hernández Galvez G, Chuck Liévano D, Sarracino Martínez O, et al (2022) Harnessing <span>Offshore Wind Energy</span> along the <span>Mexican Coastline</span> in the <span>Gulf</span> of <span>Mexico</span>—<span>An Exploratory Study</span> including <span>Sustainability Criteria</span>. Sustainability 14(10):5877. <a href="https://doi.org/10.3390/su14105877">https://doi.org/10.3390/su14105877</a></div>
+</div>
+<div id="ref-worldbankgroupOffshoreWindTechnical2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Group WB (2020) Offshore <span>Wind Technical Potential</span></div>
+</div>
+<div id="ref-romero-centenoIsthmusTehuantepecWind2003" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Romero-Centeno R, Zavala-Hidalgo J, Gallegos A, O’Brien JJ (2003) Isthmus of <span>Tehuantepec Wind Climatology</span> and <span>ENSO Signal</span>. Journal of Climate 16(15):2628–2639. <a href="https://doi.org/10.1175/1520-0442(2003)016<2628:IOTWCA>2.0.CO;2">https://doi.org/10.1175/1520-0442(2003)016&lt;2628:IOTWCA&gt;2.0.CO;2</a></div>
+</div>
+<div id="ref-gebco" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">GEBCO Compilation Group (2021) <span>GEBCO</span> 2021 grid</div>
+</div>
+<div id="ref-robertsonLoadsAnalysisSeveral2011" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Robertson AN, Jonkman JM (2011) Loads <span>Analysis</span> of <span>Several Offshore Floating Wind Turbine Concepts</span>. In: Twenty first international offshore and polar engineering conference</div>
+</div>
+<div id="ref-tranCFDStudyCoupled2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Tran TT, Kim D-H (2018) A <span>CFD</span> study of coupled aerodynamic-hydrodynamic loads on a semisubmersible floating offshore wind turbine. Wind Energy 21(1):70–85. <a href="https://doi.org/10.1002/we.2145">https://doi.org/10.1002/we.2145</a></div>
+</div>
+<div id="ref-hashemiAssessmentHurricaneGenerated2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Hashemi MR, Kresning B, Hashemi J, Ginis I (2021) Assessment of hurricane generated loads on offshore wind farms; a closer look at most extreme historical hurricanes in <span>New England</span>. Renewable Energy 175:593–609. <a href="https://doi.org/10.1016/j.renene.2021.05.042">https://doi.org/10.1016/j.renene.2021.05.042</a></div>
+</div>
+<div id="ref-zambranoDynamicModelingDeepwater2006" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Zambrano T, MacCready T, Kiceniuk T, Roddier DG, Cermelli CA (2006) <a href="https://doi.org/10.1115/OMAE2006-92029">Dynamic <span>Modeling</span> of <span>Deepwater Offshore Wind Turbine Structures</span> in <span>Gulf</span> of <span>Mexico Storm Conditions</span></a>. In: Volume 1: <span>Offshore Technology</span>; <span>Offshore Wind Energy</span>; <span>Ocean Research Technology</span>; <span>LNG Specialty Symposium</span>. ASMEDC, Hamburg, Germany, pp 629–634</div>
+</div>
+<div id="ref-alqubaisiFeasibilityStudyDesign2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Al Qubaisi AA, Dol SS, Khan MS, Azeez AA (2018) <a href="https://doi.org/10.1109/ICASET.2018.8376800">Feasibility study and design of floating offshore wind turbine farm in <span>United Arab Emirates</span></a>. In: 2018 <span>Advances</span> in <span>Science</span> and <span>Engineering Technology International Conferences</span> (<span>ASET</span>). IEEE, Abu Dhabi, pp 1–5</div>
+</div>
+<div id="ref-bernal-camachoTechnicalAssessmentOffshore2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Bernal-Camacho DF, Fontes JVH, Mendoza E (2022) A <span>Technical Assessment</span> of <span>Offshore Wind Energy</span> in <span>Mexico</span>: <span>A Case Study</span> in <span>Tehuantepec Gulf</span>. Energies 15(12):4367. <a href="https://doi.org/10.3390/en15124367">https://doi.org/10.3390/en15124367</a></div>
+</div>
+<div id="ref-evangaertnerDefinitionIEAWind2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Evan Gaertner, Jennifer Rinker, Latha Sethuraman, et al (2020) Definition of the <span>IEA Wind</span> 15-<span>Megawatt Offshore Reference Wind Turbine</span>. National Renewable Energy Laboratory</div>
+</div>
+<div id="ref-allenDefinitionUMaineVolturnUSS2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Allen C, Viscelli A, Dagher H, et al (2020) <a href="\url{https://doi.org/10.2172/1660012}">Definition of the <span>UMaine VolturnUS-S Reference Platform Developed</span> for the <span>IEA Wind</span> 15-<span>Megawatt Offshore Reference Wind Turbine</span></a></div>
+</div>
+<div id="ref-IECTS61400322019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">(2019) <span>IEC TS</span> 61400-3-2:2019. <span>Wind</span> energy generation systems - <span>Part</span> 3-2: <span>Design</span> requirements for floating offshore wind turbines</div>
+</div>
+<div id="ref-jonkmanTurbSimUserGuide2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Jonkman BJ (2014) <span>TurbSim User</span>’s <span>Guide</span> v2.00.00</div>
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chp_04.html" class="pagination-link" aria-label="Wind speed variability: temporal and spatial analysis">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wind speed variability: temporal and spatial analysis</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chp_06.html" class="pagination-link" aria-label="Conclusions">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusions</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

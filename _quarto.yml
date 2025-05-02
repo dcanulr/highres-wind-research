@@ -1,0 +1,27 @@
+project:
+  type: book
+
+book:
+  title: "High-resolution wind speed data and its influence on wind energy aspects in Mexico"
+  author: "Diego Arturo Canul Reyes"
+  # date: "3/3/2025"
+  chapters:
+    - index.md
+    - chp_01.md
+    - chp_02.md
+    - chp_03.md
+    - chp_04.md
+    - chp_05.md
+    - chp_06.md
+    - references.qmd
+
+bibliography: thesis_bib.bib
+csl: diabetologia.csl
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+
+
+
