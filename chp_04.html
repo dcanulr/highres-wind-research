@@ -56,12 +56,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fdf964b8551a4c1da979a829183e41b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5d78c9e45e9a5253a6059031ce5ea1b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -147,9 +145,6 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">High-resolution wind speed data and its influence on wind energy aspects in Mexico</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -263,7 +258,7 @@ window.Quarto = {
 <p>Wind variability is a result of the wind’s complex nature; these changes are manifested at different time scales that range from years and months to seconds, with inter-scale variability across those time frames. Their effects on wind turbine performance are manifested in different wind energy variables, from annual energy production to energy quality. Evaluating the impact of variable wind speeds on wind energy production involves assessing their performance under these conditions. This analysis helps us understand wind speeds behavior and pinpoint potential risks in scenarios with high variability. In particular, dynamical analyzes in the field of wind energy require capturing the turbulent scale to perform short-term simulations of mechanical, electrical, and aeroelastic components to assess the performance of wind turbines under specific environmental conditions <span class="citation" data-cites="hashemiAssessmentHurricaneGenerated2021 papiUncertaintyQuantificationEffects2020 hafeleImprovedTwostepSoilstructure2016">[<a href="references.html#ref-hashemiAssessmentHurricaneGenerated2021" role="doc-biblioref">1</a>–<a href="references.html#ref-hafeleImprovedTwostepSoilstructure2016" role="doc-biblioref">3</a>]</span>.</p>
 <p>Short-term fluctuations can influence the performance and fatigue of wind turbines in the wind. Turbine performance and fatigue are based on dynamic studies and require high-frequency data to describe wind speed dynamics and capture these variations accurately&nbsp;<span class="citation" data-cites="hollingWindEnergyImpact2014">[<a href="references.html#ref-hollingWindEnergyImpact2014" role="doc-biblioref">4</a>]</span>. The methodologies for generating those signals can include Monte Carlo simulations <span class="citation" data-cites="damicoFirstSecondOrder2013">[<a href="references.html#ref-damicoFirstSecondOrder2013" role="doc-biblioref">5</a>]</span>, data-driven models <span class="citation" data-cites="dambrosioDataDrivenGeneration2022">[<a href="references.html#ref-dambrosioDataDrivenGeneration2022" role="doc-biblioref">6</a>]</span>, probabilistic approaches <span class="citation" data-cites="bokdeComparisonReconstructionMethods2019">[<a href="references.html#ref-bokdeComparisonReconstructionMethods2019" role="doc-biblioref">7</a>]</span>, or statistical techniques based on the distribution of the wind speeds and their variability <span class="citation" data-cites="rosales2024">[<a href="references.html#ref-rosales2024" role="doc-biblioref">8</a>]</span>. The time series data used in these simulations are typically generated using synthetic signals to represent the variability of the wind. However, a caveat is that such signals are commonly not related to local wind conditions. With the method proposed here, the performance of particular technologies would be tested under local variability, ensuring its robustness.</p>
 <p>Reliable data on renewable resources, such as solar, wind, or wave energy, are necessary to develop feasibility analyses related to the performance of the technology in a region <span class="citation" data-cites="coxRenewableEnergyData2018">[<a href="references.html#ref-coxRenewableEnergyData2018" role="doc-biblioref">9</a>]</span>. Reanalyses data sets are valuable for assessing technology performance. In addition, they contribute to the modeling of renewable energy resources by providing consistent long-term data relevant to a particular local area <span class="citation" data-cites="wuGlobalTypicalMeteorological2023">[<a href="references.html#ref-wuGlobalTypicalMeteorological2023" role="doc-biblioref">10</a>]</span>.</p>
-<p>Reanalysis data sets combine observations and a numerical model through a data assimilation process <span class="citation" data-cites="fujiwaraIntroductionSPARCReanalysis2017">[<a href="references.html#ref-fujiwaraIntroductionSPARCReanalysis2017" role="doc-biblioref">11</a>]</span> available for several decades in the past. The ERA5 <span class="citation" data-cites="ERA5">[<a href="references.html#ref-ERA5" role="doc-biblioref">12</a>]</span> and MERRA2 <span class="citation" data-cites="gelaroModernEraRetrospectiveAnalysis2017">[<a href="references.html#ref-gelaroModernEraRetrospectiveAnalysis2017" role="doc-biblioref">13</a>]</span> reanalyses are the most widely used in the wind energy industry, due to their hourly temporal and their spatial resolution of approximately 30 km and 50 km, respectively. For wind energy applications, global reanalyses have demonstrated their accuracy for predicting wind resource patterns and velocities in both offshore and onshore locations <span class="citation" data-cites="gualtieriAnalysingUncertaintiesReanalysis2022">[<a href="references.html#ref-gualtieriAnalysingUncertaintiesReanalysis2022" role="doc-biblioref">14</a>]</span>. In other studies, the variability of wind resource reanalysis has been used to study wind speed conditions and power production in different regions <span class="citation" data-cites="morales-ruvalcabaEstimatingWindSpeed2020a CANULREYES2022211 carrasco-diazAssessmentWindPower2015">[<a href="references.html#ref-morales-ruvalcabaEstimatingWindSpeed2020a" role="doc-biblioref">15</a>–<a href="references.html#ref-carrasco-diazAssessmentWindPower2015" role="doc-biblioref">17</a>]</span>, or to analyze the complementarity between wind and solar resources <span class="citation" data-cites="Magana-Gonzalez.2023id">[<a href="references.html#ref-Magana-Gonzalez.2023id" role="doc-biblioref">18</a>]</span>, for example. The ERA5 reanalysis has been shown to correlate well with observational data in some Mexican locations <span class="citation" data-cites="thomasHowWellAtmospheric2021 lopez-villalobosEffectsWindPower2021">[<a href="references.html#ref-thomasHowWellAtmospheric2021" role="doc-biblioref">19</a>, <a href="references.html#ref-lopez-villalobosEffectsWindPower2021" role="doc-biblioref">20</a>]</span>. However, two key facts must be addressed regarding the use of reanalysis in wind energy studies. Firstly, these data have temporal and spatial resolution limitations, which may not be sufficient to accurately capture the high-resolution variability of wind speed and its effects on wind turbines <span class="citation" data-cites="kissComparisonWindPower2009">[<a href="references.html#ref-kissComparisonWindPower2009" role="doc-biblioref">21</a>]</span>. Secondly, reanalyses exhibit an underestimation bias and can present larger errors in coastal and mountainous regions <span class="citation" data-cites="POTISOMPORN20234781">[<a href="references.html#ref-POTISOMPORN20234781" role="doc-biblioref">22</a>]</span>. Upon correction and when experimental data are accessible, the reliability of the reanalysis data is enhanced, and the uncertainties related to the modeled phenomena are diminished <span class="citation" data-cites="staffellUsingBiascorrectedReanalysis2016 gruberGlobalValidationWind2022">[<a href="references.html#ref-staffellUsingBiascorrectedReanalysis2016" role="doc-biblioref">23</a>, <a href="references.html#ref-gruberGlobalValidationWind2022" role="doc-biblioref">24</a>]</span>.</p>
+<p>Reanalysis data sets combine observations and a numerical model through a data assimilation process <span class="citation" data-cites="fujiwaraIntroductionSPARCReanalysis2017">[<a href="references.html#ref-fujiwaraIntroductionSPARCReanalysis2017" role="doc-biblioref">11</a>]</span> available for several decades in the past. The ERA5 <span class="citation" data-cites="ERA5">[<a href="references.html#ref-ERA5" role="doc-biblioref">12</a>]</span> and MERRA2 <span class="citation" data-cites="gelaroModernEraRetrospectiveAnalysis2017">[<a href="references.html#ref-gelaroModernEraRetrospectiveAnalysis2017" role="doc-biblioref">13</a>]</span> reanalyses are the most widely used in the wind energy industry, due to their hourly temporal and their spatial resolution of approximately 30 km and 50 km, respectively. For wind energy applications, global reanalyses have demonstrated their accuracy for predicting wind resource patterns and velocities in both offshore and onshore locations <span class="citation" data-cites="gualtieriAnalysingUncertaintiesReanalysis2022">[<a href="references.html#ref-gualtieriAnalysingUncertaintiesReanalysis2022" role="doc-biblioref">14</a>]</span>. In other studies, the variability of wind resource reanalysis has been used to study wind speed conditions and power production in different regions <span class="citation" data-cites="morales-ruvalcabaEstimatingWindSpeed2020a CANULREYES2022211 carrasco-diazAssessmentWindPower2015">[<a href="references.html#ref-morales-ruvalcabaEstimatingWindSpeed2020a" role="doc-biblioref">15</a>–<a href="references.html#ref-carrasco-diazAssessmentWindPower2015" role="doc-biblioref">17</a>]</span>, or to analyze the complementarity between wind and solar resources <span class="citation" data-cites="Magana-Gonzalez.2023id">[<a href="references.html#ref-Magana-Gonzalez.2023id" role="doc-biblioref">18</a>]</span>, for example. The ERA5 reanalysis has been shown to correlate well with observational data in some Mexican locations <span class="citation" data-cites="thomasHowWellAtmospheric2021 lopez-villalobosEffectsWindPower2021">[<a href="references.html#ref-thomasHowWellAtmospheric2021" role="doc-biblioref">19</a>,<a href="references.html#ref-lopez-villalobosEffectsWindPower2021" role="doc-biblioref">20</a>]</span>. However, two key facts must be addressed regarding the use of reanalysis in wind energy studies. Firstly, these data have temporal and spatial resolution limitations, which may not be sufficient to accurately capture the high-resolution variability of wind speed and its effects on wind turbines <span class="citation" data-cites="kissComparisonWindPower2009">[<a href="references.html#ref-kissComparisonWindPower2009" role="doc-biblioref">21</a>]</span>. Secondly, reanalyses exhibit an underestimation bias and can present larger errors in coastal and mountainous regions <span class="citation" data-cites="POTISOMPORN20234781">[<a href="references.html#ref-POTISOMPORN20234781" role="doc-biblioref">22</a>]</span>. Upon correction and when experimental data are accessible, the reliability of the reanalysis data is enhanced, and the uncertainties related to the modeled phenomena are diminished <span class="citation" data-cites="staffellUsingBiascorrectedReanalysis2016 gruberGlobalValidationWind2022">[<a href="references.html#ref-staffellUsingBiascorrectedReanalysis2016" role="doc-biblioref">23</a>,<a href="references.html#ref-gruberGlobalValidationWind2022" role="doc-biblioref">24</a>]</span>.</p>
 <p>Recent studies in enhancing wind speeds’ temporal or spatial resolution from reanalyses involve using machine learning techniques to generate predictive models <span class="citation" data-cites="wes-9-821-2024 hu2023downscaling adytia2024deep">[<a href="references.html#ref-wes-9-821-2024" role="doc-biblioref">25</a>–<a href="references.html#ref-adytia2024deep" role="doc-biblioref">27</a>]</span>. These approaches utilize vast amounts of reanalysis and measured data to train predictive models that require extensive datasets for training and higher computational resources.</p>
 <p>Considering that some applications, such as dynamic analysis, require high-resolution datasets that are often unrelated to local conditions and the strong capability demonstrated by reanalysis data in replicating long-term conditions in specific regions of Mexico, in this study, we introduce a methodology to improve the hourly time resolution of reanalysis time series to 10-minutes, by identifying temporal fluctuations in wind speed from a year of actual data in seven regions in Mexico. The reconstruction is based on the analysis of temporal and spatial variability. The temporal analysis allows for the characterization of the variability throughout the year. In contrast, the spatial analysis identifies regions with similar wind resources and delimits where the method can be applied. This approach links regional experimental information to add it to the reanalysis’ wind speed time series.</p>
 <p>In Mexico, the goal is to transition to a sustainable energy system, aiming for 50% clean energy sources in the electricity mix by 2050 <span class="citation" data-cites="dof2020acuerdo">[<a href="references.html#ref-dof2020acuerdo" role="doc-biblioref">28</a>]</span>. As of 2022, the country had an installed wind capacity of 7,317 MW, concentrated in two key regions: the Tehuantepec Isthmus in Oaxaca and Tamaulipas, which together account for 37.7% and 23.4% of the total installed wind capacity, respectively <span class="citation" data-cites="amdeeProyectos">[<a href="references.html#ref-amdeeProyectos" role="doc-biblioref">29</a>]</span>. Mexico plans to further increase its clean energy capacity, adding 88% from 2027 to 2037, with wind energy contributing 8.65% of this total, equating to approximately 3,430.42 MW <span class="citation" data-cites="prospectivaSENER">[<a href="references.html#ref-prospectivaSENER" role="doc-biblioref">30</a>]</span>. These regions are particularly rich in onshore and offshore wind resources, making them ideal for implementing the methodology proposed in this study. However, despite the potential of renewable sources, insufficient investment in research, development, and innovation of renewable energy technologies may limit Mexico’s ability to meet its renewable energy goals <span class="citation" data-cites="CASTREJONCAMPOS202229">[<a href="references.html#ref-CASTREJONCAMPOS202229" role="doc-biblioref">31</a>]</span>. Given the diverse environments across the country, linking short-term fluctuations to regional characteristics enables the development of customized technological solutions.</p>
@@ -697,109 +692,109 @@ Figure&nbsp;4.8: Example of the reconstruction method to the site M03.
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
 <div id="ref-hashemiAssessmentHurricaneGenerated2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Hashemi MR, Kresning B, Hashemi J, Ginis I (2021) Assessment of hurricane generated loads on offshore wind farms; a closer look at most extreme historical hurricanes in <span>New England</span>. Renewable Energy 175:593–609. <a href="https://doi.org/10.1016/j.renene.2021.05.042">https://doi.org/10.1016/j.renene.2021.05.042</a></div>
+1. Hashemi MR, Kresning B, Hashemi J, Ginis I. <a href="https://doi.org/10.1016/j.renene.2021.05.042">Assessment of hurricane generated loads on offshore wind farms; a closer look at most extreme historical hurricanes in <span>New England</span></a>. Renewable Energy. 2021;175:593–609.
 </div>
 <div id="ref-papiUncertaintyQuantificationEffects2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Papi F, Cappugi L, Salvadori S, Carnevale M, Bianchini A (2020) Uncertainty <span>Quantification</span> of the <span>Effects</span> of <span>Blade Damage</span> on the <span>Actual Energy Production</span> of <span>Modern Wind Turbines</span>. Energies 13(15):3785. <a href="https://doi.org/10.3390/en13153785">https://doi.org/10.3390/en13153785</a></div>
+2. Papi F, Cappugi L, Salvadori S, Carnevale M, Bianchini A. <a href="https://doi.org/10.3390/en13153785">Uncertainty <span>Quantification</span> of the <span>Effects</span> of <span>Blade Damage</span> on the <span>Actual Energy Production</span> of <span>Modern Wind Turbines</span></a>. Energies. 2020;13:3785.
 </div>
 <div id="ref-hafeleImprovedTwostepSoilstructure2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Häfele J, Hübler C, Gebhardt CG, Rolfes R (2016) An improved two-step soil-structure interaction modeling method for dynamical analyses of offshore wind turbines. Applied Ocean Research 55:141–150. <a href="https://doi.org/10.1016/j.apor.2015.12.001">https://doi.org/10.1016/j.apor.2015.12.001</a></div>
+3. Häfele J, Hübler C, Gebhardt CG, Rolfes R. <a href="https://doi.org/10.1016/j.apor.2015.12.001">An improved two-step soil-structure interaction modeling method for dynamical analyses of offshore wind turbines</a>. Applied Ocean Research. 2016;55:141–50.
 </div>
 <div id="ref-hollingWindEnergyImpact2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Hölling M, Peinke J, Ivanell S (2014) <a href="https://doi.org/10.1007/978-3-642-54696-9">Wind <span>Energy</span> - <span>Impact</span> of <span>Turbulence</span></a>. Springer Berlin Heidelberg, Berlin, Heidelberg</div>
+4. Hölling M, Peinke J, Ivanell S, editors. <a href="https://doi.org/10.1007/978-3-642-54696-9">Wind <span>Energy</span> - <span>Impact</span> of <span>Turbulence</span></a>. Berlin, Heidelberg: Springer Berlin Heidelberg; 2014.
 </div>
 <div id="ref-damicoFirstSecondOrder2013" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">D’Amico G, Petroni F, Prattico F (2013) First and second order semi-<span>Markov</span> chains for wind speed modeling. Physica A: Statistical Mechanics and its Applications 392(5):1194–1201. <a href="https://doi.org/10.1016/j.physa.2012.11.022">https://doi.org/10.1016/j.physa.2012.11.022</a></div>
+5. D’Amico G, Petroni F, Prattico F. <a href="https://doi.org/10.1016/j.physa.2012.11.022">First and second order semi-<span>Markov</span> chains for wind speed modeling</a>. Physica A: Statistical Mechanics and its Applications. 2013;392:1194–201.
 </div>
 <div id="ref-dambrosioDataDrivenGeneration2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">D’Ambrosio D, Schoukens J, De Troyer T, Zivanovic M, Runacres MC (2022) Data-driven generation of synthetic wind speeds: <span>A</span> comparative study. IET Renewable Power Generation 16(5):922–932. <a href="https://doi.org/10.1049/rpg2.12394">https://doi.org/10.1049/rpg2.12394</a></div>
+6. D’Ambrosio D, Schoukens J, De Troyer T, Zivanovic M, Runacres MC. <a href="https://doi.org/10.1049/rpg2.12394">Data-driven generation of synthetic wind speeds: <span>A</span> comparative study</a>. IET Renewable Power Generation. 2022;16:922–32.
 </div>
 <div id="ref-bokdeComparisonReconstructionMethods2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Bokde ND, Feijoo A, Al-Ansari N, Yaseen ZM (2019) A <span>Comparison Between Reconstruction Methods</span> for <span>Generation</span> of <span>Synthetic Time Series Applied</span> to <span>Wind Speed Simulation</span>. IEEE access : practical innovations, open solutions 7:135386–135398. <a href="https://doi.org/10.1109/ACCESS.2019.2941826">https://doi.org/10.1109/ACCESS.2019.2941826</a></div>
+7. Bokde ND, Feijoo A, Al-Ansari N, Yaseen ZM. <a href="https://doi.org/10.1109/ACCESS.2019.2941826">A <span>Comparison Between Reconstruction Methods</span> for <span>Generation</span> of <span>Synthetic Time Series Applied</span> to <span>Wind Speed Simulation</span></a>. IEEE access : practical innovations, open solutions. 2019;7:135386–98.
 </div>
 <div id="ref-rosales2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Rosales-Valladares VR, Salgado-Herrera NM, Rodríguez-Hernández O, Rodríguez-Rodríguez JR, Granados-Lieberman D, Anaya-Lara O (2024) Power hardware in the loop methodology applied in the integration of wind energy conversion system under fluctuations: A case study. Energy Sources, Part A: Recovery, Utilization, and Environmental Effects 46(1):2767–2791. <a href="https://doi.org/10.1080/15567036.2024.2308646">https://doi.org/10.1080/15567036.2024.2308646</a></div>
+8. Rosales-Valladares VR, Salgado-Herrera NM, Rodríguez-Hernández O, Rodríguez-Rodríguez JR, Granados-Lieberman D, Anaya-Lara O. <a href="https://doi.org/10.1080/15567036.2024.2308646">Power hardware in the loop methodology applied in the integration of wind energy conversion system under fluctuations: A case study</a>. Energy Sources, Part A: Recovery, Utilization, and Environmental Effects. 2024;46:2767–91.
 </div>
 <div id="ref-coxRenewableEnergyData2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Cox SL, Lopez AJ, Watson AC, Grue NW, Leisch JE (2018) <a href="https://doi.org/10.2172/1427970">Renewable <span>Energy Data</span>, <span>Analysis</span>, and <span>Decisions</span>: <span>A Guide</span> for <span>Practitioners</span></a></div>
+9. Cox SL, Lopez AJ, Watson AC, Grue NW, Leisch JE. <a href="https://doi.org/10.2172/1427970">Renewable <span>Energy Data</span>, <span>Analysis</span>, and <span>Decisions</span>: <span>A Guide</span> for <span>Practitioners</span></a>. 2018 Mar p. NREL/TP-6A20-68913, 1427970. Report No.: NREL/TP–6A20-68913, 1427970.
 </div>
 <div id="ref-wuGlobalTypicalMeteorological2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Wu Y, An J, Gui C, Xiao C, Yan D (2023) A global typical meteorological year (<span>TMY</span>) database on <span>ERA5</span> dataset. Building Simulation. <a href="https://doi.org/10.1007/s12273-023-1015-3">https://doi.org/10.1007/s12273-023-1015-3</a></div>
+10. Wu Y, An J, Gui C, Xiao C, Yan D. <a href="https://doi.org/10.1007/s12273-023-1015-3">A global typical meteorological year (<span>TMY</span>) database on <span>ERA5</span> dataset</a>. Building Simulation. 2023;
 </div>
 <div id="ref-fujiwaraIntroductionSPARCReanalysis2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Fujiwara M, Wright JS, Manney GL, et al (2017) Introduction to the <span>SPARC Reanalysis Intercomparison Project</span> (<span>S-RIP</span>) and overview of the reanalysis systems. Atmospheric Chemistry and Physics 17(2):1417–1452. <a href="https://doi.org/10.5194/acp-17-1417-2017">https://doi.org/10.5194/acp-17-1417-2017</a></div>
+11. Fujiwara M, Wright JS, Manney GL, Gray LJ, Anstey J, Birner T, et al. <a href="https://doi.org/10.5194/acp-17-1417-2017">Introduction to the <span>SPARC Reanalysis Intercomparison Project</span> (<span>S-RIP</span>) and overview of the reanalysis systems</a>. Atmospheric Chemistry and Physics. 2017;17:1417–52.
 </div>
 <div id="ref-ERA5" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">Hersbach H, Bell B, Berrisford P, et al (2020) The <span>ERA5</span> global reanalysis. Quarterly Journal of the Royal Meteorological Society 146(730):1999–2049. <a href="https://doi.org/10.1002/qj.3803">https://doi.org/10.1002/qj.3803</a></div>
+12. Hersbach H, Bell B, Berrisford P, Hirahara S, Horányi A, Muñoz-Sabater J, et al. <a href="https://doi.org/10.1002/qj.3803">The <span>ERA5</span> global reanalysis</a>. Quarterly Journal of the Royal Meteorological Society. 2020;146:1999–2049.
 </div>
 <div id="ref-gelaroModernEraRetrospectiveAnalysis2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline">Gelaro R, McCarty W, Suárez MJ, et al (2017) The <span>Modern-Era Retrospective Analysis</span> for <span>Research</span> and <span>Applications</span>, <span>Version</span> 2 (<span>MERRA-2</span>). Journal of Climate 30(14):5419–5454. <a href="https://doi.org/10.1175/JCLI-D-16-0758.1">https://doi.org/10.1175/JCLI-D-16-0758.1</a></div>
+13. Gelaro R, McCarty W, Suárez MJ, Todling R, Molod A, Takacs L, et al. <a href="https://doi.org/10.1175/JCLI-D-16-0758.1">The <span>Modern-Era Retrospective Analysis</span> for <span>Research</span> and <span>Applications</span>, <span>Version</span> 2 (<span>MERRA-2</span>)</a>. Journal of Climate. 2017;30:5419–54.
 </div>
 <div id="ref-gualtieriAnalysingUncertaintiesReanalysis2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline">Gualtieri G (2022) Analysing the uncertainties of reanalysis data used for wind resource assessment: <span>A</span> critical review. Renewable and Sustainable Energy Reviews 167:112741. <a href="https://doi.org/10.1016/j.rser.2022.112741">https://doi.org/10.1016/j.rser.2022.112741</a></div>
+14. Gualtieri G. <a href="https://doi.org/10.1016/j.rser.2022.112741">Analysing the uncertainties of reanalysis data used for wind resource assessment: <span>A</span> critical review</a>. Renewable and Sustainable Energy Reviews. 2022;167:112741.
 </div>
 <div id="ref-morales-ruvalcabaEstimatingWindSpeed2020a" class="csl-entry" role="listitem">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline">Morales-Ruvalcaba CF, Rodríguez-Hernández O, Martínez-Alvarado O, Drew DR, Ramos E (2020) Estimating wind speed and capacity factors in <span>Mexico</span> using reanalysis data. Energy for Sustainable Development 58:158–166. <a href="https://doi.org/10.1016/j.esd.2020.08.006">https://doi.org/10.1016/j.esd.2020.08.006</a></div>
+15. Morales-Ruvalcaba CF, Rodríguez-Hernández O, Martínez-Alvarado O, Drew DR, Ramos E. <a href="https://doi.org/10.1016/j.esd.2020.08.006">Estimating wind speed and capacity factors in <span>Mexico</span> using reanalysis data</a>. Energy for Sustainable Development. 2020;58:158–66.
 </div>
 <div id="ref-CANULREYES2022211" class="csl-entry" role="listitem">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline">Canul-Reyes DA, Rodríguez-Hernández O, Jarquin-Laguna A (2022) Potential zones for offshore wind power development in the <span>Gulf</span> of <span>Mexico</span> using reanalyses data and capacity factor seasonal analysis. Energy for Sustainable Development 68:211–219. <a href="https://doi.org/10.1016/j.esd.2022.03.008">https://doi.org/10.1016/j.esd.2022.03.008</a></div>
+16. Canul-Reyes DA, Rodríguez-Hernández O, Jarquin-Laguna A. <a href="https://doi.org/10.1016/j.esd.2022.03.008">Potential zones for offshore wind power development in the <span>Gulf</span> of <span>Mexico</span> using reanalyses data and capacity factor seasonal analysis</a>. Energy for Sustainable Development. 2022;68:211–9.
 </div>
 <div id="ref-carrasco-diazAssessmentWindPower2015" class="csl-entry" role="listitem">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline">Carrasco-Díaz M, Rivas D, Orozco-Contreras M, Sánchez-Montante O (2015) An assessment of wind power potential along the coast of <span>Tamaulipas</span>, northeastern <span>Mexico</span>. Renewable Energy 78:295–305. <a href="https://doi.org/10.1016/j.renene.2015.01.007">https://doi.org/10.1016/j.renene.2015.01.007</a></div>
+17. Carrasco-Díaz M, Rivas D, Orozco-Contreras M, Sánchez-Montante O. <a href="https://doi.org/10.1016/j.renene.2015.01.007">An assessment of wind power potential along the coast of <span>Tamaulipas</span>, northeastern <span>Mexico</span></a>. Renewable Energy. 2015;78:295–305.
 </div>
 <div id="ref-Magana-Gonzalez.2023id" class="csl-entry" role="listitem">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline">Magaña-González RC, Rodríguez-Hernández O, Canul-Reyes DA (2023) Analysis of seasonal variability and complementarity of wind and solar resources in <span>Mexico</span>. Sustainable Energy Technologies and Assessments 60:103456. <a href="https://doi.org/10.1016/j.seta.2023.103456">https://doi.org/10.1016/j.seta.2023.103456</a></div>
+18. Magaña-González RC, Rodríguez-Hernández O, Canul-Reyes DA. <a href="https://doi.org/10.1016/j.seta.2023.103456">Analysis of seasonal variability and complementarity of wind and solar resources in <span>Mexico</span></a>. Sustainable Energy Technologies and Assessments. 2023;60:103456.
 </div>
 <div id="ref-thomasHowWellAtmospheric2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">19. </div><div class="csl-right-inline">Thomas SR, Nicolau S, Martínez-Alvarado O, Drew DJ, Bloomfield HC (2021) How well do atmospheric reanalyses reproduce observed winds in coastal regions of <span>Mexico</span>? Meteorological Applications 28(5). <a href="https://doi.org/10.1002/met.2023">https://doi.org/10.1002/met.2023</a></div>
+19. Thomas SR, Nicolau S, Martínez-Alvarado O, Drew DJ, Bloomfield HC. <a href="https://doi.org/10.1002/met.2023">How well do atmospheric reanalyses reproduce observed winds in coastal regions of <span>Mexico</span>?</a> Meteorological Applications. 2021;28.
 </div>
 <div id="ref-lopez-villalobosEffectsWindPower2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">20. </div><div class="csl-right-inline">Lopez-Villalobos CA, Rodríguez-Hernández O, Martínez-Alvarado O, Hernandez-Yepes JG (2021) Effects of wind power spectrum analysis over resource assessment. Renewable Energy 167:761–773. <a href="https://doi.org/10.1016/j.renene.2020.11.147">https://doi.org/10.1016/j.renene.2020.11.147</a></div>
+20. Lopez-Villalobos CA, Rodríguez-Hernández O, Martínez-Alvarado O, Hernandez-Yepes JG. <a href="https://doi.org/10.1016/j.renene.2020.11.147">Effects of wind power spectrum analysis over resource assessment</a>. Renewable Energy. 2021;167:761–73.
 </div>
 <div id="ref-kissComparisonWindPower2009" class="csl-entry" role="listitem">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline">Kiss P, Varga L, Jánosi IM (2009) Comparison of wind power estimates from the <span>ECMWF</span> reanalyses with direct turbine measurements. Journal of Renewable and Sustainable Energy 1(3):033105. <a href="https://doi.org/10.1063/1.3153903">https://doi.org/10.1063/1.3153903</a></div>
+21. Kiss P, Varga L, Jánosi IM. <a href="https://doi.org/10.1063/1.3153903">Comparison of wind power estimates from the <span>ECMWF</span> reanalyses with direct turbine measurements</a>. Journal of Renewable and Sustainable Energy. 2009;1:033105.
 </div>
 <div id="ref-POTISOMPORN20234781" class="csl-entry" role="listitem">
-<div class="csl-left-margin">22. </div><div class="csl-right-inline">Potisomporn P, Adcock TAA, Vogel CR (2023) Evaluating <span>ERA5</span> reanalysis predictions of low wind speed events around the <span>UK</span>. Energy Reports 10:4781–4790. <a href="https://doi.org/10.1016/j.egyr.2023.11.035">https://doi.org/10.1016/j.egyr.2023.11.035</a></div>
+22. Potisomporn P, Adcock TAA, Vogel CR. <a href="https://doi.org/10.1016/j.egyr.2023.11.035">Evaluating <span>ERA5</span> reanalysis predictions of low wind speed events around the <span>UK</span></a>. Energy Reports. 2023;10:4781–90.
 </div>
 <div id="ref-staffellUsingBiascorrectedReanalysis2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline">Staffell I, Pfenninger S (2016) Using bias-corrected reanalysis to simulate current and future wind power output. Energy 114:1224–1239. <a href="https://doi.org/10.1016/j.energy.2016.08.068">https://doi.org/10.1016/j.energy.2016.08.068</a></div>
+23. Staffell I, Pfenninger S. <a href="https://doi.org/10.1016/j.energy.2016.08.068">Using bias-corrected reanalysis to simulate current and future wind power output</a>. Energy. 2016;114:1224–39.
 </div>
 <div id="ref-gruberGlobalValidationWind2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">24. </div><div class="csl-right-inline">Gruber K, Regner P, Wehrle S, Zeyringer M, Schmidt J (2022) Towards global validation of wind power simulations: <span>A</span> multi-country assessment of wind power simulation from <span>MERRA-2</span> and <span>ERA-5</span> reanalyses bias-corrected with the global wind atlas. Energy 238:121520. <a href="https://doi.org/10.1016/j.energy.2021.121520">https://doi.org/10.1016/j.energy.2021.121520</a></div>
+24. Gruber K, Regner P, Wehrle S, Zeyringer M, Schmidt J. <a href="https://doi.org/10.1016/j.energy.2021.121520">Towards global validation of wind power simulations: <span>A</span> multi-country assessment of wind power simulation from <span>MERRA-2</span> and <span>ERA-5</span> reanalyses bias-corrected with the global wind atlas</a>. Energy. 2022;238:121520.
 </div>
 <div id="ref-wes-9-821-2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">25. </div><div class="csl-right-inline">Hallgren C, Aird JA, Ivanell S, et al (2024) Machine learning methods to improve spatial predictions of coastal wind speed profiles and low-level jets using single-level <span>ERA5</span> data. Wind Energy Science 9(4):821–840. <a href="https://doi.org/10.5194/wes-9-821-2024">https://doi.org/10.5194/wes-9-821-2024</a></div>
+25. Hallgren C, Aird JA, Ivanell S, Körnich H, Vakkari V, Barthelmie RJ, et al. <a href="https://doi.org/10.5194/wes-9-821-2024">Machine learning methods to improve spatial predictions of coastal wind speed profiles and low-level jets using single-level <span>ERA5</span> data</a>. Wind Energy Science. 2024;9:821–40.
 </div>
 <div id="ref-hu2023downscaling" class="csl-entry" role="listitem">
-<div class="csl-left-margin">26. </div><div class="csl-right-inline">Hu W, Scholz Y, Yeligeti M, von Bremen L, Deng Y (2023) Downscaling <span>ERA5</span> wind speed data: A machine learning approach considering topographic influences. Environmental Research Letters 18(9):094007</div>
+26. Hu W, Scholz Y, Yeligeti M, von Bremen L, Deng Y. Downscaling <span>ERA5</span> wind speed data: A machine learning approach considering topographic influences. Environmental Research Letters. 2023;18:094007.
 </div>
 <div id="ref-adytia2024deep" class="csl-entry" role="listitem">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline">Adytia D, Latifah AL, Saepudin D, et al (2024) A deep learning approach for wind downscaling using spatially correlated global wind data. International Journal of Data Science and Analytics 1–15</div>
+27. Adytia D, Latifah AL, Saepudin D, Tarwidi D, Pudjaprasetya SR, Husrin S, et al. A deep learning approach for wind downscaling using spatially correlated global wind data. International Journal of Data Science and Analytics. 2024;1–15.
 </div>
 <div id="ref-dof2020acuerdo" class="csl-entry" role="listitem">
-<div class="csl-left-margin">28. </div><div class="csl-right-inline">de la Federación DO (2020) Acuerdo por el que la <span class="nocase">Secretar<span class="nocase">ı́</span>a</span> de <span class="nocase">Energ<span class="nocase">ı́</span>a</span> aprueba y publica la actualizaci<span>ó</span>n de la <span>Estrategia</span> de <span class="nocase">Transici<span class="nocase">ó</span>n</span> para <span>Promover</span> el <span>Uso</span> de <span class="nocase">Tecnolog<span class="nocase">ı́</span>as</span> y <span>Combustibles</span> m<span>á</span>s <span>Limpios</span>, en t<span>é</span>rminos de la <span>Ley</span> de <span class="nocase">Transici<span class="nocase">ó</span>n Energ<span class="nocase">é</span>tica</span>. 07 de <span>Febrero</span> de 2020</div>
+28. de la Federación DO. Acuerdo por el que la <span class="nocase">Secretar<span class="nocase">ı́</span>a</span> de <span class="nocase">Energ<span class="nocase">ı́</span>a</span> aprueba y publica la actualizaci<span>ó</span>n de la <span>Estrategia</span> de <span class="nocase">Transici<span class="nocase">ó</span>n</span> para <span>Promover</span> el <span>Uso</span> de <span class="nocase">Tecnolog<span class="nocase">ı́</span>as</span> y <span>Combustibles</span> m<span>á</span>s <span>Limpios</span>, en t<span>é</span>rminos de la <span>Ley</span> de <span class="nocase">Transici<span class="nocase">ó</span>n Energ<span class="nocase">é</span>tica</span>. 07 de <span>Febrero</span> de 2020. 2020.
 </div>
 <div id="ref-amdeeProyectos" class="csl-entry" role="listitem">
-<div class="csl-left-margin">29. </div><div class="csl-right-inline">Asociación Mexicana de Energía Eólica Proyectos - <span class="nocase">Parques <span>É</span>olicos</span></div>
+29. Asociación Mexicana de Energía Eólica. Proyectos - <span class="nocase">Parques <span>É</span>olicos</span>.
 </div>
 <div id="ref-prospectivaSENER" class="csl-entry" role="listitem">
-<div class="csl-left-margin">30. </div><div class="csl-right-inline">de Energía S (2024) Prospectiva del sector el<span>é</span>ctrico 2023-2037. Secretaria de Energia, Mexico</div>
+30. de Energía S. Prospectiva del sector el<span>é</span>ctrico 2023-2037. Mexico: Secretaria de Energia; 2024 Apr.
 </div>
 <div id="ref-CASTREJONCAMPOS202229" class="csl-entry" role="listitem">
-<div class="csl-left-margin">31. </div><div class="csl-right-inline">Castrejon-Campos O (2022) Evolution of clean energy technologies in <span>Mexico</span>: <span>A</span> multi-perspective analysis. Energy for Sustainable Development 67:29–53. <a href="https://doi.org/10.1016/j.esd.2022.01.003">https://doi.org/10.1016/j.esd.2022.01.003</a></div>
+31. Castrejon-Campos O. <a href="https://doi.org/10.1016/j.esd.2022.01.003">Evolution of clean energy technologies in <span>Mexico</span>: <span>A</span> multi-perspective analysis</a>. Energy for Sustainable Development. 2022;67:29–53.
 </div>
 <div id="ref-Gross2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">32. </div><div class="csl-right-inline">Gross M, Magar V, Peña A (2020) The effect of averaging, sampling, and time series length on wind power density estimations. Sustainability 12(8):3431. <a href="https://doi.org/10.3390/su12083431">https://doi.org/10.3390/su12083431</a></div>
+32. Gross M, Magar V, Peña A. <a href="https://doi.org/10.3390/su12083431">The effect of averaging, sampling, and time series length on wind power density estimations</a>. Sustainability. 2020;12:3431.
 </div>
 <div id="ref-popeTurbulentFlows2000" class="csl-entry" role="listitem">
-<div class="csl-left-margin">33. </div><div class="csl-right-inline">Pope SB (2000) <a href="https://doi.org/10.1017/CBO9780511840531">Turbulent <span>Flows</span></a>, 1st ed. Cambridge University Press</div>
+33. Pope SB. <a href="https://doi.org/10.1017/CBO9780511840531">Turbulent <span>Flows</span></a>. 1st ed. Cambridge University Press; 2000.
 </div>
 <div id="ref-mcnerneyMarkovMethodSimulating1985" class="csl-entry" role="listitem">
-<div class="csl-left-margin">34. </div><div class="csl-right-inline">McNerney GM, Veers PS (1985) Markov method for simulating non-<span>Gaussian</span> wind speed time series. Sandia National Laboratories, United States</div>
+34. McNerney GM, Veers PS. Markov method for simulating non-<span>Gaussian</span> wind speed time series. United States: Sandia National Laboratories; 1985 Jan.
 </div>
 <div id="ref-era_web" class="csl-entry" role="listitem">
-<div class="csl-left-margin">35. </div><div class="csl-right-inline">C3S (2018) <a href="https://doi.org/10.24381/CDS.ADBB2D47">ERA5 hourly data on single levels from 1940 to present</a></div>
+35. C3S. ERA5 hourly data on single levels from 1940 to present [Internet]. Copernicus Climate Change Service (C3S) Climate Data Store (CDS); 2018. Available from: <a href="https://cds.climate.copernicus.eu/doi/10.24381/cds.adbb2d47">https://cds.climate.copernicus.eu/doi/10.24381/cds.adbb2d47</a>
 </div>
 </div>
 </section>
@@ -825,150 +820,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = true;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

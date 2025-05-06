@@ -56,12 +56,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fdf964b8551a4c1da979a829183e41b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5d78c9e45e9a5253a6059031ce5ea1b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -147,9 +145,6 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">High-resolution wind speed data and its influence on wind energy aspects in Mexico</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -413,7 +408,7 @@ Table&nbsp;2.2: Locations of AEM meteorological tower sites in Mexico <span clas
 <h2 data-number="2.2" class="anchored" data-anchor-id="concepts"><span class="header-section-number">2.2</span> Concepts</h2>
 <section id="sec-abl" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-abl"><span class="header-section-number">2.2.1</span> Atmospheric Boundary Layer</h3>
-<p>The atmospheric boundary layer (ABL) is the lowest segment of the atmosphere, where wind speed and other meteorological variables are significantly influenced by surface roughness, atmospheric stability, and, in coastal and oceanic regions, by wave momentum flux <span class="citation" data-cites="coeff manwell">[<a href="references.html#ref-coeff" role="doc-biblioref">6</a>, <a href="references.html#ref-manwell" role="doc-biblioref">7</a>]</span>.</p>
+<p>The atmospheric boundary layer (ABL) is the lowest segment of the atmosphere, where wind speed and other meteorological variables are significantly influenced by surface roughness, atmospheric stability, and, in coastal and oceanic regions, by wave momentum flux <span class="citation" data-cites="coeff manwell">[<a href="references.html#ref-coeff" role="doc-biblioref">6</a>,<a href="references.html#ref-manwell" role="doc-biblioref">7</a>]</span>.</p>
 <p>In wind energy applications, accurate wind speed measurements at the turbine hub height are crucial for optimal performance prediction. In the absence of direct measurements using models that describe the wind speed profile as a function of height within the ABL is commonly employed. Two such models are the logarithmic profile and the power-law profile, which provide distinct representations of the wind speed gradient with height.</p>
 <p>The logarithmic profile is frequently applied to model the wind speed in the surface layer of the ABL, particularly under neutral stability conditions. The model assumes that the wind speed increases logarithmically with height, reflecting the influence of surface roughness and turbulence. It is expressed as <span class="citation" data-cites="manwell">[<a href="references.html#ref-manwell" role="doc-biblioref">7</a>]</span>:</p>
 <p><span id="eq-log-profile"><span class="math display">\[U(z) = \frac{U_*}{\kappa} \ln\left(\frac{z}{z_0}\right) \tag{2.1}\]</span></span></p>
@@ -471,7 +466,7 @@ Figure&nbsp;2.2: Power curve for a typical wind turbine, highlighting cut-in, ra
 </section>
 <section id="sec-del" class="level3" data-number="2.2.5">
 <h3 data-number="2.2.5" class="anchored" data-anchor-id="sec-del"><span class="header-section-number">2.2.5</span> Damage equivalent load</h3>
-<p>The damage equivalent load (DEL) represents a simplified measure of fatigue damage commonly used in wind turbine analysis, by converting varying load cycles into an equivalent constant amplitude load <span class="citation" data-cites="grieve2022 lee2005fatigue">[<a href="references.html#ref-grieve2022" role="doc-biblioref">10</a>, <a href="references.html#ref-lee2005fatigue" role="doc-biblioref">11</a>]</span>. This allows quantifying the fatigue loads experienced by a wind turbine due to external factors such as wind and waves.</p>
+<p>The damage equivalent load (DEL) represents a simplified measure of fatigue damage commonly used in wind turbine analysis, by converting varying load cycles into an equivalent constant amplitude load <span class="citation" data-cites="grieve2022 lee2005fatigue">[<a href="references.html#ref-grieve2022" role="doc-biblioref">10</a>,<a href="references.html#ref-lee2005fatigue" role="doc-biblioref">11</a>]</span>. This allows quantifying the fatigue loads experienced by a wind turbine due to external factors such as wind and waves.</p>
 <p>The <span class="math inline">\({DEL}_{M_{dir_{p}}}\)</span> is the total damage equivalent load for all events in wind direction <em>p</em> during 25 years, a typical lifetime for a turbine, is defined as:</p>
 <p><span id="eq-del"><span class="math display">\[\text{DEL}_{M_{dir_{p}}} = \left( \sum_r P_r \left(\sum_i \frac{n_i M_i^k}{T_{sim}}\right) \right)^{1/k}
 \tag{2.8}\]</span></span></p>
@@ -507,64 +502,64 @@ Figure&nbsp;2.3: Geometric layout of a wind turbine in OpenFAST, illustrating ke
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
 <div id="ref-ERA5" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Hersbach H, Bell B, Berrisford P, et al (2020) The <span>ERA5</span> global reanalysis. Quarterly Journal of the Royal Meteorological Society 146(730):1999–2049. <a href="https://doi.org/10.1002/qj.3803">https://doi.org/10.1002/qj.3803</a></div>
+1. Hersbach H, Bell B, Berrisford P, Hirahara S, Horányi A, Muñoz-Sabater J, et al. <a href="https://doi.org/10.1002/qj.3803">The <span>ERA5</span> global reanalysis</a>. Quarterly Journal of the Royal Meteorological Society. 2020;146:1999–2049.
 </div>
 <div id="ref-ineelAtlasEolicoMexicano" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">INEEL Atlas <span>Eolico Mexicano</span></div>
+2. INEEL. Atlas <span>Eolico Mexicano</span>.
 </div>
 <div id="ref-CENACE" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">CENACE (Consulted - 2022) Centro nacional de control de energ<span>í</span>a - <span class="nocase">https://www.gob.mx/cenace</span>. Gobierno de M<span>é</span>xico</div>
+3. CENACE. Centro nacional de control de energ<span>í</span>a - <span class="nocase">https://www.gob.mx/cenace</span>. Gobierno de M<span>é</span>xico; Consulted - 2022.
 </div>
 <div id="ref-MERRA2" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Gelaro R, McCarty W, Suárez MJ, et al (2017) The modern-era retrospective analysis for research and applications, version 2 (<span>MERRA-2</span>). Journal of Climate 30:5419–5454. <a href="https://doi.org/10.1175/JCLI-D-16-0758.1">https://doi.org/10.1175/JCLI-D-16-0758.1</a></div>
+4. Gelaro R, McCarty W, Suárez MJ, Todling R, Molod A, Takacs L, et al. <a href="https://doi.org/10.1175/JCLI-D-16-0758.1">The modern-era retrospective analysis for research and applications, version 2 (<span>MERRA-2</span>)</a>. Journal of Climate. 2017;30:5419–54.
 </div>
 <div id="ref-reanalysis" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Dee D, Fasullo J, Shea D, Walsh J, for Atmospheric Research Staff NC The climate data guide: <span>Atmospheric</span> reanalysis: <span>Overview</span> &amp; comparison tables</div>
+5. Dee D, Fasullo J, Shea D, Walsh J, for Atmospheric Research Staff NC. The climate data guide: <span>Atmospheric</span> reanalysis: <span>Overview</span> &amp; comparison tables.
 </div>
 <div id="ref-coeff" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Hsu SA, Meindl EA, Gilhousen DB (1994) Determining the power-law wind-profile exponent under near-neutral stability conditions at sea. Journal of Applied Meteorology 33(6):757–765</div>
+6. Hsu SA, Meindl EA, Gilhousen DB. Determining the power-law wind-profile exponent under near-neutral stability conditions at sea. Journal of Applied Meteorology. 1994;33:757–65.
 </div>
 <div id="ref-manwell" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Manwell J, Mcgowan J, Rogers A (2006) <a href="https://doi.org/10.1002/9781119994367">Wind energy explained: <span>Theory</span>, design and application, second edition</a>. John Wiley &amp; Sons, Ltd</div>
+7. Manwell J, Mcgowan J, Rogers A. <a href="https://doi.org/10.1002/9781119994367">Wind energy explained: <span>Theory</span>, design and application, second edition</a>. John Wiley &amp; Sons, Ltd; 2006.
 </div>
 <div id="ref-neutral_abl" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Arya SP (1988) <a href="https://doi.org/10.1016/S0074-6142(08)60425-8">Chapter 10 neutral boundary layers</a>. In: Introduction to micrometeorology. Academic Press, pp 141–156</div>
+8. Arya SP, editor. <a href="https://doi.org/10.1016/S0074-6142(08)60425-8">Chapter 10 neutral boundary layers</a>. Introduction to micrometeorology. Academic Press; 1988. p. 141–56.
 </div>
 <div id="ref-wind_turbine" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Lydia M, Kumar SS, Selvakumar AI, Prem Kumar GE (2014) A comprehensive review on wind turbine power curve modeling techniques. Renewable and Sustainable Energy Reviews 30:452–460</div>
+9. Lydia M, Kumar SS, Selvakumar AI, Prem Kumar GE. A comprehensive review on wind turbine power curve modeling techniques. Renewable and Sustainable Energy Reviews. 2014;30:452–60.
 </div>
 <div id="ref-grieve2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Grieve N, Kazemi Amiri AM, Leithead WE (2022) A straightforward approach to site-wide assessment of wind turbine tower lifetime extension potential. Energies 15(3380). <a href="https://doi.org/10.3390/en15093380">https://doi.org/10.3390/en15093380</a></div>
+10. Grieve N, Kazemi Amiri AM, Leithead WE. <a href="https://doi.org/10.3390/en15093380">A straightforward approach to site-wide assessment of wind turbine tower lifetime extension potential</a>. Energies. 2022;15.
 </div>
 <div id="ref-lee2005fatigue" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Lee YL (2005) Fatigue testing and analysis: <span>Theory</span> and practice. Elsevier Science</div>
+11. Lee YL. Fatigue testing and analysis: <span>Theory</span> and practice. Elsevier Science; 2005.
 </div>
 <div id="ref-openfast_documentation" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">National Renewable Energy Laboratory (2025) <span>OpenFAST</span> documentation</div>
+12. National Renewable Energy Laboratory. <span>OpenFAST</span> documentation. 2025.
 </div>
 <div id="ref-fast_gov" class="csl-entry" role="listitem">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline">U.S. Department of Energy (2023) Modeling the future of wind energy</div>
+13. U.S. Department of Energy. Modeling the future of wind energy. https://www.energy.gov/eere/wind/articles/modeling-future-wind-energy; 2023.
 </div>
 <div id="ref-tranCFDStudyCoupled2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline">Tran TT, Kim D-H (2018) A <span>CFD</span> study of coupled aerodynamic-hydrodynamic loads on a semisubmersible floating offshore wind turbine. Wind Energy 21(1):70–85. <a href="https://doi.org/10.1002/we.2145">https://doi.org/10.1002/we.2145</a></div>
+14. Tran TT, Kim D-H. <a href="https://doi.org/10.1002/we.2145">A <span>CFD</span> study of coupled aerodynamic-hydrodynamic loads on a semisubmersible floating offshore wind turbine.</a> Wind Energy. 2018;21:70–85.
 </div>
 <div id="ref-hashemiAssessmentHurricaneGenerated2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline">Hashemi MR, Kresning B, Hashemi J, Ginis I (2021) Assessment of hurricane generated loads on offshore wind farms; a closer look at most extreme historical hurricanes in <span>New England</span>. Renewable Energy 175:593–609. <a href="https://doi.org/10.1016/j.renene.2021.05.042">https://doi.org/10.1016/j.renene.2021.05.042</a></div>
+15. Hashemi MR, Kresning B, Hashemi J, Ginis I. <a href="https://doi.org/10.1016/j.renene.2021.05.042">Assessment of hurricane generated loads on offshore wind farms; a closer look at most extreme historical hurricanes in <span>New England</span></a>. Renewable Energy. 2021;175:593–609.
 </div>
 <div id="ref-maWindwaveInducedDynamic2014" class="csl-entry" role="listitem">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline">Ma Y, Hu Z, Xiao L (2014) Wind-wave induced dynamic response analysis for motions and mooring loads of a spar-type offshore floating wind turbine. Journal of Hydrodynamics 26(6):865–874. <a href="https://doi.org/10.1016/S1001-6058(14)60095-0">https://doi.org/10.1016/S1001-6058(14)60095-0</a></div>
+16. Ma Y, Hu Z, Xiao L. <a href="https://doi.org/10.1016/S1001-6058(14)60095-0">Wind-wave induced dynamic response analysis for motions and mooring loads of a spar-type offshore floating wind turbine</a>. Journal of Hydrodynamics. 2014;26:865–74.
 </div>
 <div id="ref-moratoUltimateLoadsResponse2017a" class="csl-entry" role="listitem">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline">Morató A, Sriramula S, Krishnan N, Nichols J (2017) Ultimate loads and response analysis of a monopile supported offshore wind turbine using fully coupled simulation. Renewable Energy 101:126–143. <a href="https://doi.org/10.1016/j.renene.2016.08.056">https://doi.org/10.1016/j.renene.2016.08.056</a></div>
+17. Morató A, Sriramula S, Krishnan N, Nichols J. <a href="https://doi.org/10.1016/j.renene.2016.08.056">Ultimate loads and response analysis of a monopile supported offshore wind turbine using fully coupled simulation</a>. Renewable Energy. 2017;101:126–43.
 </div>
 <div id="ref-xuExtremeLoadsAnalysis2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline">Xu X, Gaidai O, Naess A, Sahoo P (2020) Extreme loads analysis of a site-specific semi-submersible type wind turbine. Ships and Offshore Structures 15(sup1):S46–S54. <a href="https://doi.org/10.1080/17445302.2020.1733315">https://doi.org/10.1080/17445302.2020.1733315</a></div>
+18. Xu X, Gaidai O, Naess A, Sahoo P. <a href="https://doi.org/10.1080/17445302.2020.1733315">Extreme loads analysis of a site-specific semi-submersible type wind turbine</a>. Ships and Offshore Structures. 2020;15:S46–54.
 </div>
 <div id="ref-papiTechnicalChallengesFloating2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">19. </div><div class="csl-right-inline">Papi F, Bianchini A (2022) Technical challenges in floating offshore wind turbine upscaling: <span>A</span> critical analysis based on the <span>NREL</span> 5 <span>MW</span> and <span>IEA</span> 15 <span>MW Reference Turbines</span>. Renewable and Sustainable Energy Reviews 162:112489. <a href="https://doi.org/10.1016/j.rser.2022.112489">https://doi.org/10.1016/j.rser.2022.112489</a></div>
+19. Papi F, Bianchini A. <a href="https://doi.org/10.1016/j.rser.2022.112489">Technical challenges in floating offshore wind turbine upscaling: <span>A</span> critical analysis based on the <span>NREL</span> 5 <span>MW</span> and <span>IEA</span> 15 <span>MW Reference Turbines</span></a>. Renewable and Sustainable Energy Reviews. 2022;162:112489.
 </div>
 <div id="ref-singh2014simulation" class="csl-entry" role="listitem">
-<div class="csl-left-margin">20. </div><div class="csl-right-inline">Singh M, Muljadi E, Jonkman J, Gevorgian V, Girsang I, Dhupia J (2014) Simulation for wind turbine generators—with <span>FAST</span> and <span class="nocase">MATLAB-simulink</span> modules. National Renewable Energy Laboratory</div>
+20. Singh M, Muljadi E, Jonkman J, Gevorgian V, Girsang I, Dhupia J. Simulation for wind turbine generators—with <span>FAST</span> and <span class="nocase">MATLAB-simulink</span> modules. National Renewable Energy Laboratory; 2014 Apr. Report No.: NREL/TP-5D00-59195.
 </div>
 </div>
 </section>
@@ -590,150 +585,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = true;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

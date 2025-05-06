@@ -56,12 +56,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fdf964b8551a4c1da979a829183e41b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5d78c9e45e9a5253a6059031ce5ea1b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -147,9 +145,6 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">High-resolution wind speed data and its influence on wind energy aspects in Mexico</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,8 +252,8 @@ window.Quarto = {
 <section id="introduction" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
 <p>The global shift towards energy transition prominently features wind and solar energy production as leading alternatives. These renewable sources present generation costs that are on par with fossil fuel-based electricity production <span class="citation" data-cites="IrenaCosts_2022">[<a href="references.html#ref-IrenaCosts_2022" role="doc-biblioref">1</a>]</span>. Although these technologies have reached significant levels of technical and economic development, challenges remain in effectively integrating them due to issues such as their variable nature and capacity to meet electricity demand.</p>
-<p>Recently, Mexico has set greenhouse gas (GHG) reduction goals for 2050, aiming to have clean energy constitute 50% of its electricity mix. With the rise of electric vehicles, the demand for electricity will necessitate substantial contributions from renewable sources, such as wind and solar energy <span class="citation" data-cites="Castrejon-Campos.2022">[<a href="references.html#ref-Castrejon-Campos.2022" role="doc-biblioref">2</a>]</span>. The extensive integration of these variable energy sources will lead to modifications in the transmission network, as its expansion will be pivotal in meeting mitigation targets without limitations <span class="citation" data-cites="Miranda.2022hop">[<a href="references.html#ref-Miranda.2022hop" role="doc-biblioref">3</a>]</span>. In 2022, the national transmission network in Mexico spanned 110,685 km, covering nine control zones and an isolated system <span class="citation" data-cites="PRODESEN_2022">[<a href="references.html#ref-PRODESEN_2022" role="doc-biblioref">4</a>]</span>, representing a considerable challenge. Additionally, Mexico’s large and diverse landscape affects wind and solar resource availability, as their potential varies by location and time, creating a unique challenge for the regional integration of renewable energy sources.</p>
-<p>The Yucatan Peninsula, situated in Mexico’s southeast, primarily relies on natural gas for electricity generation <span class="citation" data-cites="Navarro-Pineda.2017">[<a href="references.html#ref-Navarro-Pineda.2017" role="doc-biblioref">5</a>]</span>. Although recent investigations have identified offshore wind potential <span class="citation" data-cites="canul-reyesPotentialZonesOffshore2022">[<a href="references.html#ref-canul-reyesPotentialZonesOffshore2022" role="doc-biblioref">6</a>]</span>, there is a lack of research on how to incorporate these renewable resources into the region’s power grid. In the work by Magana-Gonzalez et al. <span class="citation" data-cites="Magana-Gonzalez.2023id">[<a href="references.html#ref-Magana-Gonzalez.2023id" role="doc-biblioref">7</a>]</span>, the researchers analyze the spatial and temporal complementarity of energies throughout Mexico. A significant finding emphasizes the Yucatan Peninsula, where seasonal complementarity values are notably high. Nevertheless, while this study focused on complementarity, it did not explore specifics concerning installed capacity or energy output.</p>
+<p>Recently, Mexico has set greenhouse gas (GHG) reduction goals for 2050, aiming to have clean energy constitute 50% of its electricity mix. With the rise of electric vehicles, the demand for electricity will necessitate substantial contributions from renewable sources, such as wind and solar energy <span class="citation" data-cites="CASTREJONCAMPOS202229">[<a href="references.html#ref-CASTREJONCAMPOS202229" role="doc-biblioref">2</a>]</span>. The extensive integration of these variable energy sources will lead to modifications in the transmission network, as its expansion will be pivotal in meeting mitigation targets without limitations <span class="citation" data-cites="Miranda.2022hop">[<a href="references.html#ref-Miranda.2022hop" role="doc-biblioref">3</a>]</span>. In 2022, the national transmission network in Mexico spanned 110,685 km, covering nine control zones and an isolated system <span class="citation" data-cites="PRODESEN_2022">[<a href="references.html#ref-PRODESEN_2022" role="doc-biblioref">4</a>]</span>, representing a considerable challenge. Additionally, Mexico’s large and diverse landscape affects wind and solar resource availability, as their potential varies by location and time, creating a unique challenge for the regional integration of renewable energy sources.</p>
+<p>The Yucatan Peninsula, situated in Mexico’s southeast, primarily relies on natural gas for electricity generation <span class="citation" data-cites="Navarro-Pineda.2017">[<a href="references.html#ref-Navarro-Pineda.2017" role="doc-biblioref">5</a>]</span>. Although recent investigations have identified offshore wind potential <span class="citation" data-cites="CANULREYES2022211">[<a href="references.html#ref-CANULREYES2022211" role="doc-biblioref">6</a>]</span>, there is a lack of research on how to incorporate these renewable resources into the region’s power grid. In the work by Magana-Gonzalez et al. <span class="citation" data-cites="Magana-Gonzalez.2023id">[<a href="references.html#ref-Magana-Gonzalez.2023id" role="doc-biblioref">7</a>]</span>, the researchers analyze the spatial and temporal complementarity of energies throughout Mexico. A significant finding emphasizes the Yucatan Peninsula, where seasonal complementarity values are notably high. Nevertheless, while this study focused on complementarity, it did not explore specifics concerning installed capacity or energy output.</p>
 <p>Meteorological modeling is increasingly recognized as a valuable instrument for analyzing renewable energy production due to its ability to deliver insights on key physical variables that influence power generation over time and across regions, as well as their complementary potential. Moreover, integrating these analyses with electricity demand forecasts allows for the identification of the necessary technologies, scale of installations, and storage capacities required to fulfill both present and future regional energy demands.</p>
 <p>A pioneering study investigating the interaction between wind and solar resources took place in the United Kingdom <span class="citation" data-cites="Bett.2016">[<a href="references.html#ref-Bett.2016" role="doc-biblioref">8</a>]</span>. The study employed the ERA-Interim dataset to explore their combined effects on a weekly and monthly basis, revealing substantial large-scale complementarity.</p>
 <p>A recent review by <span class="citation" data-cites="Weschenfelder.2020">[<a href="references.html#ref-Weschenfelder.2020" role="doc-biblioref">9</a>]</span> offers a comprehensive overview of complementarity analysis, particularly in integrating renewable energy sources into power grids to decrease their variability. A frequently explored strategy is the use of hybrid systems combining photovoltaics, wind, and storage, which operate synergistically to assist in meeting national emission reduction goals. This review examines 41 studies, addressing typical data sources that range from experimental to reanalysis data. The authors propose that using both data types can enhance the accuracy of results, an assertion also supported by <span class="citation" data-cites="Pedruzzi.2023">[<a href="references.html#ref-Pedruzzi.2023" role="doc-biblioref">10</a>]</span>. They emphasize the significance of conducting localized analyses and the need for a consistent reference measure to assess complementarity effectively.</p>
@@ -486,88 +481,88 @@ In green is represented the electricity demand. Each group of hours on the x-axi
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
 <div id="ref-IrenaCosts_2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">IRENA (2023) Renewable power generation costs in 2022. International Renewable Energy Agency</div>
+1. IRENA. Renewable power generation costs in 2022. International Renewable Energy Agency; 2023.
 </div>
-<div id="ref-Castrejon-Campos.2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Castrejon-Campos O (2022) Evolution of clean energy technologies in <span>Mexico</span>: <span>A</span> multi-perspective analysis. Energy for Sustainable Development 67:29–53. <a href="https://doi.org/10.1016/j.esd.2022.01.003">https://doi.org/10.1016/j.esd.2022.01.003</a></div>
+<div id="ref-CASTREJONCAMPOS202229" class="csl-entry" role="listitem">
+2. Castrejon-Campos O. <a href="https://doi.org/10.1016/j.esd.2022.01.003">Evolution of clean energy technologies in <span>Mexico</span>: <span>A</span> multi-perspective analysis</a>. Energy for Sustainable Development. 2022;67:29–53.
 </div>
 <div id="ref-Miranda.2022hop" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Miranda K, Tarín-Santiso AV, Llamas-Terrés A, Probst O (2022) The electricity generation dispatch in mexico: <span>An</span> uncertain road towards sustainability. Energies 15(23):8831. <a href="https://doi.org/10.3390/en15238831">https://doi.org/10.3390/en15238831</a></div>
+3. Miranda K, Tarín-Santiso AV, Llamas-Terrés A, Probst O. <a href="https://doi.org/10.3390/en15238831">The electricity generation dispatch in mexico: <span>An</span> uncertain road towards sustainability</a>. Energies. 2022;15:8831.
 </div>
 <div id="ref-PRODESEN_2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">de Energía S (2023) Programa de desarrollo del sistema el<span>é</span>ctrico nacional 2023-2037. Gobierno de M<span>é</span>xico</div>
+4. de Energía S. Programa de desarrollo del sistema el<span>é</span>ctrico nacional 2023-2037. Gobierno de M<span>é</span>xico; 2023.
 </div>
 <div id="ref-Navarro-Pineda.2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Navarro-Pineda FS, Handler R, Sacramento-Rivero JC (2017) Potential effects of the <span>Mexican</span> energy reform on life cycle impacts of electricity generation in <span>Mexico</span> and the <span>Yucatan</span> region. Journal of Cleaner Production 164:1016–1025. <a href="https://doi.org/10.1016/j.jclepro.2017.07.023">https://doi.org/10.1016/j.jclepro.2017.07.023</a></div>
+5. Navarro-Pineda FS, Handler R, Sacramento-Rivero JC. <a href="https://doi.org/10.1016/j.jclepro.2017.07.023">Potential effects of the <span>Mexican</span> energy reform on life cycle impacts of electricity generation in <span>Mexico</span> and the <span>Yucatan</span> region</a>. Journal of Cleaner Production. 2017;164:1016–25.
 </div>
-<div id="ref-canul-reyesPotentialZonesOffshore2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Canul-Reyes DA, Rodríguez-Hernández O, Jarquin-Laguna A (2022) Potential zones for offshore wind power development in the <span>Gulf</span> of <span>Mexico</span> using reanalyses data and capacity factor seasonal analysis. Energy for Sustainable Development 68:211–219. <a href="https://doi.org/10.1016/j.esd.2022.03.008">https://doi.org/10.1016/j.esd.2022.03.008</a></div>
+<div id="ref-CANULREYES2022211" class="csl-entry" role="listitem">
+6. Canul-Reyes DA, Rodríguez-Hernández O, Jarquin-Laguna A. <a href="https://doi.org/10.1016/j.esd.2022.03.008">Potential zones for offshore wind power development in the <span>Gulf</span> of <span>Mexico</span> using reanalyses data and capacity factor seasonal analysis</a>. Energy for Sustainable Development. 2022;68:211–9.
 </div>
 <div id="ref-Magana-Gonzalez.2023id" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Magaña-González RC, Rodríguez-Hernández O, Canul-Reyes DA (2023) Analysis of seasonal variability and complementarity of wind and solar resources in <span>Mexico</span>. Sustainable Energy Technologies and Assessments 60:103456. <a href="https://doi.org/10.1016/j.seta.2023.103456">https://doi.org/10.1016/j.seta.2023.103456</a></div>
+7. Magaña-González RC, Rodríguez-Hernández O, Canul-Reyes DA. <a href="https://doi.org/10.1016/j.seta.2023.103456">Analysis of seasonal variability and complementarity of wind and solar resources in <span>Mexico</span></a>. Sustainable Energy Technologies and Assessments. 2023;60:103456.
 </div>
 <div id="ref-Bett.2016" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Bett PE, Thornton HE (2016) The climatological relationships between wind and solar energy supply in <span>Britain</span>. Renewable Energy 87(1):96–110. <a href="https://doi.org/10.1016/j.renene.2015.10.006">https://doi.org/10.1016/j.renene.2015.10.006</a></div>
+8. Bett PE, Thornton HE. <a href="https://doi.org/10.1016/j.renene.2015.10.006">The climatological relationships between wind and solar energy supply in <span>Britain</span></a>. Renewable Energy. 2016;87:96–110.
 </div>
 <div id="ref-Weschenfelder.2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Weschenfelder F, Leite G, Costa A da, et al (2020) A review on the complementarity between grid-connected solar and wind power systems. Journal of Cleaner Production 257. <a href="https://doi.org/10.1016/j.jclepro.2020.120617">https://doi.org/10.1016/j.jclepro.2020.120617</a></div>
+9. Weschenfelder F, Leite G, Costa A da, Vilela O, Ribeiro C, Ochoa A, et al. <a href="https://doi.org/10.1016/j.jclepro.2020.120617">A review on the complementarity between grid-connected solar and wind power systems</a>. Journal of Cleaner Production. 2020;257.
 </div>
 <div id="ref-Pedruzzi.2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Pedruzzi R, Silva AR, Santos TSD, et al (2023) Review of mapping analysis and complementarity between solar and wind energy sources. Energy 283:129045. <a href="https://doi.org/10.1016/j.energy.2023.129045">https://doi.org/10.1016/j.energy.2023.129045</a></div>
+10. Pedruzzi R, Silva AR, Santos TSD, Araujo AC, Weyll ALC, Kitagawa YKL, et al. <a href="https://doi.org/10.1016/j.energy.2023.129045">Review of mapping analysis and complementarity between solar and wind energy sources</a>. Energy. 2023;283:129045.
 </div>
 <div id="ref-Sun.2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Sun Y, Li Y, Wang R, Ma R (2023) Assessing the national synergy potential of onshore and offshore renewable energy from the perspective of resources dynamic and complementarity. Energy 279. <a href="https://doi.org/10.1016/j.energy.2023.128106">https://doi.org/10.1016/j.energy.2023.128106</a></div>
+11. Sun Y, Li Y, Wang R, Ma R. <a href="https://doi.org/10.1016/j.energy.2023.128106">Assessing the national synergy potential of onshore and offshore renewable energy from the perspective of resources dynamic and complementarity</a>. Energy. 2023;279.
 </div>
 <div id="ref-Lindberg.2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">Lindberg O, Arnqvist J, Munkhammar J, Lingfors D (2021) Review on power-production modeling of hybrid wind and <span>PV</span> power parks. Journal of Renewable and Sustainable Energy 13(4). <a href="https://doi.org/10.1063/5.0056201">https://doi.org/10.1063/5.0056201</a></div>
+12. Lindberg O, Arnqvist J, Munkhammar J, Lingfors D. <a href="https://doi.org/10.1063/5.0056201">Review on power-production modeling of hybrid wind and <span>PV</span> power parks</a>. Journal of Renewable and Sustainable Energy. 2021;13.
 </div>
 <div id="ref-Delbeke.2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline">Delbeke O, Moschner J, Driesen J (2023) The complementarity of offshore wind and floating photovoltaics in the <span>Belgian North Sea</span>, an analysis up to 2100. Renewable energy 218. <a href="https://doi.org/10.1016/j.renene.2023.119253">https://doi.org/10.1016/j.renene.2023.119253</a></div>
+13. Delbeke O, Moschner J, Driesen J. <a href="https://doi.org/10.1016/j.renene.2023.119253">The complementarity of offshore wind and floating photovoltaics in the <span>Belgian North Sea</span>, an analysis up to 2100</a>. Renewable energy. 2023;218.
 </div>
 <div id="ref-Fabry.2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline">Fabry F, Samuel J, Meunier V (2023) Weather-driven complementarity between daily energy demand at one location and renewable supply at another. Journal of Applied Meteorology and Climatology 62(8):1115–1127. <a href="https://doi.org/10.1175/jamc-d-22-0153.1">https://doi.org/10.1175/jamc-d-22-0153.1</a></div>
+14. Fabry F, Samuel J, Meunier V. <a href="https://doi.org/10.1175/jamc-d-22-0153.1">Weather-driven complementarity between daily energy demand at one location and renewable supply at another</a>. Journal of Applied Meteorology and Climatology. 2023;62:1115–27.
 </div>
 <div id="ref-Muchiri.2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline">Muchiri K, Kamau J, Wekesa D, Saoke C, Mutuku J, Gathua J (2023) Wind and solar resource complementarity and its viability in wind/<span>PV</span> hybrid energy systems in <span>Machakos</span>, <span>Kenya</span>. Scientific African 20. <a href="https://doi.org/10.1016/j.sciaf.2023.e01599">https://doi.org/10.1016/j.sciaf.2023.e01599</a></div>
+15. Muchiri K, Kamau J, Wekesa D, Saoke C, Mutuku J, Gathua J. <a href="https://doi.org/10.1016/j.sciaf.2023.e01599">Wind and solar resource complementarity and its viability in wind/<span>PV</span> hybrid energy systems in <span>Machakos</span>, <span>Kenya</span></a>. Scientific African. 2023;20.
 </div>
 <div id="ref-Gulagi.2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline">Gulagi A, Ram M, Breyer C (2020) Role of the transmission grid and solar wind complementarity in mitigating the monsoon effect in a fully sustainable electricity system for <span>India</span>. IET Renewable Power Generation 14(2):254–262. <a href="https://doi.org/10.1049/iet-rpg.2019.0603">https://doi.org/10.1049/iet-rpg.2019.0603</a></div>
+16. Gulagi A, Ram M, Breyer C. <a href="https://doi.org/10.1049/iet-rpg.2019.0603">Role of the transmission grid and solar wind complementarity in mitigating the monsoon effect in a fully sustainable electricity system for <span>India</span></a>. IET Renewable Power Generation. 2020;14:254–62.
 </div>
 <div id="ref-Jani.2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline">Jani H, Kachhwaha S, Nagababu G, Das A (2022) Hybrid wind-solar energy and resource simultaneity: <span>An Indian</span> case study for site selection and feasibility check. Energy Reports 8(15):593–598. <a href="https://doi.org/10.1016/j.egyr.2022.10.262">https://doi.org/10.1016/j.egyr.2022.10.262</a></div>
+17. Jani H, Kachhwaha S, Nagababu G, Das A. <a href="https://doi.org/10.1016/j.egyr.2022.10.262">Hybrid wind-solar energy and resource simultaneity: <span>An Indian</span> case study for site selection and feasibility check</a>. Energy Reports. 2022;8:593–8.
 </div>
 <div id="ref-Ren.2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline">Ren G, Wan J, Liu J, Yu D (2019) Spatial and temporal assessments of complementarity for renewable energy resources in <span>China</span>. Energy 177:262–275. <a href="https://doi.org/10.1016/j.energy.2019.04.023">https://doi.org/10.1016/j.energy.2019.04.023</a></div>
+18. Ren G, Wan J, Liu J, Yu D. <a href="https://doi.org/10.1016/j.energy.2019.04.023">Spatial and temporal assessments of complementarity for renewable energy resources in <span>China</span></a>. Energy. 2019;177:262–75.
 </div>
 <div id="ref-Guezgouz.2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">19. </div><div class="csl-right-inline">Guezgouz M, Jurasz J, Chouai M, Bloomfield H, Bekkouche B (2021) Assessment of solar and wind energy complementarity in <span>Algeria</span>. Energy Conversion and Management 238:114170. <a href="https://doi.org/10.1016/j.enconman.2021.114170">https://doi.org/10.1016/j.enconman.2021.114170</a></div>
+19. Guezgouz M, Jurasz J, Chouai M, Bloomfield H, Bekkouche B. <a href="https://doi.org/10.1016/j.enconman.2021.114170">Assessment of solar and wind energy complementarity in <span>Algeria</span></a>. Energy Conversion and Management. 2021;238:114170.
 </div>
 <div id="ref-Couto.2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">20. </div><div class="csl-right-inline">Couto A, Estanqueiro A (2021) Assessment of wind and solar <span>PV</span> local complementarity for the hybridization of the wind power plants installed in <span>Portugal</span>. Journal of Cleaner Production 319. <a href="https://doi.org/10.1016/j.jclepro.2021.128728">https://doi.org/10.1016/j.jclepro.2021.128728</a></div>
+20. Couto A, Estanqueiro A. <a href="https://doi.org/10.1016/j.jclepro.2021.128728">Assessment of wind and solar <span>PV</span> local complementarity for the hybridization of the wind power plants installed in <span>Portugal</span></a>. Journal of Cleaner Production. 2021;319.
 </div>
 <div id="ref-Harrison-Atlas.2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline">Harrison-Atlas D, Murphy C, Schleifer A, Grue N (2022) Temporal complementarity and value of wind-<span>PV</span> hybrid systems across the <span>United States</span>. RENEWABLE ENERGY 201:111–123. <a href="https://doi.org/10.1016/j.renene.2022.10.060">https://doi.org/10.1016/j.renene.2022.10.060</a></div>
+21. Harrison-Atlas D, Murphy C, Schleifer A, Grue N. <a href="https://doi.org/10.1016/j.renene.2022.10.060">Temporal complementarity and value of wind-<span>PV</span> hybrid systems across the <span>United States</span></a>. RENEWABLE ENERGY. 2022;201:111–23.
 </div>
 <div id="ref-Prasad.2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">22. </div><div class="csl-right-inline">Prasad A, Yang Y, Kay M, Menictas C, Bremner S (2021) Synergy of solar photovoltaics-wind-battery systems in <span>Australia</span>. Renewable &amp; Sustainable Energy Reviews 152:111693. <a href="https://doi.org/10.1016/j.rser.2021.111693">https://doi.org/10.1016/j.rser.2021.111693</a></div>
+22. Prasad A, Yang Y, Kay M, Menictas C, Bremner S. <a href="https://doi.org/10.1016/j.rser.2021.111693">Synergy of solar photovoltaics-wind-battery systems in <span>Australia</span></a>. Renewable &amp; Sustainable Energy Reviews. 2021;152:111693.
 </div>
 <div id="ref-Couto.2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline">Couto A, Estanqueiro A (2020) Exploring wind and solar <span>PV</span> generation complementarity to meet electricity demand. Energies 13(16). <a href="https://doi.org/10.3390/en13164132">https://doi.org/10.3390/en13164132</a></div>
+23. Couto A, Estanqueiro A. <a href="https://doi.org/10.3390/en13164132">Exploring wind and solar <span>PV</span> generation complementarity to meet electricity demand</a>. Energies. 2020;13.
 </div>
 <div id="ref-ERA5" class="csl-entry" role="listitem">
-<div class="csl-left-margin">24. </div><div class="csl-right-inline">Hersbach H, Bell B, Berrisford P, et al (2020) The <span>ERA5</span> global reanalysis. Quarterly Journal of the Royal Meteorological Society 146(730):1999–2049. <a href="https://doi.org/10.1002/qj.3803">https://doi.org/10.1002/qj.3803</a></div>
+24. Hersbach H, Bell B, Berrisford P, Hirahara S, Horányi A, Muñoz-Sabater J, et al. <a href="https://doi.org/10.1002/qj.3803">The <span>ERA5</span> global reanalysis</a>. Quarterly Journal of the Royal Meteorological Society. 2020;146:1999–2049.
 </div>
 <div id="ref-MERRA2" class="csl-entry" role="listitem">
-<div class="csl-left-margin">25. </div><div class="csl-right-inline">Gelaro R, McCarty W, Suárez MJ, et al (2017) The modern-era retrospective analysis for research and applications, version 2 (<span>MERRA-2</span>). Journal of Climate 30:5419–5454. <a href="https://doi.org/10.1175/JCLI-D-16-0758.1">https://doi.org/10.1175/JCLI-D-16-0758.1</a></div>
+25. Gelaro R, McCarty W, Suárez MJ, Todling R, Molod A, Takacs L, et al. <a href="https://doi.org/10.1175/JCLI-D-16-0758.1">The modern-era retrospective analysis for research and applications, version 2 (<span>MERRA-2</span>)</a>. Journal of Climate. 2017;30:5419–54.
 </div>
 <div id="ref-CENACE" class="csl-entry" role="listitem">
-<div class="csl-left-margin">26. </div><div class="csl-right-inline">CENACE (Consulted - 2022) Centro nacional de control de energ<span>í</span>a - <span class="nocase">https://www.gob.mx/cenace</span>. Gobierno de M<span>é</span>xico</div>
+26. CENACE. Centro nacional de control de energ<span>í</span>a - <span class="nocase">https://www.gob.mx/cenace</span>. Gobierno de M<span>é</span>xico; Consulted - 2022.
 </div>
 <div id="ref-bc5f61cd4c51442f89eb02df89ab0aa4" class="csl-entry" role="listitem">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline">Bak C, Zahle F, Bitsche R, et al (2013) The <span>DTU</span> 10-<span>MW</span> reference wind turbine</div>
+27. Bak C, Zahle F, Bitsche R, Kim T, Yde A, Henriksen LC, et al. The <span>DTU</span> 10-<span>MW</span> reference wind turbine. 2013.
 </div>
 <div id="ref-zhangQuantitativeSynergyAssessment2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">28. </div><div class="csl-right-inline">Zhang H, Cao Y, Zhang Y, Terzija V (2018) Quantitative synergy assessment of regional wind-solar energy resources based on <span>MERRA</span> reanalysis data. Applied Energy 216:172–182. <a href="https://doi.org/10.1016/j.apenergy.2018.02.094">https://doi.org/10.1016/j.apenergy.2018.02.094</a></div>
+28. Zhang H, Cao Y, Zhang Y, Terzija V. <a href="https://doi.org/10.1016/j.apenergy.2018.02.094">Quantitative synergy assessment of regional wind-solar energy resources based on <span>MERRA</span> reanalysis data</a>. Applied Energy. 2018;216:172–82.
 </div>
 </div>
 </section>
@@ -593,150 +588,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = true;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

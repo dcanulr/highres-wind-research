@@ -56,12 +56,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fdf964b8551a4c1da979a829183e41b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5d78c9e45e9a5253a6059031ce5ea1b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -118,9 +116,6 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">High-resolution wind speed data and its influence on wind energy aspects in Mexico</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -217,9 +212,9 @@ div.csl-indent {
 
 
 <p>The growing demand for renewable energy has positioned wind power as a key component of the global energy transition. Mexico, with its diverse geography and climate, is uniquely positioned to harness this potential. The Mexican government has committed to integrating 50% of renewable sources into its electrical mix by 2050 <span class="citation" data-cites="dof2020acuerdo">[<a href="references.html#ref-dof2020acuerdo" role="doc-biblioref">1</a>]</span>. For the 2027-2037 period, it is projected that 88% of the installed capacity will come from clean energy, with wind energy contributing 8.65%, equivalent to approximately 3430.42 MW <span class="citation" data-cites="prospectivaSENER">[<a href="references.html#ref-prospectivaSENER" role="doc-biblioref">2</a>]</span>.</p>
-<p>Mexico’s geographic location, situated between the Pacific and Atlantic Oceans, offers significant opportunities for both onshore and offshore wind energy development. Key onshore regions with high wind velocities include Oaxaca, Chiapas, Tamaulipas, Yucatan, and the Baja California Peninsula <span class="citation" data-cites="amdeeProyectos">[<a href="references.html#ref-amdeeProyectos" role="doc-biblioref">3</a>]</span>. Offshore opportunities have been identified in the Yucatan Peninsula, the Gulf of Tehuantepec, and the eastern coast of Tamaulipas <span class="citation" data-cites="worldbankgroupOffshoreWindTechnical2020 CANULREYES2022211">[<a href="references.html#ref-worldbankgroupOffshoreWindTechnical2020" role="doc-biblioref">4</a>, <a href="references.html#ref-CANULREYES2022211" role="doc-biblioref">5</a>]</span>.</p>
+<p>Mexico’s geographic location, situated between the Pacific and Atlantic Oceans, offers significant opportunities for both onshore and offshore wind energy development. Key onshore regions with high wind velocities include Oaxaca, Chiapas, Tamaulipas, Yucatan, and the Baja California Peninsula <span class="citation" data-cites="amdeeProyectos">[<a href="references.html#ref-amdeeProyectos" role="doc-biblioref">3</a>]</span>. Offshore opportunities have been identified in the Yucatan Peninsula, the Gulf of Tehuantepec, and the eastern coast of Tamaulipas <span class="citation" data-cites="worldbankgroupOffshoreWindTechnical2020 CANULREYES2022211">[<a href="references.html#ref-worldbankgroupOffshoreWindTechnical2020" role="doc-biblioref">4</a>,<a href="references.html#ref-CANULREYES2022211" role="doc-biblioref">5</a>]</span>.</p>
 <p>Despite Mexico’s vast wind energy potential, significant gaps remain in understanding how the multi-scale complexity of wind impacts the reliability of this renewable energy source, particularly for the country’s wind regimes. These gaps span from large-scale climatic phenomena influencing wind farm operations to small-scale fluctuations occurring within seconds, which affect the mechanical behavior of wind turbines.</p>
-<p>Wind energy research faces three grand challenges <span class="citation" data-cites="veers2019">[<a href="references.html#ref-veers2019" role="doc-biblioref">6</a>]</span>: understanding the physics of the atmosphere in regions where wind power plants operate, improving the materials and system dynamics of wind turbines, and optimizing the integration of wind farms into the electricity grid. These challenges are inherently multi-scale, requiring analysis across varying temporal and spatial dimensions due to the complex and dynamic nature of wind behavior. These scales, as applied to wind energy, are shown in <a href="#fig-atmospheric_scales" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> and described as follows <span class="citation" data-cites="sanz2017 manwell">[<a href="references.html#ref-sanz2017" role="doc-biblioref">7</a>, <a href="references.html#ref-manwell" role="doc-biblioref">8</a>]</span>:</p>
+<p>Wind energy research faces three grand challenges <span class="citation" data-cites="veers2019">[<a href="references.html#ref-veers2019" role="doc-biblioref">6</a>]</span>: understanding the physics of the atmosphere in regions where wind power plants operate, improving the materials and system dynamics of wind turbines, and optimizing the integration of wind farms into the electricity grid. These challenges are inherently multi-scale, requiring analysis across varying temporal and spatial dimensions due to the complex and dynamic nature of wind behavior. These scales, as applied to wind energy, are shown in <a href="#fig-atmospheric_scales" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> and described as follows <span class="citation" data-cites="sanz2017 manwell">[<a href="references.html#ref-sanz2017" role="doc-biblioref">7</a>,<a href="references.html#ref-manwell" role="doc-biblioref">8</a>]</span>:</p>
 <ul>
 <li><p><strong>Synoptic scales:</strong> Spanning hundreds of kilometers and timescales from weeks to decades. These include tropical cyclones, monsoons, and climate change. The environmental information obtained at this scale helps identify wind resource variability and aids in spatial planning.</p></li>
 <li><p><strong>Mesoscale:</strong> Ranging from 100 m to 100 km and from hours to years. This scale encompasses thunderstorms, high- and low-pressure systems, and mountain-valley winds. It is particularly useful for specific resource assessment and determining site suitability.</p></li>
@@ -322,31 +317,31 @@ Table&nbsp;1.1: Description of the topics addressed on this research. The spatia
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
 <div id="ref-dof2020acuerdo" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">de la Federación DO (2020) Acuerdo por el que la <span class="nocase">Secretar<span class="nocase">ı́</span>a</span> de <span class="nocase">Energ<span class="nocase">ı́</span>a</span> aprueba y publica la actualizaci<span>ó</span>n de la <span>Estrategia</span> de <span class="nocase">Transici<span class="nocase">ó</span>n</span> para <span>Promover</span> el <span>Uso</span> de <span class="nocase">Tecnolog<span class="nocase">ı́</span>as</span> y <span>Combustibles</span> m<span>á</span>s <span>Limpios</span>, en t<span>é</span>rminos de la <span>Ley</span> de <span class="nocase">Transici<span class="nocase">ó</span>n Energ<span class="nocase">é</span>tica</span>. 07 de <span>Febrero</span> de 2020</div>
+1. de la Federación DO. Acuerdo por el que la <span class="nocase">Secretar<span class="nocase">ı́</span>a</span> de <span class="nocase">Energ<span class="nocase">ı́</span>a</span> aprueba y publica la actualizaci<span>ó</span>n de la <span>Estrategia</span> de <span class="nocase">Transici<span class="nocase">ó</span>n</span> para <span>Promover</span> el <span>Uso</span> de <span class="nocase">Tecnolog<span class="nocase">ı́</span>as</span> y <span>Combustibles</span> m<span>á</span>s <span>Limpios</span>, en t<span>é</span>rminos de la <span>Ley</span> de <span class="nocase">Transici<span class="nocase">ó</span>n Energ<span class="nocase">é</span>tica</span>. 07 de <span>Febrero</span> de 2020. 2020.
 </div>
 <div id="ref-prospectivaSENER" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">de Energía S (2024) Prospectiva del sector el<span>é</span>ctrico 2023-2037. Secretaria de Energia, Mexico</div>
+2. de Energía S. Prospectiva del sector el<span>é</span>ctrico 2023-2037. Mexico: Secretaria de Energia; 2024 Apr.
 </div>
 <div id="ref-amdeeProyectos" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Asociación Mexicana de Energía Eólica Proyectos - <span class="nocase">Parques <span>É</span>olicos</span></div>
+3. Asociación Mexicana de Energía Eólica. Proyectos - <span class="nocase">Parques <span>É</span>olicos</span>.
 </div>
 <div id="ref-worldbankgroupOffshoreWindTechnical2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Group WB (2020) Offshore <span>Wind Technical Potential</span></div>
+4. Group WB. Offshore <span>Wind Technical Potential</span>. 2020.
 </div>
 <div id="ref-CANULREYES2022211" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Canul-Reyes DA, Rodríguez-Hernández O, Jarquin-Laguna A (2022) Potential zones for offshore wind power development in the <span>Gulf</span> of <span>Mexico</span> using reanalyses data and capacity factor seasonal analysis. Energy for Sustainable Development 68:211–219. <a href="https://doi.org/10.1016/j.esd.2022.03.008">https://doi.org/10.1016/j.esd.2022.03.008</a></div>
+5. Canul-Reyes DA, Rodríguez-Hernández O, Jarquin-Laguna A. <a href="https://doi.org/10.1016/j.esd.2022.03.008">Potential zones for offshore wind power development in the <span>Gulf</span> of <span>Mexico</span> using reanalyses data and capacity factor seasonal analysis</a>. Energy for Sustainable Development. 2022;68:211–9.
 </div>
 <div id="ref-veers2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Veers P, Dykes K, Lantz E, et al (2019) Grand challenges in the science of wind energy. Science 366(6464):eaau2027. <a href="https://doi.org/10.1126/science.aau2027">https://doi.org/10.1126/science.aau2027</a></div>
+6. Veers P, Dykes K, Lantz E, Barth S, Bottasso CL, Carlson O, et al. <a href="https://doi.org/10.1126/science.aau2027">Grand challenges in the science of wind energy</a>. Science. 2019;366:eaau2027.
 </div>
 <div id="ref-sanz2017" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Sanz Rodrigo J, Chávez Arroyo RA, Moriarty P, et al (2017) Mesoscale to microscale wind farm flow modeling and evaluation. WIREs Energy and Environment 6(2):e214. <a href="https://doi.org/10.1002/wene.214">https://doi.org/10.1002/wene.214</a></div>
+7. Sanz Rodrigo J, Chávez Arroyo RA, Moriarty P, Churchfield M, Kosović B, Réthoré P-E, et al. <a href="https://doi.org/10.1002/wene.214">Mesoscale to microscale wind farm flow modeling and evaluation</a>. WIREs Energy and Environment. 2017;6:e214.
 </div>
 <div id="ref-manwell" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Manwell J, Mcgowan J, Rogers A (2006) <a href="https://doi.org/10.1002/9781119994367">Wind energy explained: <span>Theory</span>, design and application, second edition</a>. John Wiley &amp; Sons, Ltd</div>
+8. Manwell J, Mcgowan J, Rogers A. <a href="https://doi.org/10.1002/9781119994367">Wind energy explained: <span>Theory</span>, design and application, second edition</a>. John Wiley &amp; Sons, Ltd; 2006.
 </div>
 <div id="ref-ERA5" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Hersbach H, Bell B, Berrisford P, et al (2020) The <span>ERA5</span> global reanalysis. Quarterly Journal of the Royal Meteorological Society 146(730):1999–2049. <a href="https://doi.org/10.1002/qj.3803">https://doi.org/10.1002/qj.3803</a></div>
+9. Hersbach H, Bell B, Berrisford P, Hirahara S, Horányi A, Muñoz-Sabater J, et al. <a href="https://doi.org/10.1002/qj.3803">The <span>ERA5</span> global reanalysis</a>. Quarterly Journal of the Royal Meteorological Society. 2020;146:1999–2049.
 </div>
 </div>
 </section>
@@ -372,150 +367,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = true;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
