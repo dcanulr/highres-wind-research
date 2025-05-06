@@ -28,5 +28,6 @@ format:
     theme:
       dark: darkly
       light: cosmo
+    citation-location: document
 
 
