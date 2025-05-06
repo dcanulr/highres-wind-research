@@ -22,12 +22,8 @@ book:
     search: true
     contents: section 
 bibliography: thesis_bib.bib
-csl: diabetologia.csl
+csl: springer-vancouver-brackets.csl
 format:
   html:
-    theme:
-      dark: darkly
-      light: cosmo
-    citation-location: document
-
+    theme: flatly
 

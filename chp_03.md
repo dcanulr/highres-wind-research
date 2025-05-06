@@ -14,7 +14,7 @@ Recently, Mexico has set greenhouse gas (GHG) reduction goals for 2050,
 aiming to have clean energy constitute 50% of its electricity mix. With
 the rise of electric vehicles, the demand for electricity will
 necessitate substantial contributions from renewable sources, such as
-wind and solar energy [@Castrejon-Campos.2022]. The extensive
+wind and solar energy [@CASTREJONCAMPOS202229]. The extensive
 integration of these variable energy sources will lead to modifications
 in the transmission network, as its expansion will be pivotal in meeting
 mitigation targets without limitations [@Miranda.2022hop]. In 2022, the
@@ -28,7 +28,7 @@ the regional integration of renewable energy sources.
 The Yucatan Peninsula, situated in Mexico's southeast, primarily relies
 on natural gas for electricity generation [@Navarro-Pineda.2017].
 Although recent investigations have identified offshore wind potential
-[@canul-reyesPotentialZonesOffshore2022], there is a lack of research on
+[@CANULREYES2022211], there is a lack of research on
 how to incorporate these renewable resources into the region's power
 grid. In the work by Magana-Gonzalez et al. [@Magana-Gonzalez.2023id],
 the researchers analyze the spatial and temporal complementarity of
