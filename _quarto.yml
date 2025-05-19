@@ -18,6 +18,7 @@ book:
     - chp_05.md
     - chp_06.md
     - references.qmd
+    - presentation.qmd
   sidebar:
     search: true
     contents: section 
